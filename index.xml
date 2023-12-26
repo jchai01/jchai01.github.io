@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Do It Tech</title>
+    <link>https://doittech.github.io/</link>
+    <description>Recent content on Do It Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Dec 2023 00:04:48 +0000</lastBuildDate><atom:link href="https://doittech.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resolve HEVC (H265) In Davinci Resolve</title>
+      <link>https://doittech.github.io/posts/resolve-hevc-in-davinci-resolve/</link>
+      <pubDate>Mon, 25 Dec 2023 00:04:48 +0000</pubDate>
+      
+      <guid>https://doittech.github.io/posts/resolve-hevc-in-davinci-resolve/</guid>
+      <description>Download the HEVC extension and install it from: https://drive.google.com/drive/folders/19FWeAVWFoZUaM-14Wbt3t9lb_bIprl8b
+Press Win + R on your keyboard to launch the Run dialog box.Type WSReset.exe in the dialog box and press Enter.
+Open Microsoft Store, click the Library icon. This will be on the left side of the Store app.Check for Microsoft Store Updates.
+Click the Get updates button to check for available updates.If updates are available, click Update all to download and install them.</description>
+    </item>
+    
+    <item>
+      <title>Change Timezone in Linux</title>
+      <link>https://doittech.github.io/posts/change-timezone-in-linux/</link>
+      <pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate>
+      
+      <guid>https://doittech.github.io/posts/change-timezone-in-linux/</guid>
+      <description>View current timezone:
+timedatectl List timezones:
+timedatectl list-timezones Change timezone example:
+sudo timedatectl set-timezone Europe/Dublin </description>
+    </item>
+    
+    <item>
+      <title>Automount Windows drive in Linux</title>
+      <link>https://doittech.github.io/posts/mount-windows-drive-in-linux/</link>
+      <pubDate>Sun, 24 Dec 2023 23:10:09 +0000</pubDate>
+      
+      <guid>https://doittech.github.io/posts/mount-windows-drive-in-linux/</guid>
+      <description>Find out where the windows drive is located:
+lsblk Edit fstab file:
+sudo nvim /etc/fstab For example, sdb2:
+# &amp;lt;file system&amp;gt; &amp;lt;mount point&amp;gt; &amp;lt;type&amp;gt; &amp;lt;options&amp;gt; &amp;lt;dump&amp;gt; &amp;lt;pass&amp;gt;``` /dev/sdb2 /media/data ntfs defaults 0 0 Reboot the system:
+reboot Create a launcher.</description>
+    </item>
+    
+  </channel>
+</rss>

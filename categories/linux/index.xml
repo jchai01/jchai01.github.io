@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Do It Tech</title>
+    <link>https://doittech.github.io/categories/linux/</link>
+    <description>Recent content in Linux on Do It Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Dec 2023 23:58:39 +0000</lastBuildDate><atom:link href="https://doittech.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Change Timezone in Linux</title>
+      <link>https://doittech.github.io/posts/change-timezone-in-linux/</link>
+      <pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate>
+      
+      <guid>https://doittech.github.io/posts/change-timezone-in-linux/</guid>
+      <description>View current timezone:
+timedatectl List timezones:
+timedatectl list-timezones Change timezone example:
+sudo timedatectl set-timezone Europe/Dublin </description>
+    </item>
+    
+  </channel>
+</rss>

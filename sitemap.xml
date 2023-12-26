@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://doittech.github.io/</loc>
+    <lastmod>2023-12-25T00:04:48+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/posts/</loc>
+    <lastmod>2023-12-25T00:04:48+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/posts/resolve-hevc-in-davinci-resolve/</loc>
+    <lastmod>2023-12-25T00:04:48+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/categories/</loc>
+    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/posts/change-timezone-in-linux/</loc>
+    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/tags/linux/</loc>
+    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/categories/linux/</loc>
+    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/tags/</loc>
+    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/posts/mount-windows-drive-in-linux/</loc>
+    <lastmod>2023-12-24T23:10:09+00:00</lastmod>
+  </url><url>
+    <loc>https://doittech.github.io/authors/</loc>
+  </url><url>
+    <loc>https://doittech.github.io/series/</loc>
+  </url>
+</urlset>
