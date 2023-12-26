@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>davinci-resolve on Home</title>
+    <link>https://jchai01.github.io/tags/davinci-resolve/</link>
+    <description>Recent content in davinci-resolve on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Dec 2023 22:38:32 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/davinci-resolve/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Davinci Resolve Shortcut Mappings</title>
+      <link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link>
+      <pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid>
+      <description>CTRL + ALT + K to access preference.
+Split Change from Ctrl + \ to “S”
+Start to playhead and End to playhead. CTRL + SHIFT + [ to “Q” and “W”
+Remember to remove keybindings for the affected shortcut.</description>
+    </item>
+    
+  </channel>
+</rss>

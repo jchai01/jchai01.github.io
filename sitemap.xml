@@ -2,35 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://doittech.github.io/</loc>
+    <loc>https://jchai01.github.io/</loc>
+    <lastmod>2023-12-26T22:58:22+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/</loc>
+    <lastmod>2023-12-26T22:58:22+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</loc>
+    <lastmod>2023-12-26T22:58:22+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/i3-configuration/</loc>
+    <lastmod>2023-12-26T22:45:57+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/google-search-highlighted-text/</loc>
+    <lastmod>2023-12-26T22:42:42+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/categories/</loc>
+    <lastmod>2023-12-26T22:38:32+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</loc>
+    <lastmod>2023-12-26T22:38:32+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/davinci-resolve/</loc>
+    <lastmod>2023-12-26T22:38:32+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/</loc>
+    <lastmod>2023-12-26T22:38:32+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/categories/video-editing/</loc>
+    <lastmod>2023-12-26T22:38:32+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</loc>
     <lastmod>2023-12-25T00:04:48+00:00</lastmod>
   </url><url>
-    <loc>https://doittech.github.io/posts/</loc>
-    <lastmod>2023-12-25T00:04:48+00:00</lastmod>
-  </url><url>
-    <loc>https://doittech.github.io/posts/resolve-hevc-in-davinci-resolve/</loc>
-    <lastmod>2023-12-25T00:04:48+00:00</lastmod>
-  </url><url>
-    <loc>https://doittech.github.io/categories/</loc>
+    <loc>https://jchai01.github.io/posts/change-timezone-in-linux/</loc>
     <lastmod>2023-12-24T23:58:39+00:00</lastmod>
   </url><url>
-    <loc>https://doittech.github.io/posts/change-timezone-in-linux/</loc>
+    <loc>https://jchai01.github.io/tags/linux/</loc>
     <lastmod>2023-12-24T23:58:39+00:00</lastmod>
   </url><url>
-    <loc>https://doittech.github.io/tags/linux/</loc>
+    <loc>https://jchai01.github.io/categories/linux/</loc>
     <lastmod>2023-12-24T23:58:39+00:00</lastmod>
   </url><url>
-    <loc>https://doittech.github.io/categories/linux/</loc>
-    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
-  </url><url>
-    <loc>https://doittech.github.io/tags/</loc>
-    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
-  </url><url>
-    <loc>https://doittech.github.io/posts/mount-windows-drive-in-linux/</loc>
+    <loc>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</loc>
     <lastmod>2023-12-24T23:10:09+00:00</lastmod>
   </url><url>
-    <loc>https://doittech.github.io/authors/</loc>
+    <loc>https://jchai01.github.io/about/</loc>
   </url><url>
-    <loc>https://doittech.github.io/series/</loc>
+    <loc>https://jchai01.github.io/authors/</loc>
+  </url><url>
+    <loc>https://jchai01.github.io/series/</loc>
   </url>
 </urlset>

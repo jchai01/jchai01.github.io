@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Do It Tech</title>
-    <link>https://doittech.github.io/</link>
-    <description>Recent content on Do It Tech</description>
+    <title>Home</title>
+    <link>https://jchai01.github.io/</link>
+    <description>Recent content on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Dec 2023 00:04:48 +0000</lastBuildDate><atom:link href="https://doittech.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Dec 2023 22:58:22 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Toggle night light in Ubuntu</title>
+      <link>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</link>
+      <pubDate>Tue, 26 Dec 2023 22:58:22 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</guid>
+      <description>Make night light always on https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off
+Add custom shortcut to toggle night light https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/</description>
+    </item>
+    
+    <item>
+      <title>I3 configuration</title>
+      <link>https://jchai01.github.io/posts/i3-configuration/</link>
+      <pubDate>Tue, 26 Dec 2023 22:45:57 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/i3-configuration/</guid>
+      <description>My attempt on switching to a window manager (I3). I was on a pretty old laptop (GL752V), probably why I faced a handful of issues. Distro used: EndeavourOS.
+config file path:
+~/.config/i3/config Changes made:
+ Change open file explorer from ctrl+n to ctrl+e Make brightness key work. (See fix i3wm brightness) Resize feature with mod + ctrl + arrow keys. Ensure power button work. Make alt+F4 work as well, other than $mod + q.</description>
+    </item>
+    
+    <item>
+      <title>Google search highlighted text</title>
+      <link>https://jchai01.github.io/posts/google-search-highlighted-text/</link>
+      <pubDate>Tue, 26 Dec 2023 22:42:42 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/google-search-highlighted-text/</guid>
+      <description>#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &amp;#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&amp;#34; Bind it to a shortcut key, mine is super + s.</description>
+    </item>
+    
+    <item>
+      <title>Davinci Resolve Shortcut Mappings</title>
+      <link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link>
+      <pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid>
+      <description>CTRL + ALT + K to access preference.
+Split Change from Ctrl + \ to “S”
+Start to playhead and End to playhead. CTRL + SHIFT + [ to “Q” and “W”
+Remember to remove keybindings for the affected shortcut.</description>
+    </item>
+    
     <item>
       <title>Resolve HEVC (H265) In Davinci Resolve</title>
-      <link>https://doittech.github.io/posts/resolve-hevc-in-davinci-resolve/</link>
+      <link>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</link>
       <pubDate>Mon, 25 Dec 2023 00:04:48 +0000</pubDate>
       
-      <guid>https://doittech.github.io/posts/resolve-hevc-in-davinci-resolve/</guid>
+      <guid>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</guid>
       <description>Download the HEVC extension and install it from: https://drive.google.com/drive/folders/19FWeAVWFoZUaM-14Wbt3t9lb_bIprl8b
 Press Win + R on your keyboard to launch the Run dialog box.Type WSReset.exe in the dialog box and press Enter.
 Open Microsoft Store, click the Library icon. This will be on the left side of the Store app.Check for Microsoft Store Updates.
@@ -21,10 +64,10 @@ Click the Get updates button to check for available updates.If updates are avail
     
     <item>
       <title>Change Timezone in Linux</title>
-      <link>https://doittech.github.io/posts/change-timezone-in-linux/</link>
+      <link>https://jchai01.github.io/posts/change-timezone-in-linux/</link>
       <pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate>
       
-      <guid>https://doittech.github.io/posts/change-timezone-in-linux/</guid>
+      <guid>https://jchai01.github.io/posts/change-timezone-in-linux/</guid>
       <description>View current timezone:
 timedatectl List timezones:
 timedatectl list-timezones Change timezone example:
@@ -33,15 +76,24 @@ sudo timedatectl set-timezone Europe/Dublin </description>
     
     <item>
       <title>Automount Windows drive in Linux</title>
-      <link>https://doittech.github.io/posts/mount-windows-drive-in-linux/</link>
+      <link>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</link>
       <pubDate>Sun, 24 Dec 2023 23:10:09 +0000</pubDate>
       
-      <guid>https://doittech.github.io/posts/mount-windows-drive-in-linux/</guid>
+      <guid>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</guid>
       <description>Find out where the windows drive is located:
 lsblk Edit fstab file:
 sudo nvim /etc/fstab For example, sdb2:
 # &amp;lt;file system&amp;gt; &amp;lt;mount point&amp;gt; &amp;lt;type&amp;gt; &amp;lt;options&amp;gt; &amp;lt;dump&amp;gt; &amp;lt;pass&amp;gt;``` /dev/sdb2 /media/data ntfs defaults 0 0 Reboot the system:
 reboot Create a launcher.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://jchai01.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/about/</guid>
+      <description>Hello! Just a curious individual that wants to learn everything and anything:) Building this personal site to document my thoughts or journey in tech, but mainly to serve as a reference/guide/cheatsheet for myself to issues I have resolved before and hopefully, it can help someone too.</description>
     </item>
     
   </channel>
