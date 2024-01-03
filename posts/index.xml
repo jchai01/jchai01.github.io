@@ -6,7 +6,38 @@
     <description>Recent content in Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Dec 2023 22:58:22 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Jan 2024 02:53:14 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate Image Resize with Padding using ImageMagick</title>
+      <link>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</link>
+      <pubDate>Wed, 03 Jan 2024 02:53:14 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</guid>
+      <description>#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&amp;#34;1280x960&amp;#34; if [ -z $image_dir ]; then echo &amp;#34;Please provide image directory as first argument.&amp;#34; exit 1 fi if [ ! -d $image_dir ]; then echo &amp;#34;Not a valid directory&amp;#34; exit 1 fi output_dir=&amp;#34;$image_dir-output&amp;#34; echo &amp;#34;Located $image_dir&amp;#34; echo &amp;#34;Creating output $output_dir&amp;#34; mkdir $output_dir for image in $image_dir/*; do echo &amp;#34;Processing $image&amp;#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done </description>
+    </item>
+    
+    <item>
+      <title>FFMPEG cheatsheet</title>
+      <link>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</link>
+      <pubDate>Wed, 03 Jan 2024 02:47:17 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</guid>
+      <description>Changing Aspect Ratio  Link to heading   Resizing a video from 4:3 to 16:9 (HD, 1280 x 720) for max screen size, with no cropping and addition of black padding
+ffmpeg -i input.mp4 -vf &amp;#34;scale=(iw*sar)*min(1280/(iw*sar)\,720/ih):ih*min(1280/(iw*sar)\,720/ih),pad=1280:720:(ow-iw)/2:(oh-ih)/2:black&amp;#34; output.mp4 Explanation: *scale = FFMPEG video filter to resize a video
+ (iw*sar)min(1280/(iwsar),720/ih) = output width of the resized video = Resize width of video to AT MOST 1280 (keeping original aspect ratio) ihmin(1280/(iwsar),720/ih) = output height of the resized video = Resize width of video to AT MOST 720 (keeping original aspect ratio)  The scale transformation is then followed (chained) by a pad video filter:</description>
+    </item>
+    
+    <item>
+      <title>Installing Blender manually in Linux</title>
+      <link>https://jchai01.github.io/posts/installing-blender-via-zip-folder/</link>
+      <pubDate>Tue, 02 Jan 2024 19:52:20 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/installing-blender-via-zip-folder/</guid>
+      <description>Sometimes the package manager does not give you the lastest version of the software. This guide shows you how to install Blender manually without the use of package manager in order to get the lastest version. I am using Ubuntu in this example.
+Download the zip file from Blender website. Unzip the file.
+Copy the extracted folder to somewhere else if you want to. For me I placed them in /opt folder.</description>
+    </item>
+    
     <item>
       <title>Toggle night light in Ubuntu</title>
       <link>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</link>
@@ -15,6 +46,20 @@
       <guid>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</guid>
       <description>Make night light always on https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off
 Add custom shortcut to toggle night light https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/</description>
+    </item>
+    
+    <item>
+      <title>Setup latest NeoVim on ubuntu with AppImage</title>
+      <link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link>
+      <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid>
+      <description>Download NeoVim AppImage from GitHub release page.
+Rename nvim.appimage to nvim
+mv nvim.appimage nvim Set the permission:
+chmod +x nvim Install fuse2 library if it is required to run the appimage
+sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.
+sudo mv nvim /usr/local/bin Optional  Link to heading   Install AstroVim</description>
     </item>
     
     <item>

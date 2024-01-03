@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Automate Image Resize with Padding using ImageMagick · Home
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Joseph Chai">
+<meta name="description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done ">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Automate Image Resize with Padding using ImageMagick"/>
+<meta name="twitter:description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done "/>
+
+<meta property="og:title" content="Automate Image Resize with Padding using ImageMagick" />
+<meta property="og:description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-03T02:53:14+00:00" />
+<meta property="article:modified_time" content="2024-01-03T02:53:14+00:00" />
+
+
+
+
+
+<link rel="canonical" href="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Home
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/">
+              Automate Image Resize with Padding using ImageMagick
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-01-03T02:53:14Z">
+                January 3, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              One-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0f0;font-weight:bold">#!/bin/sh
+</span><span style="color:#0f0;font-weight:bold"></span>
+<span style="color:#007f7f"># This script requires the download imagemagick.</span>
+
+image_dir=$1 <span style="color:#007f7f"># First argument</span>
+target_ratio=<span style="color:#0ff;font-weight:bold">&#34;1280x960&#34;</span>
+
+<span style="color:#fff;font-weight:bold">if</span> [ -z $image_dir ]; <span style="color:#fff;font-weight:bold">then</span>
+    <span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Please provide image directory as first argument.&#34;</span>
+    <span style="color:#fff;font-weight:bold">exit</span> <span style="color:#ff0;font-weight:bold">1</span>
+<span style="color:#fff;font-weight:bold">fi</span>
+
+<span style="color:#fff;font-weight:bold">if</span> [ ! -d $image_dir ]; <span style="color:#fff;font-weight:bold">then</span>
+    <span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Not a valid directory&#34;</span>
+    <span style="color:#fff;font-weight:bold">exit</span> <span style="color:#ff0;font-weight:bold">1</span>
+<span style="color:#fff;font-weight:bold">fi</span>
+
+output_dir=<span style="color:#0ff;font-weight:bold">&#34;</span>$image_dir<span style="color:#0ff;font-weight:bold">-output&#34;</span>
+
+<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Located </span>$image_dir<span style="color:#0ff;font-weight:bold">&#34;</span>
+<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Creating output </span>$output_dir<span style="color:#0ff;font-weight:bold">&#34;</span>
+mkdir $output_dir
+
+<span style="color:#fff;font-weight:bold">for</span> image in $image_dir/*; <span style="color:#fff;font-weight:bold">do</span>
+    <span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Processing </span>$image<span style="color:#0ff;font-weight:bold">&#34;</span>
+    file_name=<span style="color:#fff;font-weight:bold">$(</span>basename $image<span style="color:#fff;font-weight:bold">)</span>
+
+    <span style="color:#007f7f"># convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name</span>
+    convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name
+
+<span style="color:#fff;font-weight:bold">done</span>
+</code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script>
+  window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+          DISQUS.reset({ reload: true, config: disqus_config });
+        }
+    });
+</script>
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Joseph Chai 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
