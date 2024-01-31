@@ -13,15 +13,15 @@
 
 
 <meta name="author" content="Joseph Chai">
-<meta name="description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done ">
+<meta name="description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done Resize Images  Link to heading   Basic usage (will overwrite the original file):">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Automate Image Resize with Padding using ImageMagick"/>
-<meta name="twitter:description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done "/>
+<meta name="twitter:description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done Resize Images  Link to heading   Basic usage (will overwrite the original file):"/>
 
 <meta property="og:title" content="Automate Image Resize with Padding using ImageMagick" />
-<meta property="og:description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done " />
+<meta property="og:description" content="#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&#34;1280x960&#34; if [ -z $image_dir ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d $image_dir ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir $output_dir for image in $image_dir/*; do echo &#34;Processing $image&#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done Resize Images  Link to heading   Basic usage (will overwrite the original file):" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-03T02:53:14+00:00" />
@@ -187,6 +187,17 @@ mkdir $output_dir
     convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name
 
 <span style="color:#fff;font-weight:bold">done</span>
+</code></pre></div><h3 id="resize-images">
+  Resize Images
+  <a class="heading-link" href="#resize-images">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Basic usage (will overwrite the original file):</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mogrify -resize 820x ./*.jpg
+</code></pre></div><p>If you need recursion:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -name <span style="color:#0ff;font-weight:bold">&#39;*.jpg&#39;</span> -execdir mogrify -resize 820x {} +
 </code></pre></div>
       </div>
 

@@ -6,14 +6,42 @@
     <description>Recent content on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jan 2024 02:53:14 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Jan 2024 15:55:06 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Sideloaded Android Apps</title>
+      <link>https://jchai01.github.io/posts/best-sideloaded-android-apps/</link>
+      <pubDate>Thu, 11 Jan 2024 15:55:06 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/best-sideloaded-android-apps/</guid>
+      <description>ReVanced Manager/YouTube ReVanced  Link to heading   Removes ads on YouTube App, enables play in background feature. Able to patch various other app too via ReVanced Manager.
+Fastest way:
+Visit: https://revanced.net/
+Download APK file for YouTube ReVanced and MicroG and install them. (MicroG makes it possible for you to log into your google account with ReVanced)
+Patch the app yourself (get APK files from APKMirror):
+https://github.com/ReVanced/revanced-manager
+xManager  Link to heading   Ad-free Spotify patch:</description>
+    </item>
+    
+    <item>
+      <title>Python Cheatsheet</title>
+      <link>https://jchai01.github.io/posts/python-cheatsheet/</link>
+      <pubDate>Thu, 11 Jan 2024 15:27:40 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/python-cheatsheet/</guid>
+      <description>Virtual Environment  Link to heading   In this example, folder for the Virtual Environment is .venv
+python3 -m venv .venv source .venv/bin/activate deactivate Packages  Link to heading   pip install name-of-package pip uninstall name-of-package pip install -r requirements.txt pyenv  Link to heading   Manage different versions of python.
+List all version installed:
+pyenv versions Switch to a particular version example:
+pyenv global 3.8 Reset back to default:</description>
+    </item>
+    
     <item>
       <title>Automate Image Resize with Padding using ImageMagick</title>
       <link>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</link>
       <pubDate>Wed, 03 Jan 2024 02:53:14 +0000</pubDate>
       
       <guid>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</guid>
-      <description>#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&amp;#34;1280x960&amp;#34; if [ -z $image_dir ]; then echo &amp;#34;Please provide image directory as first argument.&amp;#34; exit 1 fi if [ ! -d $image_dir ]; then echo &amp;#34;Not a valid directory&amp;#34; exit 1 fi output_dir=&amp;#34;$image_dir-output&amp;#34; echo &amp;#34;Located $image_dir&amp;#34; echo &amp;#34;Creating output $output_dir&amp;#34; mkdir $output_dir for image in $image_dir/*; do echo &amp;#34;Processing $image&amp;#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done </description>
+      <description>#!/bin/sh  # This script requires the download imagemagick. image_dir=$1 # First argument target_ratio=&amp;#34;1280x960&amp;#34; if [ -z $image_dir ]; then echo &amp;#34;Please provide image directory as first argument.&amp;#34; exit 1 fi if [ ! -d $image_dir ]; then echo &amp;#34;Not a valid directory&amp;#34; exit 1 fi output_dir=&amp;#34;$image_dir-output&amp;#34; echo &amp;#34;Located $image_dir&amp;#34; echo &amp;#34;Creating output $output_dir&amp;#34; mkdir $output_dir for image in $image_dir/*; do echo &amp;#34;Processing $image&amp;#34; file_name=$(basename $image) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio $image $output_dir/$file_name done Resize Images  Link to heading   Basic usage (will overwrite the original file):</description>
     </item>
     
     <item>
@@ -80,7 +108,8 @@ config file path:
       <pubDate>Tue, 26 Dec 2023 22:42:42 +0000</pubDate>
       
       <guid>https://jchai01.github.io/posts/google-search-highlighted-text/</guid>
-      <description>#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &amp;#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&amp;#34; Bind it to a shortcut key, mine is super + s.</description>
+      <description>#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &amp;#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&amp;#34; Bind it to a shortcut key, mine is super + s.
+/home/user/Desktop/scripts/google-search.sh </description>
     </item>
     
     <item>

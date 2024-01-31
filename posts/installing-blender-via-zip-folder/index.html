@@ -193,7 +193,7 @@ MimeType=application/x-blender;
 </code></pre><p>Remember to set the permission to execute the desktop entry:</p>
 <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod +x blender.desktop
 </code></pre></div><p>Copy/move desktop entry to usr/share/application, this allows you to search for Blender.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cp blender.desktop usr/share/application
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cp blender.desktop /usr/share/applications
 </code></pre></div><p>create link to usr/local/bin, this allows you to use blender through the terminal.</p>
 <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ln -s path_to_blender_executable /usr/local/bin
 </code></pre></div>
