@@ -2,13 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jchai01.github.io/tags/automation/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/categories/automation/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/categories/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/linux/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/categories/linux/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/xdotool/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/xdodool-scripts-example/</loc>
+    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/android/</loc>
+    <lastmod>2024-01-11T15:55:06+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/categories/android/</loc>
+    <lastmod>2024-01-11T15:55:06+00:00</lastmod>
+  </url><url>
     <loc>https://jchai01.github.io/posts/best-sideloaded-android-apps/</loc>
     <lastmod>2024-01-11T15:55:06+00:00</lastmod>
   </url><url>
-    <loc>https://jchai01.github.io/</loc>
-    <lastmod>2024-01-11T15:55:06+00:00</lastmod>
-  </url><url>
-    <loc>https://jchai01.github.io/posts/</loc>
+    <loc>https://jchai01.github.io/tags/sideloading/</loc>
     <lastmod>2024-01-11T15:55:06+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/tags/python/</loc>
@@ -17,11 +50,11 @@
     <loc>https://jchai01.github.io/posts/python-cheatsheet/</loc>
     <lastmod>2024-01-11T15:27:40+00:00</lastmod>
   </url><url>
-    <loc>https://jchai01.github.io/tags/</loc>
-    <lastmod>2024-01-11T15:27:40+00:00</lastmod>
-  </url><url>
     <loc>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</loc>
     <lastmod>2024-01-03T02:53:14+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/cheatsheet/</loc>
+    <lastmod>2024-01-03T02:47:17+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/tags/ffmpeg/</loc>
     <lastmod>2024-01-03T02:47:17+00:00</lastmod>
@@ -35,14 +68,17 @@
     <loc>https://jchai01.github.io/categories/blender/</loc>
     <lastmod>2024-01-02T19:52:20+00:00</lastmod>
   </url><url>
-    <loc>https://jchai01.github.io/categories/</loc>
-    <lastmod>2024-01-02T19:52:20+00:00</lastmod>
-  </url><url>
     <loc>https://jchai01.github.io/posts/installing-blender-via-zip-folder/</loc>
     <lastmod>2024-01-02T19:52:20+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</loc>
     <lastmod>2023-12-26T22:58:22+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/ubuntu/</loc>
+    <lastmod>2023-12-26T22:58:22+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/neovim/</loc>
+    <lastmod>2023-12-26T22:57:27+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</loc>
     <lastmod>2023-12-26T22:57:27+00:00</lastmod>
@@ -53,10 +89,10 @@
     <loc>https://jchai01.github.io/posts/google-search-highlighted-text/</loc>
     <lastmod>2023-12-26T22:42:42+00:00</lastmod>
   </url><url>
-    <loc>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</loc>
+    <loc>https://jchai01.github.io/tags/davinci-resolve/</loc>
     <lastmod>2023-12-26T22:38:32+00:00</lastmod>
   </url><url>
-    <loc>https://jchai01.github.io/tags/davinci-resolve/</loc>
+    <loc>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</loc>
     <lastmod>2023-12-26T22:38:32+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/categories/video-editing/</loc>
@@ -68,18 +104,14 @@
     <loc>https://jchai01.github.io/posts/change-timezone-in-linux/</loc>
     <lastmod>2023-12-24T23:58:39+00:00</lastmod>
   </url><url>
-    <loc>https://jchai01.github.io/tags/linux/</loc>
-    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
-  </url><url>
-    <loc>https://jchai01.github.io/categories/linux/</loc>
-    <lastmod>2023-12-24T23:58:39+00:00</lastmod>
-  </url><url>
     <loc>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</loc>
     <lastmod>2023-12-24T23:10:09+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/about/</loc>
   </url><url>
     <loc>https://jchai01.github.io/authors/</loc>
+  </url><url>
+    <loc>https://jchai01.github.io/projects/</loc>
   </url><url>
     <loc>https://jchai01.github.io/series/</loc>
   </url>

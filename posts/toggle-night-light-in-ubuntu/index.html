@@ -13,18 +13,21 @@
 
 
 <meta name="author" content="Joseph Chai">
-<meta name="description" content="Make night light always on https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off
-Add custom shortcut to toggle night light https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/">
+<meta name="description" content="Set night light to always on  Link to heading    Install dconf-editor:  sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this)  ref: link
+Add custom shortcut to toggle night light  Link to heading   Use the following script:
+bash -c &#34;if [[ $(gsettings get org.">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Toggle night light in Ubuntu"/>
-<meta name="twitter:description" content="Make night light always on https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off
-Add custom shortcut to toggle night light https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/"/>
+<meta name="twitter:description" content="Set night light to always on  Link to heading    Install dconf-editor:  sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this)  ref: link
+Add custom shortcut to toggle night light  Link to heading   Use the following script:
+bash -c &#34;if [[ $(gsettings get org."/>
 
 <meta property="og:title" content="Toggle night light in Ubuntu" />
-<meta property="og:description" content="Make night light always on https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off
-Add custom shortcut to toggle night light https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/" />
+<meta property="og:description" content="Set night light to always on  Link to heading    Install dconf-editor:  sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this)  ref: link
+Add custom shortcut to toggle night light  Link to heading   Use the following script:
+bash -c &#34;if [[ $(gsettings get org." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-12-26T22:58:22+00:00" />
@@ -115,6 +118,10 @@ Add custom shortcut to toggle night light https://www.reddit.com/r/gnome/comment
             </li>
           
             <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
               <a class="navigation-link" href="/about/">About</a>
             </li>
           
@@ -152,17 +159,53 @@ Add custom shortcut to toggle night light https://www.reddit.com/r/gnome/comment
             </span>
           </div>
           
-          
-          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/linux/">Linux</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/ubuntu/">ubuntu</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/linux/">Linux</a>
+    </span></div>
+
         </div>
       </header>
 
       <div class="post-content">
         
-        <p>Make night light always on
-<a href="https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off"  class="external-link" target="_blank" rel="noopener">https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off</a></p>
-<p>Add custom shortcut to toggle night light
-<a href="https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/"  class="external-link" target="_blank" rel="noopener">https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/</a></p>
+        <h2 id="set-night-light-to-always-on">
+  Set night light to always on
+  <a class="heading-link" href="#set-night-light-to-always-on">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>Install dconf-editor:</li>
+</ol>
+<pre tabindex="0"><code>sudo apt install dconf-editor
+</code></pre><ol start="2">
+<li>Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/</li>
+<li>Set night-light-schedule-automatic to false</li>
+<li>Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this)</li>
+</ol>
+<p>ref: <a href="https://askubuntu.com/questions/1087449/force-gnome-night-light-to-stay-on-and-never-turn-off"  class="external-link" target="_blank" rel="noopener">link</a></p>
+<h2 id="add-custom-shortcut-to-toggle-night-light">
+  Add custom shortcut to toggle night light
+  <a class="heading-link" href="#add-custom-shortcut-to-toggle-night-light">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Use the following script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash -c <span style="color:#0ff;font-weight:bold">&#34;if [[ </span><span style="color:#fff;font-weight:bold">$(</span>gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold"> == &#34;</span>true<span style="color:#0ff;font-weight:bold">&#34; ]]; then gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false; else gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true; fi&#34;</span>
+</code></pre></div><p>Bind it to a shortcut, mine is <code>super + b</code></p>
+<p>ref: <a href="https://www.reddit.com/r/gnome/comments/ig7wsk/a_keyboard_shortcut_to_toggle_nightlight_in_gnome/"  class="external-link" target="_blank" rel="noopener">link</a></p>
 
       </div>
 

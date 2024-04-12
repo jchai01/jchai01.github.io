@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>FFMPEG on Home</title>
+    <title>ffmpeg on Home</title>
     <link>https://jchai01.github.io/tags/ffmpeg/</link>
-    <description>Recent content in FFMPEG on Home</description>
+    <description>Recent content in ffmpeg on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jan 2024 02:47:17 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />

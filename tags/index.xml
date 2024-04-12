@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jan 2024 15:27:40 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Feb 2024 02:04:09 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://jchai01.github.io/tags/automation/</link>
+      <pubDate>Sat, 10 Feb 2024 02:04:09 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://jchai01.github.io/tags/linux/</link>
+      <pubDate>Sat, 10 Feb 2024 02:04:09 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xdotool</title>
+      <link>https://jchai01.github.io/tags/xdotool/</link>
+      <pubDate>Sat, 10 Feb 2024 02:04:09 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/tags/xdotool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://jchai01.github.io/tags/android/</link>
+      <pubDate>Thu, 11 Jan 2024 15:55:06 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sideloading</title>
+      <link>https://jchai01.github.io/tags/sideloading/</link>
+      <pubDate>Thu, 11 Jan 2024 15:55:06 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/tags/sideloading/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Python</title>
       <link>https://jchai01.github.io/tags/python/</link>
@@ -17,7 +62,16 @@
     </item>
     
     <item>
-      <title>FFMPEG</title>
+      <title>cheatsheet</title>
+      <link>https://jchai01.github.io/tags/cheatsheet/</link>
+      <pubDate>Wed, 03 Jan 2024 02:47:17 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ffmpeg</title>
       <link>https://jchai01.github.io/tags/ffmpeg/</link>
       <pubDate>Wed, 03 Jan 2024 02:47:17 +0000</pubDate>
       
@@ -26,7 +80,7 @@
     </item>
     
     <item>
-      <title>Blender</title>
+      <title>blender</title>
       <link>https://jchai01.github.io/tags/blender/</link>
       <pubDate>Tue, 02 Jan 2024 19:52:20 +0000</pubDate>
       
@@ -35,20 +89,29 @@
     </item>
     
     <item>
-      <title>davinci-resolve</title>
-      <link>https://jchai01.github.io/tags/davinci-resolve/</link>
-      <pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate>
+      <title>ubuntu</title>
+      <link>https://jchai01.github.io/tags/ubuntu/</link>
+      <pubDate>Tue, 26 Dec 2023 22:58:22 +0000</pubDate>
       
-      <guid>https://jchai01.github.io/tags/davinci-resolve/</guid>
+      <guid>https://jchai01.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://jchai01.github.io/tags/linux/</link>
-      <pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate>
+      <title>neovim</title>
+      <link>https://jchai01.github.io/tags/neovim/</link>
+      <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
       
-      <guid>https://jchai01.github.io/tags/linux/</guid>
+      <guid>https://jchai01.github.io/tags/neovim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>davinci resolve</title>
+      <link>https://jchai01.github.io/tags/davinci-resolve/</link>
+      <pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/tags/davinci-resolve/</guid>
       <description></description>
     </item>
     

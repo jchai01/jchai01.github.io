@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cheatsheet on Home</title>
+    <link>https://jchai01.github.io/tags/cheatsheet/</link>
+    <description>Recent content in cheatsheet on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jan 2024 02:47:17 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FFMPEG cheatsheet</title>
+      <link>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</link>
+      <pubDate>Wed, 03 Jan 2024 02:47:17 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</guid>
+      <description>Changing Aspect Ratio  Link to heading   Resizing a video from 4:3 to 16:9 (HD, 1280 x 720) for max screen size, with no cropping and addition of black padding
+ffmpeg -i input.mp4 -vf &amp;#34;scale=(iw*sar)*min(1280/(iw*sar)\,720/ih):ih*min(1280/(iw*sar)\,720/ih),pad=1280:720:(ow-iw)/2:(oh-ih)/2:black&amp;#34; output.mp4 Explanation: *scale = FFMPEG video filter to resize a video
+ (iw*sar)min(1280/(iwsar),720/ih) = output width of the resized video = Resize width of video to AT MOST 1280 (keeping original aspect ratio) ihmin(1280/(iwsar),720/ih) = output height of the resized video = Resize width of video to AT MOST 720 (keeping original aspect ratio)  The scale transformation is then followed (chained) by a pad video filter:</description>
+    </item>
+    
+  </channel>
+</rss>

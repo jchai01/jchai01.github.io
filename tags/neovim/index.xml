@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>neovim on Home</title>
+    <link>https://jchai01.github.io/tags/neovim/</link>
+    <description>Recent content in neovim on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Dec 2023 22:57:27 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup latest NeoVim on Ubuntu with AppImage</title>
+      <link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link>
+      <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid>
+      <description>Download NeoVim AppImage from GitHub release page.
+Rename nvim.appimage to nvim
+mv nvim.appimage nvim Set the permission:
+chmod +x nvim Install fuse2 library if it is required to run the appimage
+sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.
+sudo mv nvim /usr/local/bin Optional  Link to heading   Install AstroVim</description>
+    </item>
+    
+  </channel>
+</rss>

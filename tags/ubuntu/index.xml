@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on Home</title>
+    <link>https://jchai01.github.io/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Dec 2023 22:58:22 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Toggle night light in Ubuntu</title>
+      <link>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</link>
+      <pubDate>Tue, 26 Dec 2023 22:58:22 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</guid>
+      <description>Set night light to always on  Link to heading    Install dconf-editor:  sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this)  ref: link
+Add custom shortcut to toggle night light  Link to heading   Use the following script:
+bash -c &amp;#34;if [[ $(gsettings get org.</description>
+    </item>
+    
+  </channel>
+</rss>
