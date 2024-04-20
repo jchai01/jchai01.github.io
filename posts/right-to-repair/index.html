@@ -3,7 +3,7 @@
 
 <head>
   <title>
-  Xdotool script examples · Home
+  Right to repair, why you should care · Home
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +13,25 @@
 
 
 <meta name="author" content="Joseph Chai">
-<meta name="description" content="Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&rsquo;s usage in a shell script.
-# Type ABC xdotool key A xdotool key B xdotool key C # Tab 3 times xdotool key Tab xdotool key Tab xdotool key Tab # Type 20 xdotool key 2 xdotool key 0 xdotool key Down xdotool key Left xdotool key Right xdotool key Return # Use sleep to wait sleep 0.">
+<meta name="description" content="test">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Xdotool script examples"/>
-<meta name="twitter:description" content="Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&rsquo;s usage in a shell script.
-# Type ABC xdotool key A xdotool key B xdotool key C # Tab 3 times xdotool key Tab xdotool key Tab xdotool key Tab # Type 20 xdotool key 2 xdotool key 0 xdotool key Down xdotool key Left xdotool key Right xdotool key Return # Use sleep to wait sleep 0."/>
+<meta name="twitter:title" content="Right to repair, why you should care"/>
+<meta name="twitter:description" content="test"/>
 
-<meta property="og:title" content="Xdotool script examples" />
-<meta property="og:description" content="Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&rsquo;s usage in a shell script.
-# Type ABC xdotool key A xdotool key B xdotool key C # Tab 3 times xdotool key Tab xdotool key Tab xdotool key Tab # Type 20 xdotool key 2 xdotool key 0 xdotool key Down xdotool key Left xdotool key Right xdotool key Return # Use sleep to wait sleep 0." />
+<meta property="og:title" content="Right to repair, why you should care" />
+<meta property="og:description" content="test" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jchai01.github.io/posts/xdodool-scripts-example/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-02-10T02:04:09+00:00" />
-<meta property="article:modified_time" content="2024-02-10T02:04:09+00:00" />
+<meta property="og:url" content="https://jchai01.github.io/posts/right-to-repair/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-12T23:47:06+01:00" />
+<meta property="article:modified_time" content="2024-04-12T23:47:06+01:00" />
 
 
 
 
 
-<link rel="canonical" href="https://jchai01.github.io/posts/xdodool-scripts-example/">
+<link rel="canonical" href="https://jchai01.github.io/posts/right-to-repair/">
 
 
 <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
@@ -163,8 +160,8 @@ if (!doNotTrack) {
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://jchai01.github.io/posts/xdodool-scripts-example/">
-              Xdotool script examples
+            <a class="title-link" href="https://jchai01.github.io/posts/right-to-repair/">
+              Right to repair, why you should care
             </a>
           </h1>
         </div>
@@ -172,34 +169,24 @@ if (!doNotTrack) {
           <div class="date">
             <span class="posted-on">
               <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime="2024-02-10T02:04:09Z">
-                February 10, 2024
+              <time datetime="2024-04-12T23:47:06&#43;01:00">
+                April 12, 2024
               </time>
             </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
-              One-minute read
+              2-minute read
             </span>
           </div>
           
           <div class="categories">
   <i class="fa fa-folder" aria-hidden="true"></i>
-    <a href="/categories/linux/">Linux</a>
-      <span class="separator">•</span>
-    <a href="/categories/automation/">automation</a></div>
+    <a href="/categories/blog/">blog</a></div>
 
           <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
-      <a href="/tags/xdotool/">xdotool</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/tags/linux/">Linux</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/tags/automation/">automation</a>
+      <a href="/tags/blog/">blog</a>
     </span></div>
 
         </div>
@@ -207,50 +194,62 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-        <p>Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&rsquo;s usage in a shell script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># Type ABC</span>
-xdotool key A
-xdotool key B
-xdotool key C
+        <h1 id="you-will-own-nothing-in-the-future-software-locks">
+  You will own nothing in the future (Software locks)
+  <a class="heading-link" href="#you-will-own-nothing-in-the-future-software-locks">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>If I paid for the product, I should have full ownership and be allowed to do anything I want with the product. Companies should not dictate how I should be using it, this includes installation of custom software. It is almost impossible to use a modern smartphone today without a Google or Apple account.</p>
+<p>Software locks is used to prevent repairs which is proven by Huge Jeffrey&rsquo;s videos, where he would assess the repairability of phones by performing a teardown of 2 identical phone and swapping the authentic parts. More often than not, the software detects that the hardware is tampered with and refuses to work. This serialization of parts (parts married to the PCB board, preventing replacements) is a common practice and threatens independent repairs. Apparently, you can&rsquo;t even replace a sleep sensor on Apple&rsquo;s mac book now.</p>
+<p>DRM - imagine that you now need to jailbreak a car you own to keep your ass warm
+Tesla car locks also lock down features with software. Yes that feature is available in the car, the hardware is capable of performing that task but it&rsquo;s block by the software unless you pay a certain amount of money to unlock that feature. Would you feel like you fully own that car after paying a huge sum of money?</p>
+<p>the john deere case</p>
+<h2 id="planned-obsolescence">
+  Planned obsolescence
+  <a class="heading-link" href="#planned-obsolescence">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Companies plan when their product get&rsquo;s obsolete, by deliberating slowing down phones, which have been caught in apple products.</p>
+<h2 id="e-waste">
+  E-waste
+  <a class="heading-link" href="#e-waste">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>unauthorized repair shops cant be authorized.
+farm equipment have to be thrown away, company who makes it is violating the rule but because no one is enforcing etc, they get to do all these.</p>
+<p>Once upon a time, any electronics device you bought would come with a schematic, documenting it&rsquo;s inner workings. Now, just try to replace a battery on your laptop and you would be faced with a bunch of roadblocks; proprietary software, adhesives,  Nowadays, it&rsquo;s pretty involved just to replace a battery from say, a laptop.</p>
+<p>nowadays, product is locked down with adhesive. Apple, one of the biggest anti repair company invented a mechanically inferior screw called the pentalope screw just to keep people out of the hardware.</p>
+<p>Products are no longer repairable anymore.</p>
+<h1 id="learn-more">
+  Learn more
+  <a class="heading-link" href="#learn-more">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="louis-rossman">
+  Louis Rossman
+  <a class="heading-link" href="#louis-rossman">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A repair and right to repair activist who owns a repair shop</p>
+<h2 id="huge-jeffrey">
+  Huge Jeffrey
+  <a class="heading-link" href="#huge-jeffrey">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Teardown of all sorts of equipment and compare their repairibility.</p>
 
-<span style="color:#007f7f"># Tab 3 times</span>
-xdotool key Tab
-xdotool key Tab
-xdotool key Tab
-
-<span style="color:#007f7f"># Type 20</span>
-xdotool key <span style="color:#ff0;font-weight:bold">2</span>
-xdotool key <span style="color:#ff0;font-weight:bold">0</span>
-
-xdotool key Down
-xdotool key Left
-xdotool key Right
-xdotool key Return
-
-<span style="color:#007f7f"># Use sleep to wait</span>
-sleep 0.5
-
-<span style="color:#007f7f"># Multiple keys</span>
-xdotool key ctrl+c
-xdotool key Alt+Tab
-xdotool key ctrl+f
-xdotool key ctrl+v
-xdotool key enter
-xdotool key super+e
-
-<span style="color:#007f7f"># Loops</span>
-<span style="color:#fff;font-weight:bold">for</span> n in {1..1}; 
-<span style="color:#fff;font-weight:bold">do</span>
-    xdotool key ctrl+c
-    xdotool key Alt+Tab
-
-	<span style="color:#007f7f"># Inner loop</span>
-    <span style="color:#fff;font-weight:bold">for</span> n in {1..8}; 
-    <span style="color:#fff;font-weight:bold">do</span>
-        xdotool key Shift_L+Right
-    <span style="color:#fff;font-weight:bold">done</span>
-<span style="color:#fff;font-weight:bold">done</span>
-</code></pre></div>
       </div>
 
 

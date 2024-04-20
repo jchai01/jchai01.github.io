@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Feb 2024 02:04:09 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Apr 2024 23:47:06 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Right to repair, why you should care</title>
+      <link>https://jchai01.github.io/posts/right-to-repair/</link>
+      <pubDate>Fri, 12 Apr 2024 23:47:06 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/right-to-repair/</guid>
+      <description>You will own nothing in the future (Software locks)  Link to heading   If I paid for the product, I should have full ownership and be allowed to do anything I want with the product. Companies should not dictate how I should be using it, this includes installation of custom software. It is almost impossible to use a modern smartphone today without a Google or Apple account.
+Software locks is used to prevent repairs which is proven by Huge Jeffrey&amp;rsquo;s videos, where he would assess the repairability of phones by performing a teardown of 2 identical phone and swapping the authentic parts.</description>
+    </item>
+    
     <item>
       <title>Xdotool script examples</title>
       <link>https://jchai01.github.io/posts/xdodool-scripts-example/</link>
