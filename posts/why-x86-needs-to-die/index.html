@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Why x86 needs to die, summary · Home
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Joseph Chai">
+<meta name="description" content="This blog is a compilation of summaries and insights gathered from this video by ThePrimeagen , where he reacts to an article titled &ldquo;Why x86 needs to die&rdquo;  together with hardware expert Casey Muratori. A counter-article  is also available at Chip and Cheese , a site that blogs about micro analysis stuff, and it&rsquo;s recommended by Casey.
+Why are register names so weird? (4:35)  Link to heading   In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &hellip;) but not the first half (they are not named r0, r1, r2 &hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Why x86 needs to die, summary"/>
+<meta name="twitter:description" content="This blog is a compilation of summaries and insights gathered from this video by ThePrimeagen , where he reacts to an article titled &ldquo;Why x86 needs to die&rdquo;  together with hardware expert Casey Muratori. A counter-article  is also available at Chip and Cheese , a site that blogs about micro analysis stuff, and it&rsquo;s recommended by Casey.
+Why are register names so weird? (4:35)  Link to heading   In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &hellip;) but not the first half (they are not named r0, r1, r2 &hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D."/>
+
+<meta property="og:title" content="Why x86 needs to die, summary" />
+<meta property="og:description" content="This blog is a compilation of summaries and insights gathered from this video by ThePrimeagen , where he reacts to an article titled &ldquo;Why x86 needs to die&rdquo;  together with hardware expert Casey Muratori. A counter-article  is also available at Chip and Cheese , a site that blogs about micro analysis stuff, and it&rsquo;s recommended by Casey.
+Why are register names so weird? (4:35)  Link to heading   In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &hellip;) but not the first half (they are not named r0, r1, r2 &hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jchai01.github.io/posts/why-x86-needs-to-die/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-25T00:03:12+01:00" />
+<meta property="article:modified_time" content="2024-04-25T00:03:12+01:00" />
+
+
+
+
+
+<link rel="canonical" href="https://jchai01.github.io/posts/why-x86-needs-to-die/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <head>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWPVNC5R8Z%20"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-DWPVNC5R8Z ', { 'anonymize_ip': false });
+}
+</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-DWPVNC5R8Z ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Home
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jchai01.github.io/posts/why-x86-needs-to-die/">
+              Why x86 needs to die, summary
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-04-25T00:03:12&#43;01:00">
+                April 25, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              8-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/blog/">blog</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>This blog is a compilation of summaries and insights gathered from <a href="https://www.youtube.com/watch?v=xCBrtopAG80"  class="external-link" target="_blank" rel="noopener"> this video by ThePrimeagen </a>, where he reacts to an article titled <a href="https://hackaday.com/2024/03/21/why-x86-needs-to-die/"  class="external-link" target="_blank" rel="noopener"> &ldquo;Why x86 needs to die&rdquo; </a> together with hardware expert Casey Muratori. A <a href="https://chipsandcheese.com/2024/03/27/why-x86-doesnt-need-to-die/"  class="external-link" target="_blank" rel="noopener"> counter-article </a> is also available at <a href="https://chipsandcheese.com/"  class="external-link" target="_blank" rel="noopener"> Chip and Cheese </a>, a site that blogs about micro analysis stuff, and it&rsquo;s recommended by Casey.</p>
+<h1 id="why-are-register-names-so-weird-435">
+  Why are register names so weird? (4:35)
+  <a class="heading-link" href="#why-are-register-names-so-weird-435">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &hellip;) but not the first half (they are not named r0, r1, r2 &hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D. From there, it evolves as the bit increases. Let&rsquo;s take register A, for example:</p>
+<ul>
+<li>8-bit CPU: A</li>
+<li>16-bit CPU: AX, also known as A Extended, has 2 parts (AL and AH, which stand for low and high, respectively).</li>
+<li>32-bit CPU: EAX, bottom 16 bits can be accessed with AX. EAX gives you the full 32-bit.</li>
+<li>64-bit CPU: RAX</li>
+</ul>
+<h1 id="why-little-endian-855">
+  Why little endian? (8:55)
+  <a class="heading-link" href="#why-little-endian-855">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Endianness refers to byte order, not bits. Network byte order uses big endian, which is the natural way in which humans read something (left to right), where the most significant bytes are read first. Almost all hardware uses little endian (opposite of big endian).</p>
+<p>Casey&rsquo;s explanation goes something along the lines of:
+If we have an address of a particular byte position in memory, the address stays the same no matter how big the value that it is pointing to gets, but this is not the case for big endian as it &ldquo;grows in the other direction.&rdquo;</p>
+<h1 id="supporting-8086-real-mode-isnt-a-big-deal-1030">
+  Supporting 8086 real mode isn&rsquo;t a big deal (10:30).
+  <a class="heading-link" href="#supporting-8086-real-mode-isnt-a-big-deal-1030">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Virtual address space did not exist back then, and direct memory addresses were used (which is what 8086 real mode in modern x86 does). Virtual address spaces don&rsquo;t necessarily map to physical RAM, and this gives modern CPUs many features, such as swapping processes. Casey argues that there are not really additional things to do to support direct physical addressing and that the original author could pick a better complaint, such as having to have more &ldquo;segment registers.&rdquo;.</p>
+<p>Prime points out that the article sounds legit due to software usually being worse when trying to support backward compatibility; he used NodeJS vs. Bun as an example, saying Bun has better performance as it ignores supporting backward compatibilities. Casey mentioned that it&rsquo;s not the case for hardware. x86 gives you both the fast performance of &ldquo;Bun&rdquo; and, whenever it can&rsquo;t, the slow emulation of &ldquo;NodeJS&rdquo; if needed.</p>
+<h1 id="von-neumann-architecture-1430">
+  Von Neumann architecture (14:30)
+  <a class="heading-link" href="#von-neumann-architecture-1430">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>A CPU with a Von Neumann architecture would have the program code and program data residing in the same address space. Von Neumann is considered to be the greatest computer science person.</p>
+<ul>
+<li>Prime recommends the novel &ldquo;Three Body Problems.&rdquo;.</li>
+<li>Casey mentions a famous biography of him called &ldquo;The Man from the Future.&rdquo;.</li>
+</ul>
+<h1 id="cpu-execution-breakdown-1822">
+  CPU execution breakdown (18:22)
+  <a class="heading-link" href="#cpu-execution-breakdown-1822">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>A single instruction, for example, add, does not equate to doing one operation. It could be broken down into many operations known as micro-ops. Casey mentions that all modern processes use micro-ops; even RISC architectures such as ARM do not always map instruction to operation one to one.</p>
+<h2 id="why-an-instruction-may-seem-like-it-only-takes-one-clock-cycle-to-complete-pipelining-2440">
+  Why an instruction may seem like it only takes one clock cycle to complete: pipelining (24:40)
+  <a class="heading-link" href="#why-an-instruction-may-seem-like-it-only-takes-one-clock-cycle-to-complete-pipelining-2440">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Casey gave an example where the ADD instruction takes 14 clock cycles to complete. The clock rate has to be slowed down in order for it to complete in 1 clock cycle, as there is a limit to how much can be accomplished in 1 clock cycle. We want to maintain high clock rates so the stages of ADD are overlapped (fetching, decoding, turning it into micro-ops, etc.).</p>
+<p>Imagine putting an ADD instruction on every clock cycle. After 14 clock cycles, each clock cycle returns the result of ADD, making it seem like only 1 clock cycle is needed.</p>
+<h2 id="cpu-pipelining-washer-and-dryer-analogy-2650">
+  CPU pipelining, washer and dryer analogy (26:50)
+  <a class="heading-link" href="#cpu-pipelining-washer-and-dryer-analogy-2650">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>An example of how the CPU utilizes micro-ops to maximize each clock cycle. Which one is better?</p>
+<ul>
+<li>washer and dryer as one unit, which takes 2 hours to complete.</li>
+<li>washer and dryer as separate units, which takes 1 hour to complete each task.</li>
+</ul>
+<p>It doesn&rsquo;t matter as both take 2 hours, right? Wrong! (from a CPU standpoint)
+While the clothes are in the dryer, a second batch of clothes can be placed in the washer. 2 batches of clothes now took 3 hours instead of 4.</p>
+<h2 id="out-of-order-execution-and-superscalar-2825">
+  Out-of-Order Execution and Superscalar (28:25)
+  <a class="heading-link" href="#out-of-order-execution-and-superscalar-2825">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Out of order, execute micro-ops in a non-sequential manner if they are independent of each other. Superscalar just means executing multiple micro-ops at once. </p>
+<h1 id="speculative-execution-spectre-and-meltdown-3048">
+  Speculative Execution, Spectre and Meltdown (30:48)
+  <a class="heading-link" href="#speculative-execution-spectre-and-meltdown-3048">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Speculative execution runs the code in the IF branch before knowing if the IF statement results in true. The state of the program is reversed if it&rsquo;s false. </p>
+<p>Casey mentioned that spectre and meltdown are caused by speculative execution, but the M2 bug has nothing to do with speculative execution; branch-free code will still be hit by the M2 bug. It is caused by the memory prefetcher.</p>
+<h1 id="address-generation-unit-agu-3320">
+  Address Generation Unit (AGU) (33:20)
+  <a class="heading-link" href="#address-generation-unit-agu-3320">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>When memory access is needed, an effective address calculation takes place to figure out where to get the memory from. The number of AGUs determines how many memory fetches can be issued per clock cycle. If you have three AGUs, you can issue three reads in one cycle.</p>
+<h1 id="arithmetic-logic-unit-alu-3450">
+  Arithmetic Logic Unit (ALU) (34:50)
+  <a class="heading-link" href="#arithmetic-logic-unit-alu-3450">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>In a modern CPU, the ALU has a list of operations it can do, e.g., a particular operation can do integer multiplication. They are optimized for specific operations (XOR, multiply, etc.), as shown in uops.info. </p>
+<h1 id="uopsinfo-3540">
+  uops.info (35:40)
+  <a class="heading-link" href="#uopsinfo-3540">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><a href="http://uops.info"  class="external-link" target="_blank" rel="noopener">uops.info</a> shows the different lists of operations in the ALU. For example, under tables-&gt;search for ADD, it shows a list of all the permutations there are for ADD.</p>
+<ul>
+<li>ADD(R32, R32): Add a 32-bit register to another 32-bit register.</li>
+<li>ADD(R32, M32): Fetch the value located at memory location M32 and add it to the 32-bit register. (I think that&rsquo;s what he meant.)</li>
+<li>ADD(M64, I8): 64-bit memory location, added to an 8-bit immediate value.</li>
+</ul>
+<p>Over at the port section of the table, an example shows ADD (M64, I8):</p>
+<p>ADD(M64, I8) -&gt; 1<em>p0156B+1</em>p23A+1<em>p49+1</em>p78</p>
+<ul>
+<li>The &ldquo;0156&rdquo; portion shows the port number on which the ALU/AGU can perform these micro-ops. In this case, port numbers 0, 1, 5, and 6 have the ADD unit on them. At any given clock cycle, there are four ports to choose from.</li>
+<li>The + symbol separates the micro-ops. This instruction takes 4 micro-ops.</li>
+<li>Micro-ops pile up, waiting for the scheduler (a chip has multiple schedulers) to place them in the appropriate ports. Out-of-order execution is implemented here.</li>
+</ul>
+<h1 id="number-of-instructions-supported-is-not-a-big-deal-4530">
+  Number of instructions supported is not a big deal (45:30)
+  <a class="heading-link" href="#number-of-instructions-supported-is-not-a-big-deal-4530">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>CPUs are divided into many parts now; the fetch decode execute cycle that generates those micro-ops (AKA frontend) is independent from the &ldquo;backend,&rdquo; and adding more instructions does not affect the actual execution engine of the CPU at all. It does matter a little, but it depends on how specific the permutations are.</p>
+<h1 id="why-certain-oddball-features-exist-in-the-cpu-4835">
+  Why certain oddball features exist in the CPU (48:35)
+  <a class="heading-link" href="#why-certain-oddball-features-exist-in-the-cpu-4835">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Casey mentions the support of critical features such as video compression/decompression and AI processing, implementing them at the hardware level improves performance, and Intel has customers that would greatly benefit from them. He mentions that RISC-V would end up in the same boat as Intel x86 processors in terms of complexity if they were to implement those mentioned features too, and extensions such as &ldquo;RISC-V-video-decompression&rdquo; would exist.</p>
+<h1 id="8086-is-simple-misconception-4945">
+  &ldquo;8086 is simple&rdquo; misconception (49:45)
+  <a class="heading-link" href="#8086-is-simple-misconception-4945">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Every single instruction is microcoded in 8086. It is not simple.</p>
+<h1 id="why-is-the-term-die-used-5040">
+  Why is the term &ldquo;die&rdquo; used? (50:40)
+  <a class="heading-link" href="#why-is-the-term-die-used-5040">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Casey has no idea either, but he can tell you what it is: chips are being manufactured with a litographic process where photons are being shot at a wafer of silicon. When it’s cut out, it’s called the die. Could be from the word diecast.</p>
+<h1 id="what-actually-matters-decoding-complexity-5548---end">
+  What actually matters? Decoding complexity (55:48 - end)
+  <a class="heading-link" href="#what-actually-matters-decoding-complexity-5548---end">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<ul>
+<li>Casey states that RISC-V is popular because it&rsquo;s free, not because of its simplicity. ARM is better than RISC-V in terms of simplicity; if RISC-V features were extended to match ARM, both chips would be similar.</li>
+<li>Superscalar, out-of-order, and speculative execution are not unique to x86. All modern CPUs are using them, including the ARM chips in our phones.</li>
+</ul>
+<p>Casey mentions that decoding complexity is a valid argument and has nothing to do with RISC vs. CISC. Instructions for the x86 are encoded badly due to legacy or bad choices that were inherited, and decoding these instructions is the bottleneck. All modern x86 chips are taking up more space for decoding than they should, and Intel already has proposals to fix these encoding issues.</p>
+<h1 id="my-take">
+  My take
+  <a class="heading-link" href="#my-take">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>The main advantage of RISC architecture is its efficiency, which leads to low power consumption. This improves battery life, and fans are no longer required due to the low heat output.</p>
+<p>If the above-mentioned decoding complexity is somehow resolved for x86/x64, will it match the efficiencies of, say, the ARM or M1 chip? Or will the opposite occur? RISC architecture gains popularity and starts to support more features for compatibility reasons; complexity grows, and eventually it matches CISC architecture chips in terms of efficiency.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script>
+  window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+          DISQUS.reset({ reload: true, config: disqus_config });
+        }
+    });
+</script>
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Joseph Chai 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
+  
+
+  
+
+  
+
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWPVNC5R8Z%20"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-DWPVNC5R8Z ', { 'anonymize_ip': false });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
