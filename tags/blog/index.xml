@@ -6,7 +6,18 @@
     <description>Recent content in blog on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Apr 2024 00:03:12 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Apr 2024 09:03:06 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacker Ethics to live by</title>
+      <link>https://jchai01.github.io/posts/hacker-ethics/</link>
+      <pubDate>Thu, 25 Apr 2024 09:03:06 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/hacker-ethics/</guid>
+      <description>Book reference: Hackers: Heroes of the Computer Evolution (1984) by Steven Levy
+In this post, you will be convinced why the hacker ethic is really the only one true ethic to live by, and you should just abandon all beliefs and become an anti-proprietary-anti-bigtech-Richard-Stallman&amp;rsquo;s-reincarnate open source zealot.
+The Definition You Did Not Know  Link to heading   Hacker was never a pejorative term. It has a second meaning that is loosely defined, but these three definitions summarize it well:</description>
+    </item>
+    
     <item>
       <title>Why x86 needs to die, summary</title>
       <link>https://jchai01.github.io/posts/why-x86-needs-to-die/</link>
