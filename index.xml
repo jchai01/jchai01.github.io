@@ -6,14 +6,27 @@
     <description>Recent content on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Apr 2024 08:21:00 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 May 2024 18:41:41 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tmuxifier Guide</title>
+      <link>https://jchai01.github.io/posts/tmuxifier-guide/</link>
+      <pubDate>Fri, 03 May 2024 18:41:41 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/tmuxifier-guide/</guid>
+      <description>If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.
+Pre-requisite: Tmux
+I have set the alias alias tm=tmuxifier in this guide.
+Tmuxifier Path  Link to heading    To delete/rename sessions, go to this path and manipulate the files. (not sure why there isn&amp;rsquo;t a command for these operations) If you have created a session before, you can cd into this path and duplicate the files etc, to create your sessions too.</description>
+    </item>
+    
     <item>
       <title>My Jackie Chan Obsession is Justified</title>
       <link>https://jchai01.github.io/posts/jackie-chan/</link>
       <pubDate>Sun, 28 Apr 2024 08:21:00 +0100</pubDate>
       
       <guid>https://jchai01.github.io/posts/jackie-chan/</guid>
-      <description>In this post, I will attempt to gaslight you into thinking that I am perfectly normal. You will learn various reasons why Jackie is superior and an ideal role model, and perhaps start bowing down too. These reasons do not include the bogus &amp;ldquo;he does all his own stunts&amp;rdquo; nonsense. Shame on him for claiming that, though, and on everyone who enables that manufactured perception, but that&amp;rsquo;s a story for another day.</description>
+      <description>In this post, I will attempt to gaslight you into thinking that I am perfectly normal. You will learn various reasons why Jackie is superior and an ideal role model, and perhaps start bowing down too. These reasons do not include the bogus &amp;ldquo;he does all his own stunts&amp;rdquo; nonsense. Shame on him for claiming that, though, but that&amp;rsquo;s a story for another day.
+He is a polymath  Link to heading   He does it all: directing, acting, scriptwriting, editing, choreography, stunts, and more.</description>
     </item>
     
     <item>
