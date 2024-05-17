@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>browser on Home</title>
+    <link>https://jchai01.github.io/tags/browser/</link>
+    <description>Recent content in browser on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 May 2024 23:24:29 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Must-have Browser Add-Ons</title>
+      <link>https://jchai01.github.io/posts/browser-add-ons/</link>
+      <pubDate>Tue, 14 May 2024 23:24:29 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/browser-add-ons/</guid>
+      <description>uBlock Origin (Best Ad-Blocker)  Link to heading   SponsorBlock  Link to heading   Automatically skips sponsored segment/intro/outro and more. Data is crowdsourced.
+Bypass Paywalls Clean  Link to heading   Read articles from sites like Medium. Not available in plugin stores, need to download from GitHub and import it. For e.g. .xpi file for Firefox.
+Dark Reader  Link to heading   Enable dark mode for any site.</description>
+    </item>
+    
+  </channel>
+</rss>

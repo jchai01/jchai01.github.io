@@ -6,7 +6,62 @@
     <description>Recent content in Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 May 2024 18:41:41 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 May 2024 15:16:42 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postgres - PostGIS - Geoserver setup troubleshoot</title>
+      <link>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</link>
+      <pubDate>Wed, 15 May 2024 15:16:42 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</guid>
+      <description>Postgres  Link to heading   After downloading postgresql, login with psql
+psql -h localhost -U postgres
+SHOW hba_file; The command will reveal a path to a file, edit that file with sudo:
+sudo -i In the file, replace all the peer/md5 column with trust. Reference https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
+PostGIS  Link to heading   sudo apt install postgis postgresql-postgis
+Run in PGAdmin or command line, run this query before importing any data: CREATE EXTENSION postgis;</description>
+    </item>
+    
+    <item>
+      <title>nvim.surround overwrite default white space behaviour</title>
+      <link>https://jchai01.github.io/posts/nvim-surround/</link>
+      <pubDate>Wed, 15 May 2024 01:43:37 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/nvim-surround/</guid>
+      <description> Using ( in nvim.surround surrounds word with white space like so: ( word ). ) have to be used instead.  The following overwrites the default:
+return { { &amp;#34;kylechui/nvim-surround&amp;#34;, -- tag = &amp;#34;*&amp;#34;, -- Use for stability; omit to use `main` branch for the latest features config = function() require(&amp;#34;nvim-surround&amp;#34;).setup { surrounds = { [&amp;#34;(&amp;#34;] = { add = function() return { { &amp;#34;(&amp;#34; }, { &amp;#34;)&amp;#34; } } end, }, [&amp;#34;{&amp;#34;] = { add = function() return { { &amp;#34;{&amp;#34; }, { &amp;#34;}&amp;#34; } } end, }, [&amp;#34;[&amp;#34;] = { add = function() return { { &amp;#34;[&amp;#34; }, { &amp;#34;]&amp;#34; } } end, }, [&amp;#34;&amp;lt;&amp;#34;] = { add = function() return { { &amp;#34;&amp;lt;&amp;#34; }, { &amp;#34;&amp;gt;&amp;#34; } } end, }, }, } end, }, } </description>
+    </item>
+    
+    <item>
+      <title>Must-have Browser Add-Ons</title>
+      <link>https://jchai01.github.io/posts/browser-add-ons/</link>
+      <pubDate>Tue, 14 May 2024 23:24:29 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/browser-add-ons/</guid>
+      <description>uBlock Origin (Best Ad-Blocker)  Link to heading   SponsorBlock  Link to heading   Automatically skips sponsored segment/intro/outro and more. Data is crowdsourced.
+Bypass Paywalls Clean  Link to heading   Read articles from sites like Medium. Not available in plugin stores, need to download from GitHub and import it. For e.g. .xpi file for Firefox.
+Dark Reader  Link to heading   Enable dark mode for any site.</description>
+    </item>
+    
+    <item>
+      <title>Setup SSH in Github</title>
+      <link>https://jchai01.github.io/posts/ssh-with-github/</link>
+      <pubDate>Tue, 14 May 2024 23:09:51 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/ssh-with-github/</guid>
+      <description>Create SSH key  Link to heading   ssh-keygen -o -t rsa -C &amp;quot;any comment”
+ The -o flag forces the tool to generate SSH keys with the OpenSSH format. The -t flag specifies the type of SSH keys to create. The -C flag allows for comments that get added as metadata at the end of the public key. Key generated to ~/.ssh folder  View SSH key  Link to heading   cat ~/.</description>
+    </item>
+    
+    <item>
+      <title>Redshift</title>
+      <link>https://jchai01.github.io/posts/redshift/</link>
+      <pubDate>Tue, 14 May 2024 21:57:33 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/redshift/</guid>
+      <description>With Redshift, you can set brightness level lower than the minumum.
+ -O Temperature level (lower = warmer, higher = cooler) -b Brightness level (0 - 1)  redshift -oP -O 3500 -b .5 Note that calling xrandr on its own will cancel any redshift effect. The -P option of redshift also resets the screen brightness and color instead of incrementally superimposing adjustments.</description>
+    </item>
+    
     <item>
       <title>Tmuxifier Guide</title>
       <link>https://jchai01.github.io/posts/tmuxifier-guide/</link>
@@ -14,13 +69,13 @@
       
       <guid>https://jchai01.github.io/posts/tmuxifier-guide/</guid>
       <description>If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.
-Pre-requisite: Tmux
-I have set the alias alias tm=tmuxifier in this guide.
+Pre-requisite: Tmux (My TMUX config)
+I have set the alias alias t=tmuxifier in this guide.
 Tmuxifier Path  Link to heading    To delete/rename sessions, go to this path and manipulate the files. (not sure why there isn&amp;rsquo;t a command for these operations) If you have created a session before, you can cd into this path and duplicate the files etc, to create your sessions too.</description>
     </item>
     
     <item>
-      <title>My Jackie Chan Obsession is Justified</title>
+      <title>Why my Jackie Chan Obsession is Justified</title>
       <link>https://jchai01.github.io/posts/jackie-chan/</link>
       <pubDate>Sun, 28 Apr 2024 08:21:00 +0100</pubDate>
       
@@ -97,6 +152,17 @@ pyenv global 3.8 Reset back to default:</description>
     </item>
     
     <item>
+      <title>AstroNvim changes</title>
+      <link>https://jchai01.github.io/posts/changes-to-astrovim-config/</link>
+      <pubDate>Wed, 03 Jan 2024 17:34:20 +0000</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/changes-to-astrovim-config/</guid>
+      <description>Show hidden files in Neo-Tree by default. Add whichwrap scrolloff = 15  Plugins  Link to heading   debugprint  Link to heading   Automatically adds debug statements.
+g?v print statement variable at cursor position, after current line. g?V print statement variable at cursor position, before current line. g?p print statement after current line. g?P print statement before current line.
+surround.nvim  Link to heading   vim-signatures  Link to heading   View vim marks.</description>
+    </item>
+    
+    <item>
       <title>Automate Image Resize with Padding using ImageMagick</title>
       <link>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</link>
       <pubDate>Wed, 03 Jan 2024 02:53:14 +0000</pubDate>
@@ -140,17 +206,14 @@ bash -c &amp;#34;if [[ $(gsettings get org.</description>
     </item>
     
     <item>
-      <title>Setup latest NeoVim on Ubuntu with AppImage</title>
+      <title>Setup Latest NeoVim Guide</title>
       <link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link>
       <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
       
       <guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid>
-      <description>Download NeoVim AppImage from GitHub release page.
-Rename nvim.appimage to nvim
-mv nvim.appimage nvim Set the permission:
-chmod +x nvim Install fuse2 library if it is required to run the appimage
-sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.
-sudo mv nvim /usr/local/bin Optional  Link to heading   Install AstroVim</description>
+      <description>Executable  Link to heading    Download the NeoVim tar file. Extract and copy folder into /opt/  sudo mv nvim-folder /opt  Create symbolic link/symlink to /usr/local/bin  sudo ln -s /opt/nvim-some-version/nvim /usr/local/bin AppImages  Link to heading     Download NeoVim AppImage from GitHub release page.
+  Rename nvim.appimage to nvim
+  mv nvim.appimage nvim  Set the permission:  chmod +x nvim  Install fuse2 library if it is required to run the appimage  sudo apt install libfuse2  Copy from download folder to /usr/local/bin path  /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description>
     </item>
     
     <item>
@@ -166,13 +229,14 @@ config file path:
     </item>
     
     <item>
-      <title>Google search highlighted text</title>
+      <title>Google search highlighted text hotkey</title>
       <link>https://jchai01.github.io/posts/google-search-highlighted-text/</link>
       <pubDate>Tue, 26 Dec 2023 22:42:42 +0000</pubDate>
       
       <guid>https://jchai01.github.io/posts/google-search-highlighted-text/</guid>
       <description>#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &amp;#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&amp;#34; Bind it to a shortcut key, mine is super + s.
-/home/user/Desktop/scripts/google-search.sh </description>
+/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
+sh -c &amp;#39;firefox &amp;#34;https://www.google.com/search?q=$(xclip -o)&amp;#34;&amp;#39; </description>
     </item>
     
     <item>

@@ -3,7 +3,7 @@
 
 <head>
   <title>
-  Google search highlighted text hotkey · Home
+  AstroNvim changes · Home
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,31 +13,31 @@
 
 
 <meta name="author" content="Joseph Chai">
-<meta name="description" content="#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&#34; Bind it to a shortcut key, mine is super &#43; s.
-/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
-sh -c &#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39; ">
+<meta name="description" content="Show hidden files in Neo-Tree by default. Add whichwrap scrolloff = 15  Plugins  Link to heading   debugprint  Link to heading   Automatically adds debug statements.
+g?v print statement variable at cursor position, after current line. g?V print statement variable at cursor position, before current line. g?p print statement after current line. g?P print statement before current line.
+surround.nvim  Link to heading   vim-signatures  Link to heading   View vim marks.">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Google search highlighted text hotkey"/>
-<meta name="twitter:description" content="#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&#34; Bind it to a shortcut key, mine is super &#43; s.
-/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
-sh -c &#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39; "/>
+<meta name="twitter:title" content="AstroNvim changes"/>
+<meta name="twitter:description" content="Show hidden files in Neo-Tree by default. Add whichwrap scrolloff = 15  Plugins  Link to heading   debugprint  Link to heading   Automatically adds debug statements.
+g?v print statement variable at cursor position, after current line. g?V print statement variable at cursor position, before current line. g?p print statement after current line. g?P print statement before current line.
+surround.nvim  Link to heading   vim-signatures  Link to heading   View vim marks."/>
 
-<meta property="og:title" content="Google search highlighted text hotkey" />
-<meta property="og:description" content="#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&#34; Bind it to a shortcut key, mine is super &#43; s.
-/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
-sh -c &#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39; " />
+<meta property="og:title" content="AstroNvim changes" />
+<meta property="og:description" content="Show hidden files in Neo-Tree by default. Add whichwrap scrolloff = 15  Plugins  Link to heading   debugprint  Link to heading   Automatically adds debug statements.
+g?v print statement variable at cursor position, after current line. g?V print statement variable at cursor position, before current line. g?p print statement after current line. g?P print statement before current line.
+surround.nvim  Link to heading   vim-signatures  Link to heading   View vim marks." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jchai01.github.io/posts/google-search-highlighted-text/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-12-26T22:42:42+00:00" />
-<meta property="article:modified_time" content="2023-12-26T22:42:42+00:00" />
+<meta property="og:url" content="https://jchai01.github.io/posts/changes-to-astrovim-config/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-03T17:34:20+00:00" />
+<meta property="article:modified_time" content="2024-01-03T17:34:20+00:00" />
 
 
 
 
 
-<link rel="canonical" href="https://jchai01.github.io/posts/google-search-highlighted-text/">
+<link rel="canonical" href="https://jchai01.github.io/posts/changes-to-astrovim-config/">
 
 
 <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
@@ -166,8 +166,8 @@ if (!doNotTrack) {
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://jchai01.github.io/posts/google-search-highlighted-text/">
-              Google search highlighted text hotkey
+            <a class="title-link" href="https://jchai01.github.io/posts/changes-to-astrovim-config/">
+              AstroNvim changes
             </a>
           </h1>
         </div>
@@ -175,8 +175,8 @@ if (!doNotTrack) {
           <div class="date">
             <span class="posted-on">
               <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime="2023-12-26T22:42:42Z">
-                December 26, 2023
+              <time datetime="2024-01-03T17:34:20Z">
+                January 3, 2024
               </time>
             </span>
             <span class="reading-time">
@@ -192,22 +192,54 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-        <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0f0;font-weight:bold">#!/bin/bash
-</span><span style="color:#0f0;font-weight:bold"></span>
-<span style="color:#007f7f"># Google search the highlighted text (requires: xdg-utils, xsel)</span>
-xdg-open <span style="color:#0ff;font-weight:bold">&#34;[https://google.com/search?q=</span><span style="color:#fff;font-weight:bold">$(</span>xsel<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">](https://google.com/search?q=</span><span style="color:#fff;font-weight:bold">$(</span>xsel<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">)&#34;</span>
-</code></pre></div><p>Bind it to a shortcut key, mine is <code>super + s</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/home/user/Desktop/scripts/google-search.sh
-</code></pre></div><h2 id="update-05142024">
-  Update (05/14/2024)
-  <a class="heading-link" href="#update-05142024">
+        <ul>
+<li>Show hidden files in Neo-Tree by default.</li>
+<li>Add whichwrap</li>
+<li>scrolloff = 15</li>
+</ul>
+<h1 id="plugins">
+  Plugins
+  <a class="heading-link" href="#plugins">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="debugprint">
+  debugprint
+  <a class="heading-link" href="#debugprint">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Just one line will do:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh -c <span style="color:#0ff;font-weight:bold">&#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39;</span>
-</code></pre></div>
+<p>Automatically adds debug statements.</p>
+<p><code>g?v</code> print statement variable at cursor position, after current line.
+<code>g?V</code> print statement variable at cursor position, before current line.
+<code>g?p</code> print statement after current line.
+<code>g?P</code> print statement before current line.</p>
+<h2 id="surroundnvim">
+  surround.nvim
+  <a class="heading-link" href="#surroundnvim">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h2 id="vim-signatures">
+  vim-signatures
+  <a class="heading-link" href="#vim-signatures">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>View vim marks.</p>
+<h1 id="others">
+  others
+  <a class="heading-link" href="#others">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Ensure latest NodeJS is installed, otherwise javascript LSP won’t work. Do not use sudo apt install as it will install older versions.</p>
+
       </div>
 
 

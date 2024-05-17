@@ -3,7 +3,7 @@
 
 <head>
   <title>
-  Google search highlighted text hotkey · Home
+  nvim.surround overwrite default white space behaviour · Home
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,31 +13,28 @@
 
 
 <meta name="author" content="Joseph Chai">
-<meta name="description" content="#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&#34; Bind it to a shortcut key, mine is super &#43; s.
-/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
-sh -c &#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39; ">
+<meta name="description" content=" Using ( in nvim.surround surrounds word with white space like so: ( word ). ) have to be used instead.  The following overwrites the default:
+return { { &#34;kylechui/nvim-surround&#34;, -- tag = &#34;*&#34;, -- Use for stability; omit to use `main` branch for the latest features config = function() require(&#34;nvim-surround&#34;).setup { surrounds = { [&#34;(&#34;] = { add = function() return { { &#34;(&#34; }, { &#34;)&#34; } } end, }, [&#34;{&#34;] = { add = function() return { { &#34;{&#34; }, { &#34;}&#34; } } end, }, [&#34;[&#34;] = { add = function() return { { &#34;[&#34; }, { &#34;]&#34; } } end, }, [&#34;&lt;&#34;] = { add = function() return { { &#34;&lt;&#34; }, { &#34;&gt;&#34; } } end, }, }, } end, }, } ">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Google search highlighted text hotkey"/>
-<meta name="twitter:description" content="#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&#34; Bind it to a shortcut key, mine is super &#43; s.
-/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
-sh -c &#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39; "/>
+<meta name="twitter:title" content="nvim.surround overwrite default white space behaviour"/>
+<meta name="twitter:description" content=" Using ( in nvim.surround surrounds word with white space like so: ( word ). ) have to be used instead.  The following overwrites the default:
+return { { &#34;kylechui/nvim-surround&#34;, -- tag = &#34;*&#34;, -- Use for stability; omit to use `main` branch for the latest features config = function() require(&#34;nvim-surround&#34;).setup { surrounds = { [&#34;(&#34;] = { add = function() return { { &#34;(&#34; }, { &#34;)&#34; } } end, }, [&#34;{&#34;] = { add = function() return { { &#34;{&#34; }, { &#34;}&#34; } } end, }, [&#34;[&#34;] = { add = function() return { { &#34;[&#34; }, { &#34;]&#34; } } end, }, [&#34;&lt;&#34;] = { add = function() return { { &#34;&lt;&#34; }, { &#34;&gt;&#34; } } end, }, }, } end, }, } "/>
 
-<meta property="og:title" content="Google search highlighted text hotkey" />
-<meta property="og:description" content="#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&#34; Bind it to a shortcut key, mine is super &#43; s.
-/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
-sh -c &#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39; " />
+<meta property="og:title" content="nvim.surround overwrite default white space behaviour" />
+<meta property="og:description" content=" Using ( in nvim.surround surrounds word with white space like so: ( word ). ) have to be used instead.  The following overwrites the default:
+return { { &#34;kylechui/nvim-surround&#34;, -- tag = &#34;*&#34;, -- Use for stability; omit to use `main` branch for the latest features config = function() require(&#34;nvim-surround&#34;).setup { surrounds = { [&#34;(&#34;] = { add = function() return { { &#34;(&#34; }, { &#34;)&#34; } } end, }, [&#34;{&#34;] = { add = function() return { { &#34;{&#34; }, { &#34;}&#34; } } end, }, [&#34;[&#34;] = { add = function() return { { &#34;[&#34; }, { &#34;]&#34; } } end, }, [&#34;&lt;&#34;] = { add = function() return { { &#34;&lt;&#34; }, { &#34;&gt;&#34; } } end, }, }, } end, }, } " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jchai01.github.io/posts/google-search-highlighted-text/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-12-26T22:42:42+00:00" />
-<meta property="article:modified_time" content="2023-12-26T22:42:42+00:00" />
+<meta property="og:url" content="https://jchai01.github.io/posts/nvim-surround/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-15T01:43:37+01:00" />
+<meta property="article:modified_time" content="2024-05-15T01:43:37+01:00" />
 
 
 
 
 
-<link rel="canonical" href="https://jchai01.github.io/posts/google-search-highlighted-text/">
+<link rel="canonical" href="https://jchai01.github.io/posts/nvim-surround/">
 
 
 <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
@@ -166,8 +163,8 @@ if (!doNotTrack) {
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://jchai01.github.io/posts/google-search-highlighted-text/">
-              Google search highlighted text hotkey
+            <a class="title-link" href="https://jchai01.github.io/posts/nvim-surround/">
+              nvim.surround overwrite default white space behaviour
             </a>
           </h1>
         </div>
@@ -175,8 +172,8 @@ if (!doNotTrack) {
           <div class="date">
             <span class="posted-on">
               <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime="2023-12-26T22:42:42Z">
-                December 26, 2023
+              <time datetime="2024-05-15T01:43:37&#43;01:00">
+                May 15, 2024
               </time>
             </span>
             <span class="reading-time">
@@ -192,21 +189,35 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-        <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0f0;font-weight:bold">#!/bin/bash
-</span><span style="color:#0f0;font-weight:bold"></span>
-<span style="color:#007f7f"># Google search the highlighted text (requires: xdg-utils, xsel)</span>
-xdg-open <span style="color:#0ff;font-weight:bold">&#34;[https://google.com/search?q=</span><span style="color:#fff;font-weight:bold">$(</span>xsel<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">](https://google.com/search?q=</span><span style="color:#fff;font-weight:bold">$(</span>xsel<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">)&#34;</span>
-</code></pre></div><p>Bind it to a shortcut key, mine is <code>super + s</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/home/user/Desktop/scripts/google-search.sh
-</code></pre></div><h2 id="update-05142024">
-  Update (05/14/2024)
-  <a class="heading-link" href="#update-05142024">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<p>Just one line will do:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh -c <span style="color:#0ff;font-weight:bold">&#39;firefox &#34;https://www.google.com/search?q=$(xclip -o)&#34;&#39;</span>
+        <ul>
+<li>Using <code>(</code> in nvim.surround surrounds word with white space like so: <code>( word )</code>.
+<code>)</code> have to be used instead.</li>
+</ul>
+<p>The following overwrites the default:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#fff;font-weight:bold">return</span> {
+  {
+    <span style="color:#0ff;font-weight:bold">&#34;kylechui/nvim-surround&#34;</span>,
+    -- tag = <span style="color:#0ff;font-weight:bold">&#34;*&#34;</span>, -- Use <span style="color:#fff;font-weight:bold">for</span> stability; omit to use <span style="color:#0ff;font-weight:bold">`</span>main<span style="color:#0ff;font-weight:bold">`</span> branch <span style="color:#fff;font-weight:bold">for</span> the latest features
+    config = <span style="color:#fff;font-weight:bold">function</span>()
+      require(<span style="color:#0ff;font-weight:bold">&#34;nvim-surround&#34;</span>).setup {
+        surrounds = {
+          [<span style="color:#0ff;font-weight:bold">&#34;(&#34;</span>] = {
+            add = <span style="color:#fff;font-weight:bold">function</span>() <span style="color:#fff;font-weight:bold">return</span> { { <span style="color:#0ff;font-weight:bold">&#34;(&#34;</span> }, { <span style="color:#0ff;font-weight:bold">&#34;)&#34;</span> } } end,
+          },
+          [<span style="color:#0ff;font-weight:bold">&#34;{&#34;</span>] = {
+            add = <span style="color:#fff;font-weight:bold">function</span>() <span style="color:#fff;font-weight:bold">return</span> { { <span style="color:#0ff;font-weight:bold">&#34;{&#34;</span> }, { <span style="color:#0ff;font-weight:bold">&#34;}&#34;</span> } } end,
+          },
+          [<span style="color:#0ff;font-weight:bold">&#34;[&#34;</span>] = {
+            add = <span style="color:#fff;font-weight:bold">function</span>() <span style="color:#fff;font-weight:bold">return</span> { { <span style="color:#0ff;font-weight:bold">&#34;[&#34;</span> }, { <span style="color:#0ff;font-weight:bold">&#34;]&#34;</span> } } end,
+          },
+          [<span style="color:#0ff;font-weight:bold">&#34;&lt;&#34;</span>] = {
+            add = <span style="color:#fff;font-weight:bold">function</span>() <span style="color:#fff;font-weight:bold">return</span> { { <span style="color:#0ff;font-weight:bold">&#34;&lt;&#34;</span> }, { <span style="color:#0ff;font-weight:bold">&#34;&gt;&#34;</span> } } end,
+          },
+        },
+      }
+    end,
+  },
+}
 </code></pre></div>
       </div>
 

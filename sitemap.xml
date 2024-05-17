@@ -3,10 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jchai01.github.io/</loc>
-    <lastmod>2024-05-03T18:41:41+01:00</lastmod>
+    <lastmod>2024-05-15T15:16:42+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</loc>
+    <lastmod>2024-05-15T15:16:42+01:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/posts/</loc>
-    <lastmod>2024-05-03T18:41:41+01:00</lastmod>
+    <lastmod>2024-05-15T15:16:42+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/nvim-surround/</loc>
+    <lastmod>2024-05-15T01:43:37+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/browser/</loc>
+    <lastmod>2024-05-14T23:24:29+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/browser-add-ons/</loc>
+    <lastmod>2024-05-14T23:24:29+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/</loc>
+    <lastmod>2024-05-14T23:24:29+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/github/</loc>
+    <lastmod>2024-05-14T23:09:51+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/tags/linux/</loc>
+    <lastmod>2024-05-14T23:09:51+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/ssh-with-github/</loc>
+    <lastmod>2024-05-14T23:09:51+01:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/redshift/</loc>
+    <lastmod>2024-05-14T21:57:33+01:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/posts/tmuxifier-guide/</loc>
     <lastmod>2024-05-03T18:41:41+01:00</lastmod>
@@ -15,9 +42,6 @@
     <lastmod>2024-04-28T08:21:00+01:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/posts/jackie-chan/</loc>
-    <lastmod>2024-04-28T08:21:00+01:00</lastmod>
-  </url><url>
-    <loc>https://jchai01.github.io/tags/</loc>
     <lastmod>2024-04-28T08:21:00+01:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/posts/hacker-ethics/</loc>
@@ -42,9 +66,6 @@
     <lastmod>2024-02-10T02:04:09+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/categories/automation/</loc>
-    <lastmod>2024-02-10T02:04:09+00:00</lastmod>
-  </url><url>
-    <loc>https://jchai01.github.io/tags/linux/</loc>
     <lastmod>2024-02-10T02:04:09+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/categories/linux/</loc>
@@ -73,6 +94,9 @@
   </url><url>
     <loc>https://jchai01.github.io/posts/python-cheatsheet/</loc>
     <lastmod>2024-01-11T15:27:40+00:00</lastmod>
+  </url><url>
+    <loc>https://jchai01.github.io/posts/changes-to-astrovim-config/</loc>
+    <lastmod>2024-01-03T17:34:20+00:00</lastmod>
   </url><url>
     <loc>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</loc>
     <lastmod>2024-01-03T02:53:14+00:00</lastmod>

@@ -6,7 +6,17 @@
     <description>Recent content in Linux on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Feb 2024 02:04:09 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 May 2024 23:09:51 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup SSH in Github</title>
+      <link>https://jchai01.github.io/posts/ssh-with-github/</link>
+      <pubDate>Tue, 14 May 2024 23:09:51 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/ssh-with-github/</guid>
+      <description>Create SSH key  Link to heading   ssh-keygen -o -t rsa -C &amp;quot;any comment”
+ The -o flag forces the tool to generate SSH keys with the OpenSSH format. The -t flag specifies the type of SSH keys to create. The -C flag allows for comments that get added as metadata at the end of the public key. Key generated to ~/.ssh folder  View SSH key  Link to heading   cat ~/.</description>
+    </item>
+    
     <item>
       <title>Xdotool script examples</title>
       <link>https://jchai01.github.io/posts/xdodool-scripts-example/</link>
@@ -29,17 +39,14 @@ bash -c &amp;#34;if [[ $(gsettings get org.</description>
     </item>
     
     <item>
-      <title>Setup latest NeoVim on Ubuntu with AppImage</title>
+      <title>Setup Latest NeoVim Guide</title>
       <link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link>
       <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
       
       <guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid>
-      <description>Download NeoVim AppImage from GitHub release page.
-Rename nvim.appimage to nvim
-mv nvim.appimage nvim Set the permission:
-chmod +x nvim Install fuse2 library if it is required to run the appimage
-sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.
-sudo mv nvim /usr/local/bin Optional  Link to heading   Install AstroVim</description>
+      <description>Executable  Link to heading    Download the NeoVim tar file. Extract and copy folder into /opt/  sudo mv nvim-folder /opt  Create symbolic link/symlink to /usr/local/bin  sudo ln -s /opt/nvim-some-version/nvim /usr/local/bin AppImages  Link to heading     Download NeoVim AppImage from GitHub release page.
+  Rename nvim.appimage to nvim
+  mv nvim.appimage nvim  Set the permission:  chmod +x nvim  Install fuse2 library if it is required to run the appimage  sudo apt install libfuse2  Copy from download folder to /usr/local/bin path  /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description>
     </item>
     
     <item>

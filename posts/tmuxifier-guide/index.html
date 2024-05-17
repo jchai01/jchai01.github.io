@@ -14,22 +14,22 @@
 
 <meta name="author" content="Joseph Chai">
 <meta name="description" content="If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.
-Pre-requisite: Tmux
-I have set the alias alias tm=tmuxifier in this guide.
+Pre-requisite: Tmux (My TMUX config)
+I have set the alias alias t=tmuxifier in this guide.
 Tmuxifier Path  Link to heading    To delete/rename sessions, go to this path and manipulate the files. (not sure why there isn&rsquo;t a command for these operations) If you have created a session before, you can cd into this path and duplicate the files etc, to create your sessions too.">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tmuxifier Guide"/>
 <meta name="twitter:description" content="If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.
-Pre-requisite: Tmux
-I have set the alias alias tm=tmuxifier in this guide.
+Pre-requisite: Tmux (My TMUX config)
+I have set the alias alias t=tmuxifier in this guide.
 Tmuxifier Path  Link to heading    To delete/rename sessions, go to this path and manipulate the files. (not sure why there isn&rsquo;t a command for these operations) If you have created a session before, you can cd into this path and duplicate the files etc, to create your sessions too."/>
 
 <meta property="og:title" content="Tmuxifier Guide" />
 <meta property="og:description" content="If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.
-Pre-requisite: Tmux
-I have set the alias alias tm=tmuxifier in this guide.
+Pre-requisite: Tmux (My TMUX config)
+I have set the alias alias t=tmuxifier in this guide.
 Tmuxifier Path  Link to heading    To delete/rename sessions, go to this path and manipulate the files. (not sure why there isn&rsquo;t a command for these operations) If you have created a session before, you can cd into this path and duplicate the files etc, to create your sessions too." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jchai01.github.io/posts/tmuxifier-guide/" /><meta property="article:section" content="posts" />
@@ -196,8 +196,8 @@ if (!doNotTrack) {
       <div class="post-content">
         
         <p>If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.</p>
-<p>Pre-requisite: Tmux</p>
-<p>I have set the alias <code>alias tm=tmuxifier</code> in this guide.</p>
+<p>Pre-requisite: Tmux (<a href="https://github.com/jchai01/dotfiles/blob/main/.tmux.conf"  class="external-link" target="_blank" rel="noopener">My TMUX config</a>)</p>
+<p>I have set the alias <code>alias t=tmuxifier</code> in this guide.</p>
 <h3 id="tmuxifier-path">
   Tmuxifier Path
   <a class="heading-link" href="#tmuxifier-path">
@@ -218,7 +218,7 @@ if (!doNotTrack) {
   </a>
 </h3>
 <p>ns = new-session</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tm ns name-of-session
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">t ns name-of-session
 </code></pre></div><h3 id="example-session-template">
   Example session template
   <a class="heading-link" href="#example-session-template">
@@ -231,7 +231,7 @@ if (!doNotTrack) {
 <li>several docker containers based on the yaml file</li>
 <li>a frontend-server</li>
 <li>a backend-server (geoserver) that isn&rsquo;t dockerized</li>
-<li>opens the editor.</li>
+<li>opens text editor</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007f7f"># Set a custom session root path. Default is `$HOME`.</span>
 <span style="color:#007f7f"># Must be called before `initialize_session`.</span>
@@ -275,7 +275,7 @@ finalize_and_go_to_session
   </a>
 </h3>
 <p>Make sure you are not using your terminal inside Tmux, then run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tm s name-of-session
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">t s name-of-session
 </code></pre></div><h3 id="editing-a-session">
   Editing a session
   <a class="heading-link" href="#editing-a-session">
@@ -283,7 +283,7 @@ finalize_and_go_to_session
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tm es name-of-session
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">t es name-of-session
 </code></pre></div>
       </div>
 

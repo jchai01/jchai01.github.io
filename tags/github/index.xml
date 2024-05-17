@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on Home</title>
+    <link>https://jchai01.github.io/tags/github/</link>
+    <description>Recent content in github on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 May 2024 23:09:51 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup SSH in Github</title>
+      <link>https://jchai01.github.io/posts/ssh-with-github/</link>
+      <pubDate>Tue, 14 May 2024 23:09:51 +0100</pubDate>
+      
+      <guid>https://jchai01.github.io/posts/ssh-with-github/</guid>
+      <description>Create SSH key  Link to heading   ssh-keygen -o -t rsa -C &amp;quot;any comment”
+ The -o flag forces the tool to generate SSH keys with the OpenSSH format. The -t flag specifies the type of SSH keys to create. The -C flag allows for comments that get added as metadata at the end of the public key. Key generated to ~/.ssh folder  View SSH key  Link to heading   cat ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

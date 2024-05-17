@@ -8,17 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 26 Dec 2023 22:57:27 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Setup latest NeoVim on Ubuntu with AppImage</title>
+      <title>Setup Latest NeoVim Guide</title>
       <link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link>
       <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
       
       <guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid>
-      <description>Download NeoVim AppImage from GitHub release page.
-Rename nvim.appimage to nvim
-mv nvim.appimage nvim Set the permission:
-chmod +x nvim Install fuse2 library if it is required to run the appimage
-sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.
-sudo mv nvim /usr/local/bin Optional  Link to heading   Install AstroVim</description>
+      <description>Executable  Link to heading    Download the NeoVim tar file. Extract and copy folder into /opt/  sudo mv nvim-folder /opt  Create symbolic link/symlink to /usr/local/bin  sudo ln -s /opt/nvim-some-version/nvim /usr/local/bin AppImages  Link to heading     Download NeoVim AppImage from GitHub release page.
+  Rename nvim.appimage to nvim
+  mv nvim.appimage nvim  Set the permission:  chmod +x nvim  Install fuse2 library if it is required to run the appimage  sudo apt install libfuse2  Copy from download folder to /usr/local/bin path  /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description>
     </item>
     
   </channel>
