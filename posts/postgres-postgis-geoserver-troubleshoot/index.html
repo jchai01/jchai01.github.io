@@ -3,7 +3,7 @@
 
 <head>
   <title>
-  Postgres - PostGIS - Geoserver setup troubleshoot · Home
+  PostGIS - Geoserver full setup &#43; troubleshoot · Home
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +13,24 @@
 
 
 <meta name="author" content="Joseph Chai">
-<meta name="description" content="Postgres  Link to heading   After downloading postgresql, login with psql
-psql -h localhost -U postgres
-SHOW hba_file; The command will reveal a path to a file, edit that file with sudo:
-sudo -i In the file, replace all the peer/md5 column with trust. Reference https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
-PostGIS  Link to heading   sudo apt install postgis postgresql-postgis
-Run in PGAdmin or command line, run this query before importing any data: CREATE EXTENSION postgis;">
+<meta name="description" content="Setup  Link to heading   Prerequisites  Link to heading   Ubuntu OS. Install Postgres, Geoserver (independent binary), PGAdmin (optional).
+Create PostGIS extension  Link to heading     Download the necessary tools: sudo apt install postgis postgresql-postgis
+  Run the following query with in PGAdmin or psql(command line): CREATE EXTENSION postgis;
+  Import GeoJson file:  Link to heading     Download the geojson file to import: https://data.">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Postgres - PostGIS - Geoserver setup troubleshoot"/>
-<meta name="twitter:description" content="Postgres  Link to heading   After downloading postgresql, login with psql
-psql -h localhost -U postgres
-SHOW hba_file; The command will reveal a path to a file, edit that file with sudo:
-sudo -i In the file, replace all the peer/md5 column with trust. Reference https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
-PostGIS  Link to heading   sudo apt install postgis postgresql-postgis
-Run in PGAdmin or command line, run this query before importing any data: CREATE EXTENSION postgis;"/>
+<meta name="twitter:title" content="PostGIS - Geoserver full setup &#43; troubleshoot"/>
+<meta name="twitter:description" content="Setup  Link to heading   Prerequisites  Link to heading   Ubuntu OS. Install Postgres, Geoserver (independent binary), PGAdmin (optional).
+Create PostGIS extension  Link to heading     Download the necessary tools: sudo apt install postgis postgresql-postgis
+  Run the following query with in PGAdmin or psql(command line): CREATE EXTENSION postgis;
+  Import GeoJson file:  Link to heading     Download the geojson file to import: https://data."/>
 
-<meta property="og:title" content="Postgres - PostGIS - Geoserver setup troubleshoot" />
-<meta property="og:description" content="Postgres  Link to heading   After downloading postgresql, login with psql
-psql -h localhost -U postgres
-SHOW hba_file; The command will reveal a path to a file, edit that file with sudo:
-sudo -i In the file, replace all the peer/md5 column with trust. Reference https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
-PostGIS  Link to heading   sudo apt install postgis postgresql-postgis
-Run in PGAdmin or command line, run this query before importing any data: CREATE EXTENSION postgis;" />
+<meta property="og:title" content="PostGIS - Geoserver full setup &#43; troubleshoot" />
+<meta property="og:description" content="Setup  Link to heading   Prerequisites  Link to heading   Ubuntu OS. Install Postgres, Geoserver (independent binary), PGAdmin (optional).
+Create PostGIS extension  Link to heading     Download the necessary tools: sudo apt install postgis postgresql-postgis
+  Run the following query with in PGAdmin or psql(command line): CREATE EXTENSION postgis;
+  Import GeoJson file:  Link to heading     Download the geojson file to import: https://data." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-05-15T15:16:42+01:00" />
@@ -49,12 +43,14 @@ Run in PGAdmin or command line, run this query before importing any data: CREATE
 <link rel="canonical" href="https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -103,7 +99,7 @@ Run in PGAdmin or command line, run this query before importing any data: CREATE
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
 
@@ -176,21 +172,21 @@ if (!doNotTrack) {
         <div class="post-title">
           <h1 class="title">
             <a class="title-link" href="https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/">
-              Postgres - PostGIS - Geoserver setup troubleshoot
+              PostGIS - Geoserver full setup &#43; troubleshoot
             </a>
           </h1>
         </div>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
               <time datetime="2024-05-15T15:16:42&#43;01:00">
                 May 15, 2024
               </time>
             </span>
             <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              One-minute read
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
             </span>
           </div>
           
@@ -201,33 +197,165 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-        <h1 id="postgres">
-  Postgres
-  <a class="heading-link" href="#postgres">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+        <h1 id="setup">
+  Setup
+  <a class="heading-link" href="#setup">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h1>
-<p>After downloading postgresql, login with <code>psql</code></p>
-<p>psql -h localhost -U postgres</p>
+<h2 id="prerequisites">
+  Prerequisites
+  <a class="heading-link" href="#prerequisites">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Ubuntu OS. Install Postgres, Geoserver (independent binary), PGAdmin (optional).</p>
+<h2 id="create-postgis-extension">
+  Create PostGIS extension
+  <a class="heading-link" href="#create-postgis-extension">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>
+<p>Download the necessary tools: <code>sudo apt install postgis postgresql-postgis</code></p>
+</li>
+<li>
+<p>Run the following query with in PGAdmin or psql(command line): <code>CREATE EXTENSION postgis;</code></p>
+</li>
+</ol>
+<h2 id="import-geojson-file">
+  Import GeoJson file:
+  <a class="heading-link" href="#import-geojson-file">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>
+<p>Download the geojson file to import: <a href="https://data.gov.ie/dataset/pra-state-assets"  class="external-link" target="_blank" rel="noopener">https://data.gov.ie/dataset/pra-state-assets</a> . If link is down, use <a href="https://drive.google.com/file/d/1hiBLPcs_hV6Lmi-iMmYB6XHra92NloLn/view?usp=sharing"  class="external-link" target="_blank" rel="noopener">this</a>.</p>
+</li>
+<li>
+<p>Install geojson to postGIS conversion tool: <code>sudo apt install gdal</code></p>
+</li>
+<li>
+<p>Run the following command to import (PRA_State_Assets.geojson is the geojson filename, destination_table is the table name):</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ogr2ogr -f <span style="color:#0ff;font-weight:bold">&#34;PostgreSQL&#34;</span> PG:<span style="color:#0ff;font-weight:bold">&#34;dbname=postgres user=postgres&#34;</span> <span style="color:#0ff;font-weight:bold">&#34;PRA_State_Assets.geojson&#34;</span> -nln destination_table -append
+</code></pre></div><h2 id="configure-geoserver">
+  Configure Geoserver
+  <a class="heading-link" href="#configure-geoserver">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Filepath: <code>/usr/share/geoserver/webapps/geoserver/WEB-INF/web.xml</code></p>
+<ol>
+<li>Fix CORS issues. <a href="https://www.linkedin.com/pulse/fixing-cors-error-geoserver-krishna-lodha/"  class="external-link" target="_blank" rel="noopener">Reference.</a></li>
+</ol>
+<p>Uncomment these block of code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="font-weight:bold">&lt;filter&gt;</span>
+      <span style="font-weight:bold">&lt;filter-name&gt;</span>cross-origin<span style="font-weight:bold">&lt;/filter-name&gt;</span>
+      <span style="font-weight:bold">&lt;filter-class&gt;</span>org.eclipse.jetty.servlets.CrossOriginFilter<span style="font-weight:bold">&lt;/filter-class&gt;</span>
+      <span style="font-weight:bold">&lt;init-param&gt;</span>
+        <span style="font-weight:bold">&lt;param-name&gt;</span>chainPreflight<span style="font-weight:bold">&lt;/param-name&gt;</span>
+        <span style="font-weight:bold">&lt;param-value&gt;</span>false<span style="font-weight:bold">&lt;/param-value&gt;</span>
+      <span style="font-weight:bold">&lt;/init-param&gt;</span>
+      <span style="font-weight:bold">&lt;init-param&gt;</span>
+        <span style="font-weight:bold">&lt;param-name&gt;</span>allowedOrigins<span style="font-weight:bold">&lt;/param-name&gt;</span>
+        <span style="font-weight:bold">&lt;param-value&gt;</span>*<span style="font-weight:bold">&lt;/param-value&gt;</span>
+      <span style="font-weight:bold">&lt;/init-param&gt;</span>
+      <span style="font-weight:bold">&lt;init-param&gt;</span>
+        <span style="font-weight:bold">&lt;param-name&gt;</span>allowedMethods<span style="font-weight:bold">&lt;/param-name&gt;</span>
+        <span style="font-weight:bold">&lt;param-value&gt;</span>GET,POST,PUT,DELETE,HEAD,OPTIONS<span style="font-weight:bold">&lt;/param-value&gt;</span>
+      <span style="font-weight:bold">&lt;/init-param&gt;</span>
+      <span style="font-weight:bold">&lt;init-param&gt;</span>
+        <span style="font-weight:bold">&lt;param-name&gt;</span>allowedHeaders<span style="font-weight:bold">&lt;/param-name&gt;</span>
+        <span style="font-weight:bold">&lt;param-value&gt;</span>*<span style="font-weight:bold">&lt;/param-value&gt;</span>
+      <span style="font-weight:bold">&lt;/init-param&gt;</span>
+    <span style="font-weight:bold">&lt;/filter&gt;</span>
+</code></pre></div><p>and these:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="font-weight:bold">&lt;filter-mapping&gt;</span>
+      <span style="font-weight:bold">&lt;filter-name&gt;</span>Set Character Encoding<span style="font-weight:bold">&lt;/filter-name&gt;</span>
+      <span style="font-weight:bold">&lt;url-pattern&gt;</span>/*<span style="font-weight:bold">&lt;/url-pattern&gt;</span>
+    <span style="font-weight:bold">&lt;/filter-mapping&gt;</span>
+</code></pre></div><ol start="2">
+<li>Enable JSONP. Uncomment the following lines.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="font-weight:bold">&lt;context-param&gt;</span>
+    <span style="font-weight:bold">&lt;param-name&gt;</span>ENABLE_JSONP<span style="font-weight:bold">&lt;/param-name&gt;</span>
+    <span style="font-weight:bold">&lt;param-value&gt;</span>true<span style="font-weight:bold">&lt;/param-value&gt;</span>
+<span style="font-weight:bold">&lt;/context-param&gt;</span>
+</code></pre></div><ol start="3">
+<li>Update port number:</li>
+</ol>
+<p>Edit <code>/usr/share/geoserver/start.ini</code> file: <code>jetty.http.port=8090</code></p>
+<ol start="4">
+<li>Run Geoserver:</li>
+</ol>
+<p><code>./usr/share/geoserver/bin/startup.sh</code></p>
+<h2 id="link-geoserver-to-postgis">
+  Link Geoserver to PostGIS
+  <a class="heading-link" href="#link-geoserver-to-postgis">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>
+<p>Login with default username: <code>admin</code> password: <code>geoserver</code></p>
+</li>
+<li>
+<p>On the left menu, go to store &gt; Add new store &gt; PostGIS</p>
+</li>
+<li>
+<p>Enter database details.</p>
+</li>
+<li>
+<p>On the left menu, go to Layers &gt; Add a new layer</p>
+</li>
+<li>
+<p>Select the store created.</p>
+</li>
+<li>
+<p>Enter the details, click compute from native bounds for the bounding boxes.</p>
+</li>
+<li>
+<p>On the left menu, go to Layer Preview. Verify the layer created is there. Click on openlayers to verify it&rsquo;s working.</p>
+</li>
+</ol>
+<h1 id="troubleshoot">
+  Troubleshoot
+  <a class="heading-link" href="#troubleshoot">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="peer-authentication-failed-for-user-postgres">
+  Peer authentication failed for user &ldquo;postgres&rdquo;
+  <a class="heading-link" href="#peer-authentication-failed-for-user-postgres">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Login to postgresql with <code>psql</code>. For e.g. <code>psql -h localhost -U postgres</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#fff;font-weight:bold">SHOW</span> hba_file;
-</code></pre></div><p>The command will reveal a path to a file, edit that file with sudo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo -i
-</code></pre></div><p>In the file, replace all the peer/md5 column with <code>trust</code>. Reference
-<a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge"  class="external-link" target="_blank" rel="noopener">https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge</a></p>
-<h1 id="postgis">
-  PostGIS
-  <a class="heading-link" href="#postgis">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+</code></pre></div><p>The command will reveal a path to a file, edit that file with sudo (<code>sudo -i</code> or <code>sudoedit</code>)</p>
+<p>In the file, replace all the peer/md5 column with <code>trust</code>. <a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge"  class="external-link" target="_blank" rel="noopener">Reference</a></p>
+<p>Run in PGAdmin or command line, run this query before importing any data:</p>
+<h2 id="compute-bounding-box-not-working-in-geoserver--in-layer-preview-clicking-openlayers-downloads-wms-file-instead-of-opening-in-separate-tab">
+  Compute bounding box not working in Geoserver / In Layer Preview, clicking openlayers downloads WMS file instead of opening in separate tab.
+  <a class="heading-link" href="#compute-bounding-box-not-working-in-geoserver--in-layer-preview-clicking-openlayers-downloads-wms-file-instead-of-opening-in-separate-tab">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h1>
-<p><code>sudo apt install postgis postgresql-postgis</code></p>
-<p>Run in PGAdmin or command line, run this query before importing any data:
-<code>CREATE EXTENSION postgis;</code></p>
-<p>compute bounding box not working in geoserver: restart postgresql:</p>
-<p><code>sudo systemctl restart postgresql</code></p>
-<p>layer preview, clicking openlayers download wms instead of opening in portal.</p>
+</h2>
+<p>Ensure you run <code>CREATE EXTENSION postgis;</code> before importing the any data.</p>
+<p>Try restarting postgresql too: <code>sudo systemctl restart postgresql</code></p>
 
       </div>
 
@@ -262,6 +390,9 @@ if (!doNotTrack) {
 </script>
         
         
+        
+        
+
         
         
       </footer>
@@ -311,6 +442,8 @@ if (!doNotTrack) {
 }
 </script>
 
+
+  
 
   
 

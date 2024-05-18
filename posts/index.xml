@@ -8,17 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 15 May 2024 15:16:42 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Postgres - PostGIS - Geoserver setup troubleshoot</title>
+      <title>PostGIS - Geoserver full setup &#43; troubleshoot</title>
       <link>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</link>
       <pubDate>Wed, 15 May 2024 15:16:42 +0100</pubDate>
       
       <guid>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</guid>
-      <description>Postgres  Link to heading   After downloading postgresql, login with psql
-psql -h localhost -U postgres
-SHOW hba_file; The command will reveal a path to a file, edit that file with sudo:
-sudo -i In the file, replace all the peer/md5 column with trust. Reference https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
-PostGIS  Link to heading   sudo apt install postgis postgresql-postgis
-Run in PGAdmin or command line, run this query before importing any data: CREATE EXTENSION postgis;</description>
+      <description>Setup  Link to heading   Prerequisites  Link to heading   Ubuntu OS. Install Postgres, Geoserver (independent binary), PGAdmin (optional).
+Create PostGIS extension  Link to heading     Download the necessary tools: sudo apt install postgis postgresql-postgis
+  Run the following query with in PGAdmin or psql(command line): CREATE EXTENSION postgis;
+  Import GeoJson file:  Link to heading     Download the geojson file to import: https://data.</description>
     </item>
     
     <item>
