@@ -1,24 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on Home</title>
-    <link>https://jchai01.github.io/tags/python/</link>
-    <description>Recent content in Python on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jan 2024 15:27:40 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Python Cheatsheet</title>
-      <link>https://jchai01.github.io/posts/python-cheatsheet/</link>
-      <pubDate>Thu, 11 Jan 2024 15:27:40 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/python-cheatsheet/</guid>
-      <description>Virtual Environment  Link to heading   In this example, folder for the Virtual Environment is .venv
-python3 -m venv .venv source .venv/bin/activate deactivate Packages  Link to heading   pip install name-of-package pip uninstall name-of-package pip install -r requirements.txt pyenv  Link to heading   Manage different versions of python.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Home</title><link>https://jchai01.github.io/tags/python/</link><description>Recent content in Python on Home</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 11 Jan 2024 15:27:40 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Python Cheatsheet</title><link>https://jchai01.github.io/posts/python-cheatsheet/</link><pubDate>Thu, 11 Jan 2024 15:27:40 +0000</pubDate><guid>https://jchai01.github.io/posts/python-cheatsheet/</guid><description>Virtual Environment Link to heading In this example, folder for the Virtual Environment is .venv
+python3 -m venv .venv source .venv/bin/activate deactivate Packages Link to heading pip install name-of-package pip uninstall name-of-package pip install -r requirements.txt pyenv Link to heading Manage different versions of python.
 List all version installed:
 pyenv versions Switch to a particular version example:
-pyenv global 3.8 Reset back to default:</description>
-    </item>
-    
-  </channel>
-</rss>
+pyenv global 3.8 Reset back to default:
+pyenv global system List all version available for install:</description></item></channel></rss>

@@ -1,32 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>davinci resolve on Home</title>
-    <link>https://jchai01.github.io/tags/davinci-resolve/</link>
-    <description>Recent content in davinci resolve on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 26 Dec 2023 22:38:32 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/davinci-resolve/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Davinci Resolve Shortcut Mappings</title>
-      <link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link>
-      <pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid>
-      <description>Access the preference menu  Link to heading   ctrl + alt + k to access preference menu.
-Changes  Link to heading     Split clips: change from ctrl + \ to s
-  Start to playhead and end to playhead: ctrl + shift + [ and ctrl + shift + ] to q and w respectively.
-  Note  Link to heading    Remember to remove keybindings for any affected shortcut.</description>
-    </item>
-    
-    <item>
-      <title>Resolve HEVC (H265) In Davinci Resolve</title>
-      <link>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</link>
-      <pubDate>Mon, 25 Dec 2023 00:04:48 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</guid>
-      <description>Download the HEVC extension and install it from: https://drive.google.com/drive/folders/19FWeAVWFoZUaM-14Wbt3t9lb_bIprl8b Press Win + R on your keyboard to launch the Run dialog box.Type WSReset.exe in the dialog box and press Enter. Open Microsoft Store, click the Library icon. This will be on the left side of the Store app.Check for Microsoft Store Updates. Click the Get updates button to check for available updates.If updates are available, click Update all to download and install them.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Davinci Resolve on Home</title><link>https://jchai01.github.io/tags/davinci-resolve/</link><description>Recent content in Davinci Resolve on Home</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 26 Dec 2023 22:38:32 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/tags/davinci-resolve/index.xml" rel="self" type="application/rss+xml"/><item><title>Davinci Resolve Shortcut Mappings</title><link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link><pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate><guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid><description> Access the preference menu Link to heading ctrl + alt + k to access preference menu.
+Changes Link to heading Split clips: change from ctrl + \ to s
+Start to playhead and end to playhead: ctrl + shift + [ and ctrl + shift + ] to q and w respectively.
+Note Link to heading Remember to remove keybindings for any affected shortcut.</description></item><item><title>Resolve HEVC (H265) In Davinci Resolve</title><link>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</link><pubDate>Mon, 25 Dec 2023 00:04:48 +0000</pubDate><guid>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</guid><description>Download the HEVC extension and install it from: https://drive.google.com/drive/folders/19FWeAVWFoZUaM-14Wbt3t9lb_bIprl8b Press Win + R on your keyboard to launch the Run dialog box.Type WSReset.exe in the dialog box and press Enter. Open Microsoft Store, click the Library icon. This will be on the left side of the Store app.Check for Microsoft Store Updates. Click the Get updates button to check for available updates.If updates are available, click Update all to download and install them.</description></item></channel></rss>

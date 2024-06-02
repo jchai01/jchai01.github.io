@@ -1,55 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on Home</title>
-    <link>https://jchai01.github.io/categories/linux/</link>
-    <description>Recent content in Linux on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Feb 2024 02:04:09 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Xdotool script examples</title>
-      <link>https://jchai01.github.io/posts/xdodool-scripts-example/</link>
-      <pubDate>Sat, 10 Feb 2024 02:04:09 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/xdodool-scripts-example/</guid>
-      <description>Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&amp;rsquo;s usage in a shell script.
-# Type ABC xdotool key A xdotool key B xdotool key C # Tab 3 times xdotool key Tab xdotool key Tab xdotool key Tab # Type 20 xdotool key 2 xdotool key 0 xdotool key Down xdotool key Left xdotool key Right xdotool key Return # Use sleep to wait sleep 0.</description>
-    </item>
-    
-    <item>
-      <title>Toggle night light in Ubuntu</title>
-      <link>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</link>
-      <pubDate>Tue, 26 Dec 2023 22:58:22 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</guid>
-      <description>Set night light to always on  Link to heading    Install dconf-editor:  sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this)  ref: link
-Add custom shortcut to toggle night light  Link to heading   Use the following script:
-bash -c &amp;#34;if [[ $(gsettings get org.</description>
-    </item>
-    
-    <item>
-      <title>Setup Latest NeoVim Guide</title>
-      <link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link>
-      <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid>
-      <description>Executable  Link to heading    Download the NeoVim tar file. Extract and copy folder into /opt/  sudo mv nvim-folder /opt  Create symbolic link/symlink to /usr/local/bin  sudo ln -s /opt/nvim-some-version/nvim /usr/local/bin AppImages  Link to heading     Download NeoVim AppImage from GitHub release page.
-  Rename nvim.appimage to nvim
-  mv nvim.appimage nvim  Set the permission:  chmod +x nvim  Install fuse2 library if it is required to run the appimage  sudo apt install libfuse2  Copy from download folder to /usr/local/bin path  /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description>
-    </item>
-    
-    <item>
-      <title>Change Timezone in Linux</title>
-      <link>https://jchai01.github.io/posts/change-timezone-in-linux/</link>
-      <pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/change-timezone-in-linux/</guid>
-      <description>View current timezone:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Home</title><link>https://jchai01.github.io/categories/linux/</link><description>Recent content in Linux on Home</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 10 Feb 2024 02:04:09 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Xdotool script examples</title><link>https://jchai01.github.io/posts/xdodool-scripts-example/</link><pubDate>Sat, 10 Feb 2024 02:04:09 +0000</pubDate><guid>https://jchai01.github.io/posts/xdodool-scripts-example/</guid><description>Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&amp;rsquo;s usage in a shell script.
+# Type ABC xdotool key A xdotool key B xdotool key C # Tab 3 times xdotool key Tab xdotool key Tab xdotool key Tab # Type 20 xdotool key 2 xdotool key 0 xdotool key Down xdotool key Left xdotool key Right xdotool key Return # Use sleep to wait sleep 0.</description></item><item><title>Toggle night light in Ubuntu</title><link>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</link><pubDate>Tue, 26 Dec 2023 22:58:22 +0000</pubDate><guid>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</guid><description>Set night light to always on Link to heading Install dconf-editor: sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this) ref: link
+Add custom shortcut to toggle night light Link to heading Use the following script:
+bash -c &amp;#34;if [[ $(gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled) == &amp;#34;true&amp;#34; ]]; then gsettings set org.</description></item><item><title>Setup Latest NeoVim Guide</title><link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link><pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate><guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid><description>Executable Link to heading Download the NeoVim tar file. Extract and copy folder into /opt/ sudo mv nvim-folder /opt Create symbolic link/symlink to /usr/local/bin sudo ln -s /opt/nvim-some-version/nvim /usr/local/bin AppImages Link to heading Download NeoVim AppImage from GitHub release page.
+Rename nvim.appimage to nvim
+mv nvim.appimage nvim Set the permission: chmod +x nvim Install fuse2 library if it is required to run the appimage sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description></item><item><title>Change Timezone in Linux</title><link>https://jchai01.github.io/posts/change-timezone-in-linux/</link><pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate><guid>https://jchai01.github.io/posts/change-timezone-in-linux/</guid><description>View current timezone:
 timedatectl List timezones:
 timedatectl list-timezones Change timezone example:
-sudo timedatectl set-timezone Europe/Dublin </description>
-    </item>
-    
-  </channel>
-</rss>
+sudo timedatectl set-timezone Europe/Dublin</description></item></channel></rss>

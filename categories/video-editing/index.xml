@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>video editing on Home</title>
-    <link>https://jchai01.github.io/categories/video-editing/</link>
-    <description>Recent content in video editing on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 26 Dec 2023 22:38:32 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/categories/video-editing/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Davinci Resolve Shortcut Mappings</title>
-      <link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link>
-      <pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid>
-      <description>Access the preference menu  Link to heading   ctrl + alt + k to access preference menu.
-Changes  Link to heading     Split clips: change from ctrl + \ to s
-  Start to playhead and end to playhead: ctrl + shift + [ and ctrl + shift + ] to q and w respectively.
-  Note  Link to heading    Remember to remove keybindings for any affected shortcut.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Video Editing on Home</title><link>https://jchai01.github.io/categories/video-editing/</link><description>Recent content in Video Editing on Home</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 26 Dec 2023 22:38:32 +0000</lastBuildDate><atom:link href="https://jchai01.github.io/categories/video-editing/index.xml" rel="self" type="application/rss+xml"/><item><title>Davinci Resolve Shortcut Mappings</title><link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link><pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate><guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid><description> Access the preference menu Link to heading ctrl + alt + k to access preference menu.
+Changes Link to heading Split clips: change from ctrl + \ to s
+Start to playhead and end to playhead: ctrl + shift + [ and ctrl + shift + ] to q and w respectively.
+Note Link to heading Remember to remove keybindings for any affected shortcut.</description></item></channel></rss>

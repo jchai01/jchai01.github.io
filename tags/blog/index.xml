@@ -1,51 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>blog on Home</title>
-    <link>https://jchai01.github.io/tags/blog/</link>
-    <description>Recent content in blog on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 28 Apr 2024 08:21:00 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Why my Jackie Chan Obsession is Justified</title>
-      <link>https://jchai01.github.io/posts/jackie-chan/</link>
-      <pubDate>Sun, 28 Apr 2024 08:21:00 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/jackie-chan/</guid>
-      <description>In this post, I will attempt to gaslight you into thinking that I am perfectly normal. You will learn various reasons why Jackie is superior and an ideal role model, and perhaps start bowing down too. These reasons do not include the bogus &amp;ldquo;he does all his own stunts&amp;rdquo; nonsense. Shame on him for claiming that, though, but that&amp;rsquo;s a story for another day.
-He is a polymath  Link to heading   He does it all: directing, acting, scriptwriting, editing, choreography, stunts, and more.</description>
-    </item>
-    
-    <item>
-      <title>Hacker Ethics to live by</title>
-      <link>https://jchai01.github.io/posts/hacker-ethics/</link>
-      <pubDate>Thu, 25 Apr 2024 09:03:06 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/hacker-ethics/</guid>
-      <description>Book reference: Hackers: Heroes of the Computer Evolution (1984) by Steven Levy
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Home</title><link>https://jchai01.github.io/tags/blog/</link><description>Recent content in Blog on Home</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 28 Apr 2024 08:21:00 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Why my Jackie Chan Obsession is Justified</title><link>https://jchai01.github.io/posts/jackie-chan/</link><pubDate>Sun, 28 Apr 2024 08:21:00 +0100</pubDate><guid>https://jchai01.github.io/posts/jackie-chan/</guid><description>In this post, I will attempt to gaslight you into thinking that I am perfectly normal. You will learn various reasons why Jackie is superior and an ideal role model, and perhaps start bowing down too. These reasons do not include the bogus &amp;ldquo;he does all his own stunts&amp;rdquo; nonsense. Shame on him for claiming that, though, but that&amp;rsquo;s a story for another day.
+He is a polymath Link to heading He does it all: directing, acting, scriptwriting, editing, choreography, stunts, and more.</description></item><item><title>Hacker Ethics to live by</title><link>https://jchai01.github.io/posts/hacker-ethics/</link><pubDate>Thu, 25 Apr 2024 09:03:06 +0100</pubDate><guid>https://jchai01.github.io/posts/hacker-ethics/</guid><description>Book reference: Hackers: Heroes of the Computer Evolution (1984) by Steven Levy
 In this post, you will be convinced why the hacker ethic is really the only one true ethic to live by, and you should just abandon all beliefs and become an anti-proprietary-anti-bigtech-Richard-Stallman&amp;rsquo;s-reincarnate open source zealot.
-The Definition You Did Not Know  Link to heading   Hacker was never a pejorative term. It has a second meaning that is loosely defined, but these three definitions summarize it well:</description>
-    </item>
-    
-    <item>
-      <title>Why x86 needs to die, summary</title>
-      <link>https://jchai01.github.io/posts/why-x86-needs-to-die/</link>
-      <pubDate>Thu, 25 Apr 2024 00:03:12 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/why-x86-needs-to-die/</guid>
-      <description>This blog is a compilation of summaries and insights gathered from this video by ThePrimeagen , where he reacts to an article titled &amp;ldquo;Why x86 needs to die&amp;rdquo;  together with hardware expert Casey Muratori. A counter-article  is also available at Chip and Cheese , a site that blogs about micro analysis stuff, and it&amp;rsquo;s recommended by Casey.
-Why are register names so weird? (4:35)  Link to heading   In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &amp;hellip;) but not the first half (they are not named r0, r1, r2 &amp;hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D.</description>
-    </item>
-    
-    <item>
-      <title>Right to repair, why you should care?</title>
-      <link>https://jchai01.github.io/posts/right-to-repair/</link>
-      <pubDate>Fri, 12 Apr 2024 23:47:06 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/right-to-repair/</guid>
-      <description>E-waste  Link to heading   Once upon a time, any electronics you bought would come with a schematic documenting their inner workings. Not only are these official schematics almost impossible to obtain due to &amp;ldquo;trade secrets,&amp;rdquo; try to disassemble any electronic device, and you will be met with a bunch of roadblocks: excessive use of adhesive, non-modular/soldered parts, and the requirement of proprietary tools. Apple even invented a mechanically inferior screw called the pentalobe screw just to keep people out of their hardware.</description>
-    </item>
-    
-  </channel>
-</rss>
+The Definition You Did Not Know Link to heading Hacker was never a pejorative term. It has a second meaning that is loosely defined, but these three definitions summarize it well:</description></item><item><title>Why x86 needs to die, summary</title><link>https://jchai01.github.io/posts/why-x86-needs-to-die/</link><pubDate>Thu, 25 Apr 2024 00:03:12 +0100</pubDate><guid>https://jchai01.github.io/posts/why-x86-needs-to-die/</guid><description>This blog is a compilation of summaries and insights gathered from this video by ThePrimeagen , where he reacts to an article titled &amp;ldquo;Why x86 needs to die&amp;rdquo; together with hardware expert Casey Muratori. A counter-article is also available at Chip and Cheese , a site that blogs about micro analysis stuff, and it&amp;rsquo;s recommended by Casey.
+Why are register names so weird? (4:35) Link to heading In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &amp;hellip;) but not the first half (they are not named r0, r1, r2 &amp;hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D.</description></item><item><title>Right to repair, why you should care?</title><link>https://jchai01.github.io/posts/right-to-repair/</link><pubDate>Fri, 12 Apr 2024 23:47:06 +0100</pubDate><guid>https://jchai01.github.io/posts/right-to-repair/</guid><description>E-waste Link to heading Once upon a time, any electronics you bought would come with a schematic documenting their inner workings. Not only are these official schematics almost impossible to obtain due to &amp;ldquo;trade secrets,&amp;rdquo; try to disassemble any electronic device, and you will be met with a bunch of roadblocks: excessive use of adhesive, non-modular/soldered parts, and the requirement of proprietary tools. Apple even invented a mechanically inferior screw called the pentalobe screw just to keep people out of their hardware.</description></item></channel></rss>

@@ -1,354 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>
-  Automate Image Resize with Padding using ImageMagick · Home
-</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
-
-
-
-
-<meta name="author" content="Joseph Chai">
-<meta name="description" content="Github link: https://github.com/jchai01/resize-photo-script
-#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio=&#34;1080x1080&#34; if [ -z &#34;$image_dir&#34; ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d &#34;$image_dir&#34; ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir &#34;$output_dir&#34; for image in &#34;$image_dir&#34;/*; do echo &#34;Processing $image&#34; file_name=$(basename &#34;$image&#34;) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio &#34;$image&#34; &#34;$output_dir&#34;/&#34;$file_name&#34; done Resize Images  Link to heading   Basic usage (will overwrite the original file):">
-<meta name="keywords" content="blog,developer,personal">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Automate Image Resize with Padding using ImageMagick"/>
-<meta name="twitter:description" content="Github link: https://github.com/jchai01/resize-photo-script
-#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio=&#34;1080x1080&#34; if [ -z &#34;$image_dir&#34; ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d &#34;$image_dir&#34; ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir &#34;$output_dir&#34; for image in &#34;$image_dir&#34;/*; do echo &#34;Processing $image&#34; file_name=$(basename &#34;$image&#34;) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio &#34;$image&#34; &#34;$output_dir&#34;/&#34;$file_name&#34; done Resize Images  Link to heading   Basic usage (will overwrite the original file):"/>
-
-<meta property="og:title" content="Automate Image Resize with Padding using ImageMagick" />
-<meta property="og:description" content="Github link: https://github.com/jchai01/resize-photo-script
-#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio=&#34;1080x1080&#34; if [ -z &#34;$image_dir&#34; ]; then echo &#34;Please provide image directory as first argument.&#34; exit 1 fi if [ ! -d &#34;$image_dir&#34; ]; then echo &#34;Not a valid directory&#34; exit 1 fi output_dir=&#34;$image_dir-output&#34; echo &#34;Located $image_dir&#34; echo &#34;Creating output $output_dir&#34; mkdir &#34;$output_dir&#34; for image in &#34;$image_dir&#34;/*; do echo &#34;Processing $image&#34; file_name=$(basename &#34;$image&#34;) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio &#34;$image&#34; &#34;$output_dir&#34;/&#34;$file_name&#34; done Resize Images  Link to heading   Basic usage (will overwrite the original file):" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-03T02:53:14+00:00" />
-<meta property="article:modified_time" content="2024-01-03T02:53:14+00:00" />
-
-
-
-
-
-<link rel="canonical" href="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/">
-
-
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-
-
-  
-  
-  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
-
-
-
-
-
-
-  
-    
-    
-    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
-  
-
-
-
- 
-
-
-
-
-<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-
-
-</head>
-
-
-
-
-
-
-<body class="preload-transitions colorscheme-auto">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
-  <main class="wrapper">
-    <head>
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWPVNC5R8Z%20"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-DWPVNC5R8Z ', { 'anonymize_ip': false });
-}
-</script>
-
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-DWPVNC5R8Z ', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-</head>
-<nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
-      Home
-    </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">Posts</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/projects/">Projects</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">About</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-    <div class="content">
-      
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/">
-              Automate Image Resize with Padding using ImageMagick
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2024-01-03T02:53:14Z">
-                January 3, 2024
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              One-minute read
-            </span>
-          </div>
-          
-          
-          
-        </div>
-      </header>
-
-      <div class="post-content">
-        
-        <p>Github link: <a href="https://github.com/jchai01/resize-photo-script"  class="external-link" target="_blank" rel="noopener">https://github.com/jchai01/resize-photo-script</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0f0;font-weight:bold">#!/bin/sh
-</span><span style="color:#0f0;font-weight:bold"></span><span style="color:#007f7f"># This script requires imagemagick.</span>
-
-image_dir=$1
-target_ratio=<span style="color:#0ff;font-weight:bold">&#34;1080x1080&#34;</span>
-
-<span style="color:#fff;font-weight:bold">if</span> [ -z <span style="color:#0ff;font-weight:bold">&#34;</span>$image_dir<span style="color:#0ff;font-weight:bold">&#34;</span> ]; <span style="color:#fff;font-weight:bold">then</span>
-	<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Please provide image directory as first argument.&#34;</span>
-	<span style="color:#fff;font-weight:bold">exit</span> <span style="color:#ff0;font-weight:bold">1</span>
-<span style="color:#fff;font-weight:bold">fi</span>
-
-<span style="color:#fff;font-weight:bold">if</span> [ ! -d <span style="color:#0ff;font-weight:bold">&#34;</span>$image_dir<span style="color:#0ff;font-weight:bold">&#34;</span> ]; <span style="color:#fff;font-weight:bold">then</span>
-	<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Not a valid directory&#34;</span>
-	<span style="color:#fff;font-weight:bold">exit</span> <span style="color:#ff0;font-weight:bold">1</span>
-<span style="color:#fff;font-weight:bold">fi</span>
-
-output_dir=<span style="color:#0ff;font-weight:bold">&#34;</span>$image_dir<span style="color:#0ff;font-weight:bold">-output&#34;</span>
-
-<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Located </span>$image_dir<span style="color:#0ff;font-weight:bold">&#34;</span>
-<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Creating output </span>$output_dir<span style="color:#0ff;font-weight:bold">&#34;</span>
-mkdir <span style="color:#0ff;font-weight:bold">&#34;</span>$output_dir<span style="color:#0ff;font-weight:bold">&#34;</span>
-
-<span style="color:#fff;font-weight:bold">for</span> image in <span style="color:#0ff;font-weight:bold">&#34;</span>$image_dir<span style="color:#0ff;font-weight:bold">&#34;</span>/*; <span style="color:#fff;font-weight:bold">do</span>
-	<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;Processing </span>$image<span style="color:#0ff;font-weight:bold">&#34;</span>
-	file_name=<span style="color:#fff;font-weight:bold">$(</span>basename <span style="color:#0ff;font-weight:bold">&#34;</span>$image<span style="color:#0ff;font-weight:bold">&#34;</span><span style="color:#fff;font-weight:bold">)</span>
-
-	<span style="color:#007f7f"># convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name</span>
-	convert -background black -gravity center -resize $target_ratio -extent $target_ratio <span style="color:#0ff;font-weight:bold">&#34;</span>$image<span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">&#34;</span>$output_dir<span style="color:#0ff;font-weight:bold">&#34;</span>/<span style="color:#0ff;font-weight:bold">&#34;</span>$file_name<span style="color:#0ff;font-weight:bold">&#34;</span>
-
-<span style="color:#fff;font-weight:bold">done</span>
-</code></pre></div><h3 id="resize-images">
-  Resize Images
-  <a class="heading-link" href="#resize-images">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p>Basic usage (will overwrite the original file):</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mogrify -resize 820x ./*.jpg
-</code></pre></div><p>If you need recursion:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -name <span style="color:#0ff;font-weight:bold">&#39;*.jpg&#39;</span> -execdir mogrify -resize 820x {} +
-</code></pre></div>
-      </div>
-
-
-      <footer>
-        
-
-
-        <div id="disqus_thread"></div>
-<script>
-  window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-    
-    document.addEventListener('themeChanged', function (e) { 
-        if (document.readyState == 'complete') {
-          DISQUS.reset({ reload: true, config: disqus_config });
-        }
-    });
-</script>
-        
-        
-        
-        
-
-        
-        
-      </footer>
-    </article>
-
-    
-  </section>
-
-    </div>
-
-    <footer class="footer">
-  <section class="container">
-    ©
-    
-    2024
-     Joseph Chai 
-    ·
-    
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
-  </section>
-</footer>
-
-  </main>
-
-  
-
-  
-  
-  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
-  
-
-  
-
-  
-
-
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWPVNC5R8Z%20"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-DWPVNC5R8Z ', { 'anonymize_ip': false });
-}
-</script>
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</body>
-
-</html>
+<!doctype html><html lang=en><head><title>Automate Image Resize with Padding using ImageMagick · Home
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Joseph Chai"><meta name=description content='Github link: https://github.com/jchai01/resize-photo-script
+#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio="1080x1080" if [ -z "$image_dir" ]; then echo "Please provide image directory as first argument." exit 1 fi if [ ! -d "$image_dir" ]; then echo "Not a valid directory" exit 1 fi output_dir="$image_dir-output" echo "Located $image_dir" echo "Creating output $output_dir" mkdir "$output_dir" for image in "$image_dir"/*; do echo "Processing $image" file_name=$(basename "$image") # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio "$image" "$output_dir"/"$file_name" done Resize Images Link to heading Basic usage (will overwrite the original file):'><meta name=keywords content="blog,developer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Automate Image Resize with Padding using ImageMagick"><meta name=twitter:description content='Github link: https://github.com/jchai01/resize-photo-script
+#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio="1080x1080" if [ -z "$image_dir" ]; then echo "Please provide image directory as first argument." exit 1 fi if [ ! -d "$image_dir" ]; then echo "Not a valid directory" exit 1 fi output_dir="$image_dir-output" echo "Located $image_dir" echo "Creating output $output_dir" mkdir "$output_dir" for image in "$image_dir"/*; do echo "Processing $image" file_name=$(basename "$image") # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio "$image" "$output_dir"/"$file_name" done Resize Images Link to heading Basic usage (will overwrite the original file):'><meta property="og:url" content="https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/"><meta property="og:site_name" content="Home"><meta property="og:title" content="Automate Image Resize with Padding using ImageMagick"><meta property="og:description" content='Github link: https://github.com/jchai01/resize-photo-script
+#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio="1080x1080" if [ -z "$image_dir" ]; then echo "Please provide image directory as first argument." exit 1 fi if [ ! -d "$image_dir" ]; then echo "Not a valid directory" exit 1 fi output_dir="$image_dir-output" echo "Located $image_dir" echo "Creating output $output_dir" mkdir "$output_dir" for image in "$image_dir"/*; do echo "Processing $image" file_name=$(basename "$image") # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio "$image" "$output_dir"/"$file_name" done Resize Images Link to heading Basic usage (will overwrite the original file):'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-01-03T02:53:14+00:00"><meta property="article:modified_time" content="2024-01-03T02:53:14+00:00"><link rel=canonical href=https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><head></head><nav class=navigation><section class=container><a class=navigation-title href=https://jchai01.github.io/>Home
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li><li class=navigation-item><a class=navigation-link href=/contact/>Contact me</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/>Automate Image Resize with Padding using ImageMagick</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2024-01-03T02:53:14Z>January 3, 2024
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+One-minute read</span></div></div></header><div class=post-content><p>Github link: <a href=https://github.com/jchai01/resize-photo-script class=external-link target=_blank rel=noopener>https://github.com/jchai01/resize-photo-script</a></p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic>#!/bin/sh
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic></span><span style=color:#8b949e;font-style:italic># This script requires imagemagick.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>image_dir</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#79c0ff>$1</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>target_ratio</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;1080x1080&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>[</span> -z <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$image_dir</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#ff7b72;font-weight:700>]</span>; <span style=color:#ff7b72>then</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#a5d6ff>&#34;Please provide image directory as first argument.&#34;</span>
+</span></span><span style=display:flex><span>	exit <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>[</span> ! -d <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$image_dir</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#ff7b72;font-weight:700>]</span>; <span style=color:#ff7b72>then</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#a5d6ff>&#34;Not a valid directory&#34;</span>
+</span></span><span style=display:flex><span>	exit <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>fi</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>output_dir</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$image_dir</span><span style=color:#a5d6ff>-output&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>echo <span style=color:#a5d6ff>&#34;Located </span><span style=color:#79c0ff>$image_dir</span><span style=color:#a5d6ff>&#34;</span>
+</span></span><span style=display:flex><span>echo <span style=color:#a5d6ff>&#34;Creating output </span><span style=color:#79c0ff>$output_dir</span><span style=color:#a5d6ff>&#34;</span>
+</span></span><span style=display:flex><span>mkdir <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$output_dir</span><span style=color:#a5d6ff>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>for</span> image in <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$image_dir</span><span style=color:#a5d6ff>&#34;</span>/*; <span style=color:#ff7b72>do</span>
+</span></span><span style=display:flex><span>	echo <span style=color:#a5d6ff>&#34;Processing </span><span style=color:#79c0ff>$image</span><span style=color:#a5d6ff>&#34;</span>
+</span></span><span style=display:flex><span>	<span style=color:#79c0ff>file_name</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>basename <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$image</span><span style=color:#a5d6ff>&#34;</span><span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#8b949e;font-style:italic># convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name</span>
+</span></span><span style=display:flex><span>	convert -background black -gravity center -resize <span style=color:#79c0ff>$target_ratio</span> -extent <span style=color:#79c0ff>$target_ratio</span> <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$image</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$output_dir</span><span style=color:#a5d6ff>&#34;</span>/<span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$file_name</span><span style=color:#a5d6ff>&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>done</span>
+</span></span></code></pre></div><h3 id=resize-images>Resize Images
+<a class=heading-link href=#resize-images><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Basic usage (will overwrite the original file):</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ mogrify -resize 820x ./*.jpg
+</span></span></code></pre></div><p>If you need recursion:</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>find . -name <span style=color:#a5d6ff>&#39;*.jpg&#39;</span> -execdir mogrify -resize 820x <span style=color:#ff7b72;font-weight:700>{}</span> +
+</span></span></code></pre></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2019 -
+2024
+Joseph Chai
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

@@ -1,287 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Home</title>
-    <link>https://jchai01.github.io/posts/</link>
-    <description>Recent content in Posts on Home</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 May 2024 15:16:42 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PostGIS - Geoserver full setup &#43; troubleshoot</title>
-      <link>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</link>
-      <pubDate>Wed, 15 May 2024 15:16:42 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</guid>
-      <description>Setup  Link to heading   Prerequisites  Link to heading   Ubuntu OS. Install Postgres, Geoserver (independent binary), PGAdmin (optional).
-Create PostGIS extension  Link to heading     Download the necessary tools: sudo apt install postgis postgresql-postgis
-  Run the following query with in PGAdmin or psql(command line): CREATE EXTENSION postgis;
-  Import GeoJson file:  Link to heading     Download the geojson file to import: https://data.</description>
-    </item>
-    
-    <item>
-      <title>nvim.surround overwrite default white space behaviour</title>
-      <link>https://jchai01.github.io/posts/nvim-surround/</link>
-      <pubDate>Wed, 15 May 2024 01:43:37 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/nvim-surround/</guid>
-      <description> Using ( in nvim.surround surrounds word with white space like so: ( word ). ) have to be used instead.  The following overwrites the default:
-return { { &amp;#34;kylechui/nvim-surround&amp;#34;, -- tag = &amp;#34;*&amp;#34;, -- Use for stability; omit to use `main` branch for the latest features config = function() require(&amp;#34;nvim-surround&amp;#34;).setup { surrounds = { [&amp;#34;(&amp;#34;] = { add = function() return { { &amp;#34;(&amp;#34; }, { &amp;#34;)&amp;#34; } } end, }, [&amp;#34;{&amp;#34;] = { add = function() return { { &amp;#34;{&amp;#34; }, { &amp;#34;}&amp;#34; } } end, }, [&amp;#34;[&amp;#34;] = { add = function() return { { &amp;#34;[&amp;#34; }, { &amp;#34;]&amp;#34; } } end, }, [&amp;#34;&amp;lt;&amp;#34;] = { add = function() return { { &amp;#34;&amp;lt;&amp;#34; }, { &amp;#34;&amp;gt;&amp;#34; } } end, }, }, } end, }, } </description>
-    </item>
-    
-    <item>
-      <title>Must-have Browser Add-Ons</title>
-      <link>https://jchai01.github.io/posts/browser-add-ons/</link>
-      <pubDate>Tue, 14 May 2024 23:24:29 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/browser-add-ons/</guid>
-      <description>uBlock Origin (Best Ad-Blocker)  Link to heading   SponsorBlock  Link to heading   Automatically skips sponsored segment/intro/outro and more. Data is crowdsourced.
-Bypass Paywalls Clean  Link to heading   Read articles from sites like Medium. Not available in plugin stores, need to download from GitHub and import it. For e.g. .xpi file for Firefox.
-Dark Reader  Link to heading   Enable dark mode for any site.</description>
-    </item>
-    
-    <item>
-      <title>Setup SSH in Github</title>
-      <link>https://jchai01.github.io/posts/ssh-with-github/</link>
-      <pubDate>Tue, 14 May 2024 23:09:51 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/ssh-with-github/</guid>
-      <description>Create SSH key  Link to heading   ssh-keygen -o -t rsa -C &amp;quot;any comment”
- The -o flag forces the tool to generate SSH keys with the OpenSSH format. The -t flag specifies the type of SSH keys to create. The -C flag allows for comments that get added as metadata at the end of the public key. Key generated to ~/.ssh folder  View SSH key  Link to heading   cat ~/.</description>
-    </item>
-    
-    <item>
-      <title>Redshift</title>
-      <link>https://jchai01.github.io/posts/redshift/</link>
-      <pubDate>Tue, 14 May 2024 21:57:33 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/redshift/</guid>
-      <description>With Redshift, you can set brightness level lower than the minumum.
- -O Temperature level (lower = warmer, higher = cooler) -b Brightness level (0 - 1)  redshift -oP -O 3500 -b .5 Note that calling xrandr on its own will cancel any redshift effect. The -P option of redshift also resets the screen brightness and color instead of incrementally superimposing adjustments.</description>
-    </item>
-    
-    <item>
-      <title>Tmuxifier Guide</title>
-      <link>https://jchai01.github.io/posts/tmuxifier-guide/</link>
-      <pubDate>Fri, 03 May 2024 18:41:41 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/tmuxifier-guide/</guid>
-      <description>If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Home</title><link>https://jchai01.github.io/posts/</link><description>Recent content in Posts on Home</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 15 May 2024 15:16:42 +0100</lastBuildDate><atom:link href="https://jchai01.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>PostGIS - Geoserver full setup + troubleshoot</title><link>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</link><pubDate>Wed, 15 May 2024 15:16:42 +0100</pubDate><guid>https://jchai01.github.io/posts/postgres-postgis-geoserver-troubleshoot/</guid><description>Setup Link to heading Prerequisites Link to heading Ubuntu OS. Install Postgres, Geoserver (independent binary), PGAdmin (optional).
+Create PostGIS extension Link to heading Download the necessary tools: sudo apt install postgis postgresql-postgis
+Run the following query with in PGAdmin or psql(command line): CREATE EXTENSION postgis;
+Import GeoJson file: Link to heading Download the geojson file to import: https://data.gov.ie/dataset/pra-state-assets . If link is down, use this.
+Install geojson to postGIS conversion tool: sudo apt install gdal</description></item><item><title>nvim.surround overwrite default white space behaviour</title><link>https://jchai01.github.io/posts/nvim-surround/</link><pubDate>Wed, 15 May 2024 01:43:37 +0100</pubDate><guid>https://jchai01.github.io/posts/nvim-surround/</guid><description> Using ( in nvim.surround surrounds word with white space like so: ( word ). ) have to be used instead. The following overwrites the default:
+return { { &amp;#34;kylechui/nvim-surround&amp;#34;, -- tag = &amp;#34;*&amp;#34;, -- Use for stability; omit to use `main` branch for the latest features config = function() require(&amp;#34;nvim-surround&amp;#34;).setup { surrounds = { [&amp;#34;(&amp;#34;] = { add = function() return { { &amp;#34;(&amp;#34; }, { &amp;#34;)&amp;#34; } } end, }, [&amp;#34;{&amp;#34;] = { add = function() return { { &amp;#34;{&amp;#34; }, { &amp;#34;}&amp;#34; } } end, }, [&amp;#34;[&amp;#34;] = { add = function() return { { &amp;#34;[&amp;#34; }, { &amp;#34;]&amp;#34; } } end, }, [&amp;#34;&amp;lt;&amp;#34;] = { add = function() return { { &amp;#34;&amp;lt;&amp;#34; }, { &amp;#34;&amp;gt;&amp;#34; } } end, }, }, } end, }, }</description></item><item><title>Must-have Browser Add-Ons</title><link>https://jchai01.github.io/posts/browser-add-ons/</link><pubDate>Tue, 14 May 2024 23:24:29 +0100</pubDate><guid>https://jchai01.github.io/posts/browser-add-ons/</guid><description>uBlock Origin (Best Ad-Blocker) Link to heading SponsorBlock Link to heading Automatically skips sponsored segment/intro/outro and more. Data is crowdsourced.
+Bypass Paywalls Clean Link to heading Read articles from sites like Medium. Not available in plugin stores, need to download from GitHub and import it. For e.g. .xpi file for Firefox.
+Dark Reader Link to heading Enable dark mode for any site.
+Default toggle keybind: alt + shift + d</description></item><item><title>Setup SSH in Github</title><link>https://jchai01.github.io/posts/ssh-with-github/</link><pubDate>Tue, 14 May 2024 23:09:51 +0100</pubDate><guid>https://jchai01.github.io/posts/ssh-with-github/</guid><description>Create SSH key Link to heading ssh-keygen -o -t rsa -C &amp;quot;any comment&amp;quot;
+The -o flag forces the tool to generate SSH keys with the OpenSSH format. The -t flag specifies the type of SSH keys to create. The -C flag allows for comments that get added as metadata at the end of the public key. Key generated to ~/.ssh folder View SSH key Link to heading cat ~/.ssh/id_rsa.pub</description></item><item><title>Redshift</title><link>https://jchai01.github.io/posts/redshift/</link><pubDate>Tue, 14 May 2024 21:57:33 +0100</pubDate><guid>https://jchai01.github.io/posts/redshift/</guid><description>With Redshift, you can set brightness level lower than the minumum.
+-O Temperature level (lower = warmer, higher = cooler) -b Brightness level (0 - 1) redshift -oP -O 3500 -b .5 Note that calling xrandr on its own will cancel any redshift effect. The -P option of redshift also resets the screen brightness and color instead of incrementally superimposing adjustments.</description></item><item><title>Tmuxifier Guide</title><link>https://jchai01.github.io/posts/tmuxifier-guide/</link><pubDate>Fri, 03 May 2024 18:41:41 +0100</pubDate><guid>https://jchai01.github.io/posts/tmuxifier-guide/</guid><description>If you have ever tried to write a shell/batch script to automate a whole dev environment such as running backend servers/opening code editor etc, this guide is for you.
 Pre-requisite: Tmux (My TMUX config)
 I have set the alias alias t=tmuxifier in this guide.
-Tmuxifier Path  Link to heading    To delete/rename sessions, go to this path and manipulate the files. (not sure why there isn&amp;rsquo;t a command for these operations) If you have created a session before, you can cd into this path and duplicate the files etc, to create your sessions too.</description>
-    </item>
-    
-    <item>
-      <title>Why my Jackie Chan Obsession is Justified</title>
-      <link>https://jchai01.github.io/posts/jackie-chan/</link>
-      <pubDate>Sun, 28 Apr 2024 08:21:00 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/jackie-chan/</guid>
-      <description>In this post, I will attempt to gaslight you into thinking that I am perfectly normal. You will learn various reasons why Jackie is superior and an ideal role model, and perhaps start bowing down too. These reasons do not include the bogus &amp;ldquo;he does all his own stunts&amp;rdquo; nonsense. Shame on him for claiming that, though, but that&amp;rsquo;s a story for another day.
-He is a polymath  Link to heading   He does it all: directing, acting, scriptwriting, editing, choreography, stunts, and more.</description>
-    </item>
-    
-    <item>
-      <title>Hacker Ethics to live by</title>
-      <link>https://jchai01.github.io/posts/hacker-ethics/</link>
-      <pubDate>Thu, 25 Apr 2024 09:03:06 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/hacker-ethics/</guid>
-      <description>Book reference: Hackers: Heroes of the Computer Evolution (1984) by Steven Levy
+Tmuxifier Path Link to heading To delete/rename sessions, go to this path and manipulate the files. (not sure why there isn&amp;rsquo;t a command for these operations) If you have created a session before, you can cd into this path and duplicate the files etc, to create your sessions too.</description></item><item><title>Why my Jackie Chan Obsession is Justified</title><link>https://jchai01.github.io/posts/jackie-chan/</link><pubDate>Sun, 28 Apr 2024 08:21:00 +0100</pubDate><guid>https://jchai01.github.io/posts/jackie-chan/</guid><description>In this post, I will attempt to gaslight you into thinking that I am perfectly normal. You will learn various reasons why Jackie is superior and an ideal role model, and perhaps start bowing down too. These reasons do not include the bogus &amp;ldquo;he does all his own stunts&amp;rdquo; nonsense. Shame on him for claiming that, though, but that&amp;rsquo;s a story for another day.
+He is a polymath Link to heading He does it all: directing, acting, scriptwriting, editing, choreography, stunts, and more.</description></item><item><title>Hacker Ethics to live by</title><link>https://jchai01.github.io/posts/hacker-ethics/</link><pubDate>Thu, 25 Apr 2024 09:03:06 +0100</pubDate><guid>https://jchai01.github.io/posts/hacker-ethics/</guid><description>Book reference: Hackers: Heroes of the Computer Evolution (1984) by Steven Levy
 In this post, you will be convinced why the hacker ethic is really the only one true ethic to live by, and you should just abandon all beliefs and become an anti-proprietary-anti-bigtech-Richard-Stallman&amp;rsquo;s-reincarnate open source zealot.
-The Definition You Did Not Know  Link to heading   Hacker was never a pejorative term. It has a second meaning that is loosely defined, but these three definitions summarize it well:</description>
-    </item>
-    
-    <item>
-      <title>Why x86 needs to die, summary</title>
-      <link>https://jchai01.github.io/posts/why-x86-needs-to-die/</link>
-      <pubDate>Thu, 25 Apr 2024 00:03:12 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/why-x86-needs-to-die/</guid>
-      <description>This blog is a compilation of summaries and insights gathered from this video by ThePrimeagen , where he reacts to an article titled &amp;ldquo;Why x86 needs to die&amp;rdquo;  together with hardware expert Casey Muratori. A counter-article  is also available at Chip and Cheese , a site that blogs about micro analysis stuff, and it&amp;rsquo;s recommended by Casey.
-Why are register names so weird? (4:35)  Link to heading   In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &amp;hellip;) but not the first half (they are not named r0, r1, r2 &amp;hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D.</description>
-    </item>
-    
-    <item>
-      <title>Right to repair, why you should care?</title>
-      <link>https://jchai01.github.io/posts/right-to-repair/</link>
-      <pubDate>Fri, 12 Apr 2024 23:47:06 +0100</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/right-to-repair/</guid>
-      <description>E-waste  Link to heading   Once upon a time, any electronics you bought would come with a schematic documenting their inner workings. Not only are these official schematics almost impossible to obtain due to &amp;ldquo;trade secrets,&amp;rdquo; try to disassemble any electronic device, and you will be met with a bunch of roadblocks: excessive use of adhesive, non-modular/soldered parts, and the requirement of proprietary tools. Apple even invented a mechanically inferior screw called the pentalobe screw just to keep people out of their hardware.</description>
-    </item>
-    
-    <item>
-      <title>Xdotool script examples</title>
-      <link>https://jchai01.github.io/posts/xdodool-scripts-example/</link>
-      <pubDate>Sat, 10 Feb 2024 02:04:09 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/xdodool-scripts-example/</guid>
-      <description>Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&amp;rsquo;s usage in a shell script.
-# Type ABC xdotool key A xdotool key B xdotool key C # Tab 3 times xdotool key Tab xdotool key Tab xdotool key Tab # Type 20 xdotool key 2 xdotool key 0 xdotool key Down xdotool key Left xdotool key Right xdotool key Return # Use sleep to wait sleep 0.</description>
-    </item>
-    
-    <item>
-      <title>Best sideloaded Android apps</title>
-      <link>https://jchai01.github.io/posts/best-sideloaded-android-apps/</link>
-      <pubDate>Thu, 11 Jan 2024 15:55:06 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/best-sideloaded-android-apps/</guid>
-      <description>It&amp;rsquo;s time to celebrate the biggest advantage of Android devices, sideloading!
-ReVanced Manager/YouTube ReVanced  Link to heading   Removes ads on YouTube App, enables play in background feature. Able to patch various other app too via ReVanced Manager.
+The Definition You Did Not Know Link to heading Hacker was never a pejorative term. It has a second meaning that is loosely defined, but these three definitions summarize it well:</description></item><item><title>Why x86 needs to die, summary</title><link>https://jchai01.github.io/posts/why-x86-needs-to-die/</link><pubDate>Thu, 25 Apr 2024 00:03:12 +0100</pubDate><guid>https://jchai01.github.io/posts/why-x86-needs-to-die/</guid><description>This blog is a compilation of summaries and insights gathered from this video by ThePrimeagen , where he reacts to an article titled &amp;ldquo;Why x86 needs to die&amp;rdquo; together with hardware expert Casey Muratori. A counter-article is also available at Chip and Cheese , a site that blogs about micro analysis stuff, and it&amp;rsquo;s recommended by Casey.
+Why are register names so weird? (4:35) Link to heading In assembly language, general purpose register names from the second half made sense (named r8, r9, r10, r11 &amp;hellip;) but not the first half (they are not named r0, r1, r2 &amp;hellip;) because original 8000 series CPUs started out with four registers: A, B, C, and D.</description></item><item><title>Right to repair, why you should care?</title><link>https://jchai01.github.io/posts/right-to-repair/</link><pubDate>Fri, 12 Apr 2024 23:47:06 +0100</pubDate><guid>https://jchai01.github.io/posts/right-to-repair/</guid><description>E-waste Link to heading Once upon a time, any electronics you bought would come with a schematic documenting their inner workings. Not only are these official schematics almost impossible to obtain due to &amp;ldquo;trade secrets,&amp;rdquo; try to disassemble any electronic device, and you will be met with a bunch of roadblocks: excessive use of adhesive, non-modular/soldered parts, and the requirement of proprietary tools. Apple even invented a mechanically inferior screw called the pentalobe screw just to keep people out of their hardware.</description></item><item><title>Xdotool script examples</title><link>https://jchai01.github.io/posts/xdodool-scripts-example/</link><pubDate>Sat, 10 Feb 2024 02:04:09 +0000</pubDate><guid>https://jchai01.github.io/posts/xdodool-scripts-example/</guid><description>Xdotool is an automation tool in Linux, something like AutoHotKey (AHK) for Windows. Below show some examples of it&amp;rsquo;s usage in a shell script.
+# Type ABC xdotool key A xdotool key B xdotool key C # Tab 3 times xdotool key Tab xdotool key Tab xdotool key Tab # Type 20 xdotool key 2 xdotool key 0 xdotool key Down xdotool key Left xdotool key Right xdotool key Return # Use sleep to wait sleep 0.</description></item><item><title>Best sideloaded Android apps</title><link>https://jchai01.github.io/posts/best-sideloaded-android-apps/</link><pubDate>Thu, 11 Jan 2024 15:55:06 +0000</pubDate><guid>https://jchai01.github.io/posts/best-sideloaded-android-apps/</guid><description>It&amp;rsquo;s time to celebrate the biggest advantage of Android devices, sideloading!
+ReVanced Manager/YouTube ReVanced Link to heading Removes ads on YouTube App, enables play in background feature. Able to patch various other app too via ReVanced Manager.
 Fastest way:
 Visit: https://revanced.net/
 Download APK file for YouTube ReVanced and MicroG and install them. (MicroG makes it possible for you to log into your google account with ReVanced)
-Patch the app yourself (get APK files from APKMirror):</description>
-    </item>
-    
-    <item>
-      <title>Python Cheatsheet</title>
-      <link>https://jchai01.github.io/posts/python-cheatsheet/</link>
-      <pubDate>Thu, 11 Jan 2024 15:27:40 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/python-cheatsheet/</guid>
-      <description>Virtual Environment  Link to heading   In this example, folder for the Virtual Environment is .venv
-python3 -m venv .venv source .venv/bin/activate deactivate Packages  Link to heading   pip install name-of-package pip uninstall name-of-package pip install -r requirements.txt pyenv  Link to heading   Manage different versions of python.
+Patch the app yourself (get APK files from APKMirror):</description></item><item><title>Python Cheatsheet</title><link>https://jchai01.github.io/posts/python-cheatsheet/</link><pubDate>Thu, 11 Jan 2024 15:27:40 +0000</pubDate><guid>https://jchai01.github.io/posts/python-cheatsheet/</guid><description>Virtual Environment Link to heading In this example, folder for the Virtual Environment is .venv
+python3 -m venv .venv source .venv/bin/activate deactivate Packages Link to heading pip install name-of-package pip uninstall name-of-package pip install -r requirements.txt pyenv Link to heading Manage different versions of python.
 List all version installed:
 pyenv versions Switch to a particular version example:
-pyenv global 3.8 Reset back to default:</description>
-    </item>
-    
-    <item>
-      <title>AstroNvim changes</title>
-      <link>https://jchai01.github.io/posts/changes-to-astrovim-config/</link>
-      <pubDate>Wed, 03 Jan 2024 17:34:20 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/changes-to-astrovim-config/</guid>
-      <description>Show hidden files in Neo-Tree by default. Add whichwrap scrolloff = 15  Plugins  Link to heading   debugprint  Link to heading   Automatically adds debug statements.
+pyenv global 3.8 Reset back to default:
+pyenv global system List all version available for install:</description></item><item><title>AstroNvim changes</title><link>https://jchai01.github.io/posts/changes-to-astrovim-config/</link><pubDate>Wed, 03 Jan 2024 17:34:20 +0000</pubDate><guid>https://jchai01.github.io/posts/changes-to-astrovim-config/</guid><description>Show hidden files in Neo-Tree by default. Add whichwrap scrolloff = 15 Plugins Link to heading debugprint Link to heading Automatically adds debug statements.
 g?v print statement variable at cursor position, after current line. g?V print statement variable at cursor position, before current line. g?p print statement after current line. g?P print statement before current line.
-surround.nvim  Link to heading   vim-signatures  Link to heading   View vim marks.</description>
-    </item>
-    
-    <item>
-      <title>Automate Image Resize with Padding using ImageMagick</title>
-      <link>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</link>
-      <pubDate>Wed, 03 Jan 2024 02:53:14 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</guid>
-      <description>Github link: https://github.com/jchai01/resize-photo-script
-#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio=&amp;#34;1080x1080&amp;#34; if [ -z &amp;#34;$image_dir&amp;#34; ]; then echo &amp;#34;Please provide image directory as first argument.&amp;#34; exit 1 fi if [ ! -d &amp;#34;$image_dir&amp;#34; ]; then echo &amp;#34;Not a valid directory&amp;#34; exit 1 fi output_dir=&amp;#34;$image_dir-output&amp;#34; echo &amp;#34;Located $image_dir&amp;#34; echo &amp;#34;Creating output $output_dir&amp;#34; mkdir &amp;#34;$output_dir&amp;#34; for image in &amp;#34;$image_dir&amp;#34;/*; do echo &amp;#34;Processing $image&amp;#34; file_name=$(basename &amp;#34;$image&amp;#34;) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio &amp;#34;$image&amp;#34; &amp;#34;$output_dir&amp;#34;/&amp;#34;$file_name&amp;#34; done Resize Images  Link to heading   Basic usage (will overwrite the original file):</description>
-    </item>
-    
-    <item>
-      <title>FFMPEG cheatsheet</title>
-      <link>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</link>
-      <pubDate>Wed, 03 Jan 2024 02:47:17 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</guid>
-      <description>Changing Aspect Ratio  Link to heading   Resizing a video from 4:3 to 16:9 (HD, 1280 x 720) for max screen size, with no cropping and addition of black padding
+surround.nvim Link to heading vim-signatures Link to heading View vim marks.
+others Link to heading Ensure latest NodeJS is installed, otherwise javascript LSP won’t work.</description></item><item><title>Automate Image Resize with Padding using ImageMagick</title><link>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</link><pubDate>Wed, 03 Jan 2024 02:53:14 +0000</pubDate><guid>https://jchai01.github.io/posts/automate-image-resize-with-padding-using-imagemagick/</guid><description>Github link: https://github.com/jchai01/resize-photo-script
+#!/bin/sh # This script requires imagemagick. image_dir=$1 target_ratio=&amp;#34;1080x1080&amp;#34; if [ -z &amp;#34;$image_dir&amp;#34; ]; then echo &amp;#34;Please provide image directory as first argument.&amp;#34; exit 1 fi if [ ! -d &amp;#34;$image_dir&amp;#34; ]; then echo &amp;#34;Not a valid directory&amp;#34; exit 1 fi output_dir=&amp;#34;$image_dir-output&amp;#34; echo &amp;#34;Located $image_dir&amp;#34; echo &amp;#34;Creating output $output_dir&amp;#34; mkdir &amp;#34;$output_dir&amp;#34; for image in &amp;#34;$image_dir&amp;#34;/*; do echo &amp;#34;Processing $image&amp;#34; file_name=$(basename &amp;#34;$image&amp;#34;) # convert -bordercolor white -border 100 -gravity center -resize 1200x1200 -extent 1200x1200 $image $output_dir/$file_name convert -background black -gravity center -resize $target_ratio -extent $target_ratio &amp;#34;$image&amp;#34; &amp;#34;$output_dir&amp;#34;/&amp;#34;$file_name&amp;#34; done Resize Images Link to heading Basic usage (will overwrite the original file):</description></item><item><title>FFMPEG cheatsheet</title><link>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</link><pubDate>Wed, 03 Jan 2024 02:47:17 +0000</pubDate><guid>https://jchai01.github.io/posts/ffmpeg-cheatsheet/</guid><description>Changing Aspect Ratio Link to heading Resizing a video from 4:3 to 16:9 (HD, 1280 x 720) for max screen size, with no cropping and addition of black padding
 ffmpeg -i input.mp4 -vf &amp;#34;scale=(iw*sar)*min(1280/(iw*sar)\,720/ih):ih*min(1280/(iw*sar)\,720/ih),pad=1280:720:(ow-iw)/2:(oh-ih)/2:black&amp;#34; output.mp4 Explanation: *scale = FFMPEG video filter to resize a video
- (iw*sar)min(1280/(iwsar),720/ih) = output width of the resized video = Resize width of video to AT MOST 1280 (keeping original aspect ratio) ihmin(1280/(iwsar),720/ih) = output height of the resized video = Resize width of video to AT MOST 720 (keeping original aspect ratio)  The scale transformation is then followed (chained) by a pad video filter:</description>
-    </item>
-    
-    <item>
-      <title>Installing Blender manually in Linux</title>
-      <link>https://jchai01.github.io/posts/installing-blender-via-zip-folder/</link>
-      <pubDate>Tue, 02 Jan 2024 19:52:20 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/installing-blender-via-zip-folder/</guid>
-      <description>Sometimes the package manager does not give you the lastest version of the software. This guide shows you how to install Blender manually without the use of package manager in order to get the lastest version. I am using Ubuntu in this example.
-  Download the zip file from Blender website. Unzip the file.
-  Copy the extracted folder to somewhere else if you want to. For me I placed them in /opt folder.</description>
-    </item>
-    
-    <item>
-      <title>Toggle night light in Ubuntu</title>
-      <link>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</link>
-      <pubDate>Tue, 26 Dec 2023 22:58:22 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</guid>
-      <description>Set night light to always on  Link to heading    Install dconf-editor:  sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this)  ref: link
-Add custom shortcut to toggle night light  Link to heading   Use the following script:
-bash -c &amp;#34;if [[ $(gsettings get org.</description>
-    </item>
-    
-    <item>
-      <title>Setup Latest NeoVim Guide</title>
-      <link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link>
-      <pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid>
-      <description>Executable  Link to heading    Download the NeoVim tar file. Extract and copy folder into /opt/  sudo mv nvim-folder /opt  Create symbolic link/symlink to /usr/local/bin  sudo ln -s /opt/nvim-some-version/nvim /usr/local/bin AppImages  Link to heading     Download NeoVim AppImage from GitHub release page.
-  Rename nvim.appimage to nvim
-  mv nvim.appimage nvim  Set the permission:  chmod +x nvim  Install fuse2 library if it is required to run the appimage  sudo apt install libfuse2  Copy from download folder to /usr/local/bin path  /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description>
-    </item>
-    
-    <item>
-      <title>I3 configuration</title>
-      <link>https://jchai01.github.io/posts/i3-configuration/</link>
-      <pubDate>Tue, 26 Dec 2023 22:45:57 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/i3-configuration/</guid>
-      <description>My attempt on switching to a window manager (I3). I was on a pretty old laptop (GL752V), probably why I faced a handful of issues. Distro used: EndeavourOS.
+(iw*sar)min(1280/(iwsar),720/ih) = output width of the resized video = Resize width of video to AT MOST 1280 (keeping original aspect ratio) ihmin(1280/(iwsar),720/ih) = output height of the resized video = Resize width of video to AT MOST 720 (keeping original aspect ratio) The scale transformation is then followed (chained) by a pad video filter:</description></item><item><title>Installing Blender manually in Linux</title><link>https://jchai01.github.io/posts/installing-blender-via-zip-folder/</link><pubDate>Tue, 02 Jan 2024 19:52:20 +0000</pubDate><guid>https://jchai01.github.io/posts/installing-blender-via-zip-folder/</guid><description>Sometimes the package manager does not give you the lastest version of the software. This guide shows you how to install Blender manually without the use of package manager in order to get the lastest version. I am using Ubuntu in this example.
+Download the zip file from Blender website. Unzip the file.
+Copy the extracted folder to somewhere else if you want to. For me I placed them in /opt folder.</description></item><item><title>Toggle night light in Ubuntu</title><link>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</link><pubDate>Tue, 26 Dec 2023 22:58:22 +0000</pubDate><guid>https://jchai01.github.io/posts/toggle-night-light-in-ubuntu/</guid><description>Set night light to always on Link to heading Install dconf-editor: sudo apt install dconf-editor Open dconf-editor and navigate to the key/org/gnome/settings-daemon/plugins/color/ Set night-light-schedule-automatic to false Set night-light-schedule-from to 0, and night-light-schedule-to to 24 (or any value higher than this) ref: link
+Add custom shortcut to toggle night light Link to heading Use the following script:
+bash -c &amp;#34;if [[ $(gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled) == &amp;#34;true&amp;#34; ]]; then gsettings set org.</description></item><item><title>Setup Latest NeoVim Guide</title><link>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</link><pubDate>Tue, 26 Dec 2023 22:57:27 +0000</pubDate><guid>https://jchai01.github.io/posts/neovim-setup-on-ubuntu/</guid><description>Executable Link to heading Download the NeoVim tar file. Extract and copy folder into /opt/ sudo mv nvim-folder /opt Create symbolic link/symlink to /usr/local/bin sudo ln -s /opt/nvim-some-version/nvim /usr/local/bin AppImages Link to heading Download NeoVim AppImage from GitHub release page.
+Rename nvim.appimage to nvim
+mv nvim.appimage nvim Set the permission: chmod +x nvim Install fuse2 library if it is required to run the appimage sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description></item><item><title>I3 configuration</title><link>https://jchai01.github.io/posts/i3-configuration/</link><pubDate>Tue, 26 Dec 2023 22:45:57 +0000</pubDate><guid>https://jchai01.github.io/posts/i3-configuration/</guid><description>My attempt on switching to a window manager (I3). I was on a pretty old laptop (GL752V), probably why I faced a handful of issues. Distro used: EndeavourOS.
 config file path:
 ~/.config/i3/config Changes made:
- Change open file explorer from ctrl+n to ctrl+e Make brightness key work. (See fix i3wm brightness) Resize feature with mod + ctrl + arrow keys. Ensure power button work. Make alt+F4 work as well, other than $mod + q.</description>
-    </item>
-    
-    <item>
-      <title>Google search highlighted text hotkey</title>
-      <link>https://jchai01.github.io/posts/google-search-highlighted-text/</link>
-      <pubDate>Tue, 26 Dec 2023 22:42:42 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/google-search-highlighted-text/</guid>
-      <description>#!/bin/bash  # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &amp;#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&amp;#34; Bind it to a shortcut key, mine is super + s.
-/home/user/Desktop/scripts/google-search.sh Update (05/14/2024)  Link to heading   Just one line will do:
-sh -c &amp;#39;firefox &amp;#34;https://www.google.com/search?q=$(xclip -o)&amp;#34;&amp;#39; </description>
-    </item>
-    
-    <item>
-      <title>Davinci Resolve Shortcut Mappings</title>
-      <link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link>
-      <pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid>
-      <description>Access the preference menu  Link to heading   ctrl + alt + k to access preference menu.
-Changes  Link to heading     Split clips: change from ctrl + \ to s
-  Start to playhead and end to playhead: ctrl + shift + [ and ctrl + shift + ] to q and w respectively.
-  Note  Link to heading    Remember to remove keybindings for any affected shortcut.</description>
-    </item>
-    
-    <item>
-      <title>Resolve HEVC (H265) In Davinci Resolve</title>
-      <link>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</link>
-      <pubDate>Mon, 25 Dec 2023 00:04:48 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</guid>
-      <description>Download the HEVC extension and install it from: https://drive.google.com/drive/folders/19FWeAVWFoZUaM-14Wbt3t9lb_bIprl8b Press Win + R on your keyboard to launch the Run dialog box.Type WSReset.exe in the dialog box and press Enter. Open Microsoft Store, click the Library icon. This will be on the left side of the Store app.Check for Microsoft Store Updates. Click the Get updates button to check for available updates.If updates are available, click Update all to download and install them.</description>
-    </item>
-    
-    <item>
-      <title>Change Timezone in Linux</title>
-      <link>https://jchai01.github.io/posts/change-timezone-in-linux/</link>
-      <pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/change-timezone-in-linux/</guid>
-      <description>View current timezone:
+Change open file explorer from ctrl+n to ctrl+e Make brightness key work. (See fix i3wm brightness) Resize feature with mod + ctrl + arrow keys. Ensure power button work. Make alt+F4 work as well, other than $mod + q.</description></item><item><title>Google search highlighted text hotkey</title><link>https://jchai01.github.io/posts/google-search-highlighted-text/</link><pubDate>Tue, 26 Dec 2023 22:42:42 +0000</pubDate><guid>https://jchai01.github.io/posts/google-search-highlighted-text/</guid><description>#!/bin/bash # Google search the highlighted text (requires: xdg-utils, xsel) xdg-open &amp;#34;[https://google.com/search?q=$(xsel)](https://google.com/search?q=$(xsel))&amp;#34; Bind it to a shortcut key, mine is super + s.
+/home/user/Desktop/scripts/google-search.sh Update (05/14/2024) Link to heading Just one line will do:
+sh -c &amp;#39;firefox &amp;#34;https://www.google.com/search?q=$(xclip -o)&amp;#34;&amp;#39;</description></item><item><title>Davinci Resolve Shortcut Mappings</title><link>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</link><pubDate>Tue, 26 Dec 2023 22:38:32 +0000</pubDate><guid>https://jchai01.github.io/posts/davinci-resolve-shortcut-mappings/</guid><description> Access the preference menu Link to heading ctrl + alt + k to access preference menu.
+Changes Link to heading Split clips: change from ctrl + \ to s
+Start to playhead and end to playhead: ctrl + shift + [ and ctrl + shift + ] to q and w respectively.
+Note Link to heading Remember to remove keybindings for any affected shortcut.</description></item><item><title>Resolve HEVC (H265) In Davinci Resolve</title><link>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</link><pubDate>Mon, 25 Dec 2023 00:04:48 +0000</pubDate><guid>https://jchai01.github.io/posts/resolve-hevc-in-davinci-resolve/</guid><description>Download the HEVC extension and install it from: https://drive.google.com/drive/folders/19FWeAVWFoZUaM-14Wbt3t9lb_bIprl8b Press Win + R on your keyboard to launch the Run dialog box.Type WSReset.exe in the dialog box and press Enter. Open Microsoft Store, click the Library icon. This will be on the left side of the Store app.Check for Microsoft Store Updates. Click the Get updates button to check for available updates.If updates are available, click Update all to download and install them.</description></item><item><title>Change Timezone in Linux</title><link>https://jchai01.github.io/posts/change-timezone-in-linux/</link><pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate><guid>https://jchai01.github.io/posts/change-timezone-in-linux/</guid><description>View current timezone:
 timedatectl List timezones:
 timedatectl list-timezones Change timezone example:
-sudo timedatectl set-timezone Europe/Dublin </description>
-    </item>
-    
-    <item>
-      <title>Automount Windows drive in Linux</title>
-      <link>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</link>
-      <pubDate>Sun, 24 Dec 2023 23:10:09 +0000</pubDate>
-      
-      <guid>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</guid>
-      <description>Find out where the windows drive is located:
+sudo timedatectl set-timezone Europe/Dublin</description></item><item><title>Automount Windows drive in Linux</title><link>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</link><pubDate>Sun, 24 Dec 2023 23:10:09 +0000</pubDate><guid>https://jchai01.github.io/posts/mount-windows-drive-in-linux/</guid><description>Find out where the windows drive is located:
 lsblk Edit fstab file:
 sudo nvim /etc/fstab For example, sdb2:
 # &amp;lt;file system&amp;gt; &amp;lt;mount point&amp;gt; &amp;lt;type&amp;gt; &amp;lt;options&amp;gt; &amp;lt;dump&amp;gt; &amp;lt;pass&amp;gt;``` /dev/sdb2 /media/data ntfs defaults 0 0 Reboot the system:
-reboot Create a launcher.</description>
-    </item>
-    
-  </channel>
-</rss>
+reboot Create a launcher.</description></item></channel></rss>
