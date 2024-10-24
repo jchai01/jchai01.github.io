@@ -1,0 +1,66 @@
+<!doctype html><html lang=en><head><title>Automate Sending Email Through Gmail with Bash Script · Home
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Joseph Chai"><meta name=description content="Setting an App Password Link to heading Click on the top-right icon -> Manage your Google Account -> Search app password on the search bar -> Sign in with App Password Follow the steps and eventually you will be given a app password that look something like this: aaaa bbbb cccc dddd Bash script Link to heading Use the following script to verify that the sending of email works (don&rsquo;t forget to chmod +x): #!"><meta name=keywords content="blog,developer,personal"><meta name=fediverse:creator content><meta name=twitter:card content="summary"><meta name=twitter:title content="Automate Sending Email Through Gmail with Bash Script"><meta name=twitter:description content="Setting an App Password Link to heading Click on the top-right icon -> Manage your Google Account -> Search app password on the search bar -> Sign in with App Password Follow the steps and eventually you will be given a app password that look something like this: aaaa bbbb cccc dddd Bash script Link to heading Use the following script to verify that the sending of email works (don’t forget to chmod +x): #!"><meta property="og:url" content="https://jchai01.github.io/posts/automate-email-with-bash/"><meta property="og:site_name" content="Home"><meta property="og:title" content="Automate Sending Email Through Gmail with Bash Script"><meta property="og:description" content="Setting an App Password Link to heading Click on the top-right icon -> Manage your Google Account -> Search app password on the search bar -> Sign in with App Password Follow the steps and eventually you will be given a app password that look something like this: aaaa bbbb cccc dddd Bash script Link to heading Use the following script to verify that the sending of email works (don’t forget to chmod +x): #!"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-10-24T02:20:18+01:00"><meta property="article:modified_time" content="2024-10-24T02:20:18+01:00"><link rel=canonical href=https://jchai01.github.io/posts/automate-email-with-bash/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.07092c1350ffd254998dc43a44ae96e617d14af4df4602626878df89189c5e1a.css integrity="sha256-BwksE1D/0lSZjcQ6RK6W5hfRSvTfRgJiaHjfiRicXho=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><head></head><nav class=navigation><section class=container><a class=navigation-title href=https://jchai01.github.io/>Home
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jchai01.github.io/posts/automate-email-with-bash/>Automate Sending Email Through Gmail with Bash Script</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2024-10-24T02:20:18+01:00>October 24, 2024
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+2-minute read</span></div></div></header><div class=post-content><h2 id=setting-an-app-password>Setting an App Password
+<a class=heading-link href=#setting-an-app-password><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><ul><li>Click on the top-right icon -> Manage your Google Account -> Search <code>app password</code> on the search bar -> Sign in with App Password</li><li>Follow the steps and eventually you will be given a app password that look something like this: <code>aaaa bbbb cccc dddd</code></li></ul><h2 id=bash-script>Bash script
+<a class=heading-link href=#bash-script><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><ul><li>Use the following script to verify that the sending of email works (don&rsquo;t forget to <code>chmod +x</code>):</li></ul><pre tabindex=0><code>#!/bin/bash
+
+# Prompt the user for input
+read -p &#34;Enter your email: &#34; sender
+read -p &#34;Enter recipient email: &#34; receiver
+read -s -p &#34;Enter your Google App password: &#34; gapp
+echo
+read -p &#34;Enter the subject of mail: &#34; sub
+
+# Read the body of the email
+echo &#34;Enter the body of mail (Ctrl+D to end):&#34;
+body=$(&lt;/dev/stdin)
+
+# Sending email using curl
+response=$(curl -s --url &#39;smtps://smtp.gmail.com:465&#39; --ssl-reqd \
+    --mail-from &#34;$sender&#34; \
+    --mail-rcpt &#34;$receiver&#34; \
+    --user &#34;$sender:$gapp&#34; \
+    -T &lt;(echo -e &#34;From: $sender\nTo: $receiver\nSubject: $sub\n\n$body&#34;))
+
+if [ $? -eq 0 ]; then
+    echo &#34;Email sent successfully.&#34;
+else
+    echo &#34;Failed to send email.&#34;
+    echo &#34;Response: $response&#34;
+fi
+</code></pre><h2 id=modify-bash-script>Modify Bash Script
+<a class=heading-link href=#modify-bash-script><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><ul><li>Modify the bash script to suit your need, for e.g:</li></ul><pre tabindex=0><code>#!/bin/bash
+
+# sets the meeting date 2 days from the current day
+MEETING_DATE=$(date -d &#34;+2 days&#34; +&#39;%m/%d/%Y&#39;)
+
+response=$(curl -s --url &#39;smtps://smtp.gmail.com:465&#39; --ssl-reqd \
+    --mail-from &#34;email-address-to-send-from@gmail.com&#34; \
+    --mail-rcpt &#34;receving-email-1@gmail.com&#34; \
+    --mail-rcpt &#34;receving-email-2@gmail.com&#34; \
+    --user &#34;email-address-to-send-from@gmail.com:aaaa bbbb cccc dddd&#34; \
+    -T &lt;(echo -e &#34;From: email-address-to-send-from@gmail.com\nTo: receving-email-1@gmail.com receving-email-2@gmail.com\nSubject: Agenda for our meeting 1:00pm-2:00pm on Thursday ($MEETING_DATE)\n\nHi Dr Harry,\n\nPlease find the agenda as follows:\n13:00-13:15: Alice&#39;s update.\n13:15-13:30: Bob&#39;s update.\n13:30-13:45: Carl&#39;s update.\n13:45-14:00: Discussions: miscellaneous.\n\nhttps://teams.microsoft.com/l/meetup-join/19%3_NzZjZGXiOTYtMDRiOS00ZmI0-random-meeting-link\n\nRegards,\nUsername&#34;))
+
+if [ $? -eq 0 ]; then
+    echo &#34;Email sent successfully.&#34;
+else
+    echo &#34;Failed to send email.&#34;
+    echo &#34;Response: $response&#34;
+fi
+</code></pre><ul><li>multiple line of <code>--mail-rcpt</code> for multiple recipients.</li><li><code>aaaa bbbb cccc dddd</code> refers to the app password.</li></ul><h2 id=setup-cronjob>Setup Cronjob
+<a class=heading-link href=#setup-cronjob><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><ul><li>Setup crontab with <code>crontab -e</code>:</li><li>E.g. at 12pm on Thursday: <code>0 12 * * 4</code></li><li>Use: <a href=https://crontab.guru/ class=external-link target=_blank rel=noopener>https://crontab.guru/</a></li></ul><h1 id=ref>Ref
+<a class=heading-link href=#ref><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><p><a href=https://www.fosstechnix.com/how-to-send-email-using-shell-script/ class=external-link target=_blank rel=noopener>https://www.fosstechnix.com/how-to-send-email-using-shell-script/</a></p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2019 -
+2024
+Joseph Chai
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script data-goatcounter=https://jchai01.goatcounter.com/count async src=//gc.zgo.at/count.js></script></body></html>
