@@ -42,8 +42,7 @@
 </span></span><span style=display:flex><span>printf <span style=color:#a5d6ff>&#34;\n</span><span style=color:#ff7b72>$(</span>date<span style=color:#ff7b72>)</span><span style=color:#a5d6ff> \n&#34;</span> &gt;&gt;log.txt
 </span></span><span style=display:flex><span>exec &gt;&gt;log.txt 2&gt;&amp;<span style=color:#a5d6ff>1</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># sets the meeting date 2 days from the current day</span>
-</span></span><span style=display:flex><span><span style=color:#79c0ff>MEETING_DATE</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>date -d <span style=color:#a5d6ff>&#34;+2 days&#34;</span> +<span style=color:#a5d6ff>&#39;%m/%d/%Y&#39;</span><span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>MEETING_DATE</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>date -d <span style=color:#a5d6ff>&#34;+2 days&#34;</span> +<span style=color:#a5d6ff>&#39;%m/%d/%Y&#39;</span><span style=color:#ff7b72>)</span> <span style=color:#8b949e;font-style:italic># set date 2 days from now</span>
 </span></span><span style=display:flex><span><span style=color:#79c0ff>RECIPIENTS_FORMATTED</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;&#34;</span>
 </span></span><span style=display:flex><span><span style=color:#79c0ff>RECIPIENTS</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;email1@abc.com email2@abc.com&#34;</span>
 </span></span><span style=display:flex><span>
