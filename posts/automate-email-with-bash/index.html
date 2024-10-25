@@ -8,53 +8,63 @@
 <a class=heading-link href=#setting-an-app-password><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><ul><li>Click on the top-right icon -> Manage your Google Account -> Search <code>app password</code> on the search bar -> Sign in with App Password</li><li>Follow the steps and eventually you will be given a app password that look something like this: <code>aaaa bbbb cccc dddd</code></li></ul><h2 id=bash-script>Bash script
 <a class=heading-link href=#bash-script><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><ul><li>Use the following script to verify that the sending of email works (don&rsquo;t forget to <code>chmod +x</code>):</li></ul><pre tabindex=0><code>#!/bin/bash
-
-# Prompt the user for input
-read -p &#34;Enter your email: &#34; sender
-read -p &#34;Enter recipient email: &#34; receiver
-read -s -p &#34;Enter your Google App password: &#34; gapp
-echo
-read -p &#34;Enter the subject of mail: &#34; sub
-
-# Read the body of the email
-echo &#34;Enter the body of mail (Ctrl+D to end):&#34;
-body=$(&lt;/dev/stdin)
-
-# Sending email using curl
-response=$(curl -s --url &#39;smtps://smtp.gmail.com:465&#39; --ssl-reqd \
-    --mail-from &#34;$sender&#34; \
-    --mail-rcpt &#34;$receiver&#34; \
-    --user &#34;$sender:$gapp&#34; \
-    -T &lt;(echo -e &#34;From: $sender\nTo: $receiver\nSubject: $sub\n\n$body&#34;))
-
-if [ $? -eq 0 ]; then
-    echo &#34;Email sent successfully.&#34;
-else
-    echo &#34;Failed to send email.&#34;
-    echo &#34;Response: $response&#34;
-fi
-</code></pre><h2 id=modify-bash-script>Modify Bash Script
+<span class=sr-only>Link to heading</span></a></h2><ul><li>Use the following script to verify that the sending of email works (don&rsquo;t forget to <code>chmod +x</code>):</li></ul><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Prompt the user for input</span>
+</span></span><span style=display:flex><span>read -p <span style=color:#a5d6ff>&#34;Enter your email: &#34;</span> sender
+</span></span><span style=display:flex><span>read -p <span style=color:#a5d6ff>&#34;Enter recipient email: &#34;</span> receiver
+</span></span><span style=display:flex><span>read -s -p <span style=color:#a5d6ff>&#34;Enter your Google App password: &#34;</span> gapp
+</span></span><span style=display:flex><span>echo
+</span></span><span style=display:flex><span>read -p <span style=color:#a5d6ff>&#34;Enter the subject of mail: &#34;</span> sub
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Read the body of the email</span>
+</span></span><span style=display:flex><span>echo <span style=color:#a5d6ff>&#34;Enter the body of mail (Ctrl+D to end):&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>body</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>&lt;/dev/stdin<span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Sending email using curl</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>response</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>curl -s --url <span style=color:#a5d6ff>&#39;smtps://smtp.gmail.com:465&#39;</span> --ssl-reqd <span style=color:#79c0ff>\
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff></span>    --mail-from <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$sender</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#79c0ff>\
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff></span>    --mail-rcpt <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$receiver</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#79c0ff>\
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff></span>    --user <span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$sender</span><span style=color:#a5d6ff>:</span><span style=color:#79c0ff>$gapp</span><span style=color:#a5d6ff>&#34;</span> <span style=color:#79c0ff>\
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff></span>    -T &lt;<span style=color:#ff7b72;font-weight:700>(</span>echo -e <span style=color:#a5d6ff>&#34;From: </span><span style=color:#79c0ff>$sender</span><span style=color:#a5d6ff>\nTo: </span><span style=color:#79c0ff>$receiver</span><span style=color:#a5d6ff>\nSubject: </span><span style=color:#79c0ff>$sub</span><span style=color:#a5d6ff>\n\n</span><span style=color:#79c0ff>$body</span><span style=color:#a5d6ff>&#34;</span><span style=color:#ff7b72>)</span><span style=color:#ff7b72;font-weight:700>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>[</span> <span style=color:#79c0ff>$?</span> -eq <span style=color:#a5d6ff>0</span> <span style=color:#ff7b72;font-weight:700>]</span>; <span style=color:#ff7b72>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Email sent successfully.&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>else</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Failed to send email.&#34;</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Response: </span><span style=color:#79c0ff>$response</span><span style=color:#a5d6ff>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>fi</span>
+</span></span></code></pre></div><h2 id=modify-bash-script>Modify Bash Script
 <a class=heading-link href=#modify-bash-script><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><ul><li>Modify the bash script to suit your need, for e.g:</li></ul><pre tabindex=0><code>#!/bin/bash
-
-# sets the meeting date 2 days from the current day
-MEETING_DATE=$(date -d &#34;+2 days&#34; +&#39;%m/%d/%Y&#39;)
-
-response=$(curl -s --url &#39;smtps://smtp.gmail.com:465&#39; --ssl-reqd \
-    --mail-from &#34;email-address-to-send-from@gmail.com&#34; \
-    --mail-rcpt &#34;receving-email-1@gmail.com&#34; \
-    --mail-rcpt &#34;receving-email-2@gmail.com&#34; \
-    --user &#34;email-address-to-send-from@gmail.com:aaaa bbbb cccc dddd&#34; \
-    -T &lt;(echo -e &#34;From: email-address-to-send-from@gmail.com\nTo: receving-email-1@gmail.com receving-email-2@gmail.com\nSubject: Agenda for our meeting 1:00pm-2:00pm on Thursday ($MEETING_DATE)\n\nHi Dr Harry,\n\nPlease find the agenda as follows:\n13:00-13:15: Alice&#39;s update.\n13:15-13:30: Bob&#39;s update.\n13:30-13:45: Carl&#39;s update.\n13:45-14:00: Discussions: miscellaneous.\n\nhttps://teams.microsoft.com/l/meetup-join/19%3_NzZjZGXiOTYtMDRiOS00ZmI0-random-meeting-link\n\nRegards,\nUsername&#34;))
-
-if [ $? -eq 0 ]; then
-    echo &#34;Email sent successfully.&#34;
-else
-    echo &#34;Failed to send email.&#34;
-    echo &#34;Response: $response&#34;
-fi
-</code></pre><ul><li>multiple line of <code>--mail-rcpt</code> for multiple recipients.</li><li><code>aaaa bbbb cccc dddd</code> refers to the app password.</li></ul><h2 id=setup-cronjob>Setup Cronjob
+<span class=sr-only>Link to heading</span></a></h2><ul><li>Modify the bash script to suit your need, for e.g:</li></ul><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic>#!/bin/bash
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-weight:700;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># for error handling when running cronjob, save output to log.txt</span>
+</span></span><span style=display:flex><span>printf <span style=color:#a5d6ff>&#34;\n</span><span style=color:#ff7b72>$(</span>date<span style=color:#ff7b72>)</span><span style=color:#a5d6ff> \n&#34;</span> &gt;&gt;log.txt
+</span></span><span style=display:flex><span>exec &gt;&gt;log.txt 2&gt;&amp;<span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># sets the meeting date 2 days from the current day</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>MEETING_DATE</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>date -d <span style=color:#a5d6ff>&#34;+2 days&#34;</span> +<span style=color:#a5d6ff>&#39;%m/%d/%Y&#39;</span><span style=color:#ff7b72>)</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>RECIPIENTS_FORMATTED</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>RECIPIENTS</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;email1@abc.com email2@abc.com&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># prepend all recipient&#39;s email with &#34;--mail-rcpt&#34;, for e.g: &#34;--mail-rcpt email1@abc.com --mail-rcpt email2@abc.com&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>for</span> i in <span style=color:#79c0ff>$RECIPIENTS</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>do</span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>RECIPIENTS_FORMATTED</span><span style=color:#ff7b72;font-weight:700>+=</span><span style=color:#a5d6ff>&#34;--mail-rcpt </span><span style=color:#79c0ff>$i</span><span style=color:#a5d6ff> &#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>done</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff>response</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>curl -s --url <span style=color:#a5d6ff>&#39;smtps://smtp.gmail.com:465&#39;</span> --ssl-reqd <span style=color:#79c0ff>\
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff></span>    --mail-from <span style=color:#a5d6ff>&#34;email-address-to-send-from@gmail.com&#34;</span> <span style=color:#79c0ff>$RECIPIENTS_FORMATTED</span> <span style=color:#79c0ff>\
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff></span>    --user <span style=color:#a5d6ff>&#34;email-address-to-send-from@gmail.com:aaaa bbbb cccc dddd&#34;</span> <span style=color:#79c0ff>\
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff></span>    -T &lt;<span style=color:#ff7b72;font-weight:700>(</span>echo -e <span style=color:#a5d6ff>&#34;From: email-address-to-send-from@gmail.com\nTo: </span><span style=color:#79c0ff>$RECIPIENTS</span><span style=color:#a5d6ff>\nSubject: Agenda for our meeting 1:00pm-2:00pm on Thursday (</span><span style=color:#79c0ff>$MEETING_DATE</span><span style=color:#a5d6ff>)\n\nHi,\n\nPlease find the agenda as follows:\n13:00-13:15: Alice&#39;s update.\n13:15-13:30: Bob&#39;s update.\n13:30-13:45: Charlie&#39;s update.\n13:45-14:00: Discussions: miscellaneous.\n\nhttps://teams.microsoft.com/l/meetup-join/19%3_NzZjZGXiOTYtMDRiOS00ZmI0-random-meeting-link\n\nRegards,\nUsername&#34;</span><span style=color:#ff7b72>)</span><span style=color:#ff7b72;font-weight:700>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>[</span> <span style=color:#79c0ff>$?</span> -eq <span style=color:#a5d6ff>0</span> <span style=color:#ff7b72;font-weight:700>]</span>; <span style=color:#ff7b72>then</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Email sent successfully.&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>else</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Failed to send email.&#34;</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#a5d6ff>&#34;Response: </span><span style=color:#79c0ff>$response</span><span style=color:#a5d6ff>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>fi</span>
+</span></span></code></pre></div><ul><li>multiple line of <code>--mail-rcpt</code> for multiple recipients.</li><li><code>aaaa bbbb cccc dddd</code> refers to the app password.</li></ul><h2 id=setup-cronjob>Setup Cronjob
 <a class=heading-link href=#setup-cronjob><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><ul><li>Setup crontab with <code>crontab -e</code>:</li><li>E.g. at 12pm on Thursday: <code>0 12 * * 4</code></li><li>Use: <a href=https://crontab.guru/ class=external-link target=_blank rel=noopener>https://crontab.guru/</a></li></ul><h1 id=ref>Ref
 <a class=heading-link href=#ref><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
