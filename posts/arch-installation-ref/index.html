@@ -34,13 +34,17 @@ both of these clears the drive of any previous partitions and starts from clean 
 <code>mkswap /dev/sda2</code>
 <code>swapon /dev/sda2</code></p><h3 id=mounting--installing>Mounting & Installing
 <a class=heading-link href=#mounting--installing><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><ul><li>Mount root partition on <code>/mnt</code>: <code>mount /dev/sda3 /mnt</code></li><li>Install Linux: <code>pacstrap -K /mnt base linux linux-firmware sudo vim</code>
-<code>-K</code> is to create an empty keyring.</li><li>Generate filesystem table: <code>genfstab -U /mnt >> /mnt/etc/fstab</code></li><li><code>arch-chroot /mnt</code> to go into the installed system.</li></ul><h2 id=creating-user>Creating User
+<span class=sr-only>Link to heading</span></a></h3><ul><li>Mount root partition on <code>/mnt</code>: <code>mount /dev/sda3 /mnt</code></li><li>Install Linux: <code>pacstrap -K /mnt base linux linux-firmware sudo vi</code>
+<code>-K</code> is to create an empty keyring.</li><li>Generate filesystem table: <code>genfstab -U /mnt >> /mnt/etc/fstab</code></li><li><code>arch-chroot /mnt</code> to go into the installed system.</li></ul><h2 id=grub-installation>Grub Installation
+<a class=heading-link href=#grub-installation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><h2 id=creating-user>Creating User
 <a class=heading-link href=#creating-user><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><ul><li><code>useradd -m -G wheel -s /bin/bash username</code></li><li>adding <code>-s /bin/bash</code> resolved an issue where the password entered is always incorrect when trying to login.</li></ul><h2 id=installing-xfce4-desktop-environment>Installing XFCE4 Desktop Environment
+<span class=sr-only>Link to heading</span></a></h2><ul><li><code>passwd</code> to set a root password, the default root password is an invalid one.</li><li><code>useradd -m -G wheel -s /bin/bash username</code></li><li>edit the visudo file to allow users in wheel group to use sudo: <code>sudo visudo</code> (uncomment the appropriate line)</li><li>adding <code>-s /bin/bash</code> resolved an issue where the password entered is always incorrect when trying to login.</li><li><code>passwd username</code> to set a password.</li></ul><h2 id=installing-xfce4-desktop-environment>Installing XFCE4 Desktop Environment
 <a class=heading-link href=#installing-xfce4-desktop-environment><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p>xfce4 installation: <code>sudo pacman -S xfce4 xfce4-goodies network-manager lightdm lightdm-gtk-greeter</code>
-Enable services: <code>systemctl enable lightdm</code> & <code>systemctl enable NetworkManager</code></p><h2 id=others>Others
+Enable services: <code>systemctl enable lightdm</code> & <code>systemctl enable NetworkManager</code></p><h2 id=gpu-driver-installation>GPU Driver installation
+<a class=heading-link href=#gpu-driver-installation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><ul><li><code>sudo pacman -S nvidia-open nvidia-utils nvidia-settings</code></li><li>after running this command, reboot and check if nvidia drivers are properly installed with the <code>nvidia-smi</code> command</li></ul><h2 id=others>Others
 <a class=heading-link href=#others><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><ul><li><code>ctrl-alt-f2</code> to enter terminal if stuck at booting.</li><li>If accidentally logout from installation medium, default password is <code>root</code>.</li></ul><h2 id=post-installation>Post Installation
 <a class=heading-link href=#post-installation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
