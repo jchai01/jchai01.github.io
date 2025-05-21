@@ -6,7 +6,7 @@
 </time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
 One-minute read</span></div></div></header><div class=post-content><ol><li><code>lsblk</code> to check which drive to format. <code>sudo fdisk -l</code> can be used too for more details.</li><li>Unmount drive: <code>umount /dev/sdb1</code></li><li>Select the drive, without the number (sdc instead of sdc1): <code>sudo fdisk /dev/sdc</code></li><li><code>g</code> to create new GPT partition</li><li><code>n</code> to write new partition</li><li>press enter to use default value, entire drive</li><li><code>w</code> to to write.</li><li><code>lsblk</code> again to confirm.</li><li>Set filesystem type e.g. fat32. Select the partition, this time with the number (sdc1): <code>sudo mkfs.fat -F 32 -n LABEL /dev/sdc1</code></li></ol></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2019 -
-2024
+2025
 Joseph Chai
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script data-goatcounter=https://jchai01.goatcounter.com/count async src=//gc.zgo.at/count.js></script></body></html>
