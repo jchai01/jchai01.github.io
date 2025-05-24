@@ -1,0 +1,171 @@
+<!doctype html><html lang=en><head><title>V2Ray Self-Hosted Setup Reference · Home
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Joseph Chai"><meta name=description content='Note: it seems like v2Ray have been superseded by xRay + XLTS, might want to look into that next time.
+Server Link to heading curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh sudo bash install-release.sh sudo systemctl restart v2ray sudo systemctl enable v2ray config: /usr/local/etc/v2ray/config.json
+On a UNIX system, you can generate random UUID with: cat /proc/sys/kernel/random/uuid Change:
+UUID (use the same for client too, it&rsquo;s used to encrypt/decrypt traffic) path port { "log": { "loglevel": "warning", "access": "/var/log/v2ray/access.'><meta name=keywords content="blog,developer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="V2Ray Self-Hosted Setup Reference"><meta name=twitter:description content='Note: it seems like v2Ray have been superseded by xRay + XLTS, might want to look into that next time.
+Server Link to heading curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh sudo bash install-release.sh sudo systemctl restart v2ray sudo systemctl enable v2ray config: /usr/local/etc/v2ray/config.json
+On a UNIX system, you can generate random UUID with: cat /proc/sys/kernel/random/uuid Change:
+UUID (use the same for client too, it’s used to encrypt/decrypt traffic) path port { "log": { "loglevel": "warning", "access": "/var/log/v2ray/access.'><meta property="og:url" content="https://jchai01.github.io/posts/v2ray-setup-ref/"><meta property="og:site_name" content="Home"><meta property="og:title" content="V2Ray Self-Hosted Setup Reference"><meta property="og:description" content='Note: it seems like v2Ray have been superseded by xRay + XLTS, might want to look into that next time.
+Server Link to heading curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh sudo bash install-release.sh sudo systemctl restart v2ray sudo systemctl enable v2ray config: /usr/local/etc/v2ray/config.json
+On a UNIX system, you can generate random UUID with: cat /proc/sys/kernel/random/uuid Change:
+UUID (use the same for client too, it’s used to encrypt/decrypt traffic) path port { "log": { "loglevel": "warning", "access": "/var/log/v2ray/access.'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-05-24T22:30:56+01:00"><meta property="article:modified_time" content="2025-05-24T22:30:56+01:00"><link rel=canonical href=https://jchai01.github.io/posts/v2ray-setup-ref/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><head></head><nav class=navigation><section class=container><a class=navigation-title href=https://jchai01.github.io/>Home
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jchai01.github.io/posts/v2ray-setup-ref/>V2Ray Self-Hosted Setup Reference</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2025-05-24T22:30:56+01:00>May 24, 2025
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div></div></header><div class=post-content><p>Note: it seems like v2Ray have been superseded by xRay + XLTS, might want to look into that next time.</p><h1 id=server>Server
+<a class=heading-link href=#server><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><pre tabindex=0><code>curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+sudo bash install-release.sh
+sudo systemctl restart v2ray
+sudo systemctl enable v2ray
+</code></pre><p>config:
+<code>/usr/local/etc/v2ray/config.json</code></p><p>On a UNIX system, you can generate random UUID with:
+<code>cat /proc/sys/kernel/random/uuid </code>Change:</p><ul><li>UUID (use the same for client too, it&rsquo;s used to encrypt/decrypt traffic)</li><li>path</li><li>port</li></ul><pre tabindex=0><code>{
+  &#34;log&#34;: {
+    &#34;loglevel&#34;: &#34;warning&#34;,
+    &#34;access&#34;: &#34;/var/log/v2ray/access.log&#34;,
+    &#34;error&#34;: &#34;/var/log/v2ray/error.log&#34;
+  },
+  &#34;inbounds&#34;: [
+    {
+      &#34;port&#34;: 9999,
+      &#34;listen&#34;:&#34;127.0.0.1&#34;,
+      &#34;protocol&#34;: &#34;vmess&#34;,
+      &#34;settings&#34;: {
+        &#34;clients&#34;: [
+          {
+            &#34;id&#34;: &#34;7b317df0-eab4-431f-be92-fbad2cc7e51e&#34;, # CHANGE UUID
+            &#34;alterId&#34;: 64
+          }
+        ]
+      },
+      &#34;streamSettings&#34;: {
+        &#34;network&#34;: &#34;ws&#34;,
+        &#34;wsSettings&#34;: {
+        &#34;path&#34;: &#34;/ray&#34; # USE CORRECT PATH
+        }
+      }
+    }
+  ],
+  &#34;outbounds&#34;: [
+    {
+      &#34;protocol&#34;: &#34;freedom&#34;,
+      &#34;settings&#34;: {}
+    }
+  ]
+}
+</code></pre><h1 id=nginx>Nginx
+<a class=heading-link href=#nginx><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><p>Setup up domain name + HTTPS with LetsEncrypt/Certbot</p><p>Config should look something like:</p><pre tabindex=0><code>server {
+      server_name domain-name www.domain-name;
+
+      index index.html;
+      root /usr/share/nginx/html/;
+
+      access_log /var/log/nginx/v2ray.access;
+      error_log /var/log/nginx/v2ray.error;
+
+      location /ray/ {
+            if ($http_upgrade != &#34;websocket&#34;) {
+              # Return 404 error when WebSocket upgrading negotiate failed
+              return 404;
+            }
+                  proxy_redirect off;
+                  proxy_pass http://127.0.0.1:9999; # match server config port
+                  proxy_http_version 1.1;
+                  proxy_set_header Upgrade $http_upgrade;
+                  proxy_set_header Connection &#34;upgrade&#34;;
+                  proxy_set_header Host $host;
+
+                  # Show real IP in v2ray access.log
+                  proxy_set_header X-Real-IP $remote_addr;
+                  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            }
+
+        listen 443 ssl;
+        ssl_certificate /etc/letsencrypt/live/domain-name/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/domain-name/privkey.pem;
+        include /etc/letsencrypt/options-ssl-nginx.conf;
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    }
+
+    server {
+        if ($host = domain-name) {
+            return 301 https://$host$request_uri;
+        }
+
+    listen 80;
+            server_name domain-name;
+        return 404;
+    }
+</code></pre><h2 id=router>Router
+<a class=heading-link href=#router><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>forward public port 443 to LAN port 443</p><h1 id=client>Client
+<a class=heading-link href=#client><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><h2 id=linux>Linux
+<a class=heading-link href=#linux><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Run: <code>v2ray</code>
+Run with config: <code>v2ray -c /etc/v2ray/config.json</code></p><p>in Ubuntu, 4.34 does not work, need to use 4.28.2</p><pre tabindex=0><code>{
+  &#34;inbounds&#34;: [
+    {
+      &#34;port&#34;: 9999,
+      &#34;listen&#34;: &#34;127.0.0.1&#34;,
+      &#34;protocol&#34;: &#34;socks&#34;,
+      &#34;sniffing&#34;: {
+        &#34;enabled&#34;: true,
+        &#34;destOverride&#34;: [&#34;http&#34;, &#34;tls&#34;]
+      },
+      &#34;settings&#34;: {
+        &#34;auth&#34;: &#34;noauth&#34;,
+        &#34;udp&#34;: false
+      }
+    }
+  ],
+  &#34;outbounds&#34;: [
+    {
+      &#34;protocol&#34;: &#34;vmess&#34;,
+      &#34;settings&#34;: {
+        &#34;vnext&#34;: [
+          {
+            &#34;address&#34;: &#34;domain-name&#34;, # without the https:// would work
+            &#34;port&#34;: 443,
+            &#34;users&#34;: [
+              {
+                &#34;id&#34;: &#34;7b317df0-eab4-431f-be92-fbad2cc7e51e&#34;, # has to match the server&#39;s UUID
+                &#34;alterId&#34;: 0
+              }
+            ]
+          }
+        ]
+      },
+      &#34;streamSettings&#34;: {
+        &#34;network&#34;: &#34;ws&#34;,
+        &#34;security&#34;: &#34;tls&#34;,
+        &#34;wsSettings&#34;: {
+          &#34;path&#34;: &#34;/ray&#34; # path has to change accordingly in server&#39;s config and nginx
+        }
+      }
+    }
+  ]
+}
+</code></pre><h2 id=android>Android
+<a class=heading-link href=#android><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Download v2RayNG
+Create new config: <code>Type manually[vMess]</code>
+address: <code>domain-name</code>
+port: <code>443</code>
+id: UUID that has to match the server, for e.g. <code>7b317df0-eab4-431f-be92-fbad2cc7e51e</code>
+Security: <code>chacha20-poly1305</code></p><p>Transport:
+Network: <code>ws</code> (web socket)
+ws path: <code>/ray</code> (has to match nginx config)
+allow insecure: <code>false</code></p><p>Ref:
+<a href=https://www.linuxbabe.com/ubuntu/set-up-v2ray-proxy-server class=external-link target=_blank rel=noopener>https://www.linuxbabe.com/ubuntu/set-up-v2ray-proxy-server</a>
+<a href=https://gist.github.com/Hansimov/05ae4e81bc8349131e939ed4753304db class=external-link target=_blank rel=noopener>https://gist.github.com/Hansimov/05ae4e81bc8349131e939ed4753304db</a></p><h2 id=troubleshoot>Troubleshoot
+<a class=heading-link href=#troubleshoot><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Ensure server time is synced: <a href=https://askubuntu.com/questions/1314479/ntp-not-supported class=external-link target=_blank rel=noopener>https://askubuntu.com/questions/1314479/ntp-not-supported</a></p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2019 -
+2025
+Joseph Chai
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script data-goatcounter=https://jchai01.goatcounter.com/count async src=//gc.zgo.at/count.js></script></body></html>
