@@ -39,7 +39,14 @@ cp /usr/lib64/libgdk_pixbuf-2.0.so.0 /opt/resolve/libs/
 <a class=heading-link href=#exporting-videos-with-aac-plugin><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p><a href=https://github.com/Toxblh/davinci-linux-aac-codec class=external-link target=_blank rel=noopener>https://github.com/Toxblh/davinci-linux-aac-codec</a></p><h3 id=magic-byte-codes>Magic Byte Codes
 <a class=heading-link href=#magic-byte-codes><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><p>One way to workaround several Linux-specific annoyances. Consider supporting them and paying for their product especially if you are making money from it.</p><p>Download link to davinci-resolve-studio installer: <a href=https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion class=external-link target=_blank rel=noopener>https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion</a></p><p>On an arch system, you can use <code>yay -S davinci-resolve-studio</code>.</p><p>Version 19:
+<span class=sr-only>Link to heading</span></a></h3><p>One way to workaround several Linux-specific annoyances. Consider supporting them and paying for their product especially if you are making money from it.</p><p>Download link to davinci-resolve-studio installer: <a href=https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion class=external-link target=_blank rel=noopener>https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion</a></p><p>On an arch system, you can use <code>yay -S davinci-resolve-studio</code>.</p><p>Version 20.1.1</p><pre tabindex=0><code>cd /opt/resolve/
+
+sudo perl -pi -e &#39;s/\x03\x00\x89\x45\xFC\x83\x7D\xFC\x00\x74\x11\x48\x8B\x45\xC8\x8B/\x03\x00\x89\x45\xFC\x83\x7D\xFC\x00\xEB\x11\x48\x8B\x45\xC8\x8B/&#39; bin/resolve
+
+sudo perl -pi -e &#39;s/\x74\x11\x48\x8B\x45\xC8\x8B\x55\xFC\x89\x50\x58\xB8\x00\x00\x00/\xEB\x11\x48\x8B\x45\xC8\x8B\x55\xFC\x89\x50\x58\xB8\x00\x00\x00/&#39; bin/resolve
+
+sudo perl -pi -e &#39;s/\x41\xb6\x01\x84\xc0\x0f\x84\xb0\x00\x00\x00\x48\x85\xdb\x74\x08\x45\x31\xf6\xe9\xa3\x00\x00\x00/\x41\xb6\x00\x84\xc0\x0f\x84\xb0\x00\x00\x00\x48\x85\xdb\x74\x08\x45\x31\xf6\xe9\xa3\x00\x00\x00/&#39; bin/resolve
+</code></pre><p>Version 19:
 <code>sudo /usr/bin/perl -pi -e 's/\x74\x11\xe8\x21\x23\x00\x00/\xeb\x11\xe8\x21\x23\x00\x00/g' /opt/resolve/bin/resolve</code></p><p>Version 19 beta (beta 2, 3 & 4):</p><pre tabindex=0><code>cd /opt/resolve
 
 sudo perl -pi -e &#39;s/\x03\x00\x89\x45\xFC\x83\x7D\xFC\x00\x74\x11\x48\x8B\x45\xC8\x8B/\x03\x00\x89\x45\xFC\x83\x7D\xFC\x00\xEB\x11\x48\x8B\x45\xC8\x8B/g&#39; bin/resolve

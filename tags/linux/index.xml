@@ -17,4 +17,5 @@ Rename nvim.appimage to nvim
 mv nvim.appimage nvim Set the permission: chmod +x nvim Install fuse2 library if it is required to run the appimage sudo apt install libfuse2 Copy from download folder to /usr/local/bin path /usr/bin is used for apps managed by the distribution&amp;rsquo;s package manager, so it&amp;rsquo;s not recommended to copy there.</description></item><item><title>Change Timezone in Linux</title><link>https://jchai01.github.io/posts/change-timezone-in-linux/</link><pubDate>Sun, 24 Dec 2023 23:58:39 +0000</pubDate><guid>https://jchai01.github.io/posts/change-timezone-in-linux/</guid><description>View current timezone:
 timedatectl List timezones:
 timedatectl list-timezones Change timezone example:
-sudo timedatectl set-timezone Europe/Dublin</description></item></channel></rss>
+sudo timedatectl set-timezone Europe/Dublin If it&amp;rsquo;s still not accurate, try:
+`timedatectl set-ntp true`</description></item></channel></rss>
