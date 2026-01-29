@@ -21,7 +21,7 @@ GatewayPorts yes
 <a class=heading-link href=#persistence-with-autossh><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p>Prerequisites: passwordless login to your server with ssh-keygen.</p><p>Ensure the tunnel stays alive with autossh: <code>autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -N -R 9000:localhost:22 user@server-ip</code></p><ul><li>The -M 0 option tells Autossh to use a built-in monitoring port to detect if the SSH tunnel has disconnected.</li><li>The -o &ldquo;ServerAliveInterval 30&rdquo; and -o &ldquo;ServerAliveCountMax 3&rdquo; options tell Autossh to send keepalive packets every 30 seconds, and to attempt to reconnect if three consecutive keepalive packets fail.</li></ul><p>ref: <a href=https://tecadmin.net/keep-the-ssh-tunnels-alive-with-autossh/ class=external-link target=_blank rel=noopener>https://tecadmin.net/keep-the-ssh-tunnels-alive-with-autossh/</a></p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2019 -
-2025
+2026
 Joseph Chai
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script data-goatcounter=https://jchai01.goatcounter.com/count async src=//gc.zgo.at/count.js></script></body></html>

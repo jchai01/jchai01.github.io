@@ -68,11 +68,15 @@ StartLimitInterval=0
 <a class=heading-link href=#running-multiple-instance><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h1><p>If you name your unit file:
 <code>my-node-app@.service</code></p><p>and assuming you want 3 instances running, you can do:</p><p><code>systemctl start my-node-app@{1,2,3}.service</code></p><p>Address each one process with the number given. For e.g. to get the logs for 1:
-<code>journalctl -u my-node-app@1.service</code></p><p>You can actually treat a single unit file as a template (<a href=https://www.freedesktop.org/software/systemd/man/systemd.unit.html class=external-link target=_blank rel=noopener>docs over here</a>).</p><h1 id=ref>Ref
+<code>journalctl -u my-node-app@1.service</code></p><p>You can actually treat a single unit file as a template (<a href=https://www.freedesktop.org/software/systemd/man/systemd.unit.html class=external-link target=_blank rel=noopener>docs over here</a>).</p><h1 id=troubleshoot>Troubleshoot
+<a class=heading-link href=#troubleshoot><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h1><h3 id=codeexited-status203exec>code=exited, status=203/EXEC
+<a class=heading-link href=#codeexited-status203exec><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Put the command in a <code>.sh</code> file, make in executable and run that instead.</p><h1 id=ref>Ref
 <a class=heading-link href=#ref><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h1><p><a href=https://www.cloudbees.com/blog/running-node-js-linux-systemd#creating-unit-files class=external-link target=_blank rel=noopener>https://www.cloudbees.com/blog/running-node-js-linux-systemd#creating-unit-files</a></p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2019 -
-2025
+2026
 Joseph Chai
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script data-goatcounter=https://jchai01.goatcounter.com/count async src=//gc.zgo.at/count.js></script></body></html>
